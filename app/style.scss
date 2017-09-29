@@ -1,0 +1,20 @@
+/* Технические стили */
+@import "styles-temp.scss";
+/* /Технические стили */
+
+/* Общие стили проекта */
+@import "styles-common.scss";
+/* /Общие стили проекта */
+
+/* Глобальные модификаторы */
+@import "styles-common-mods.scss";
+/* /Глобальные модификаторы */
+
+/* Переменные - Цвета */
+@import "styles-common-vars-colors.scss";
+/* /Переменные - Цвета */
+
+/* Main page */
+@import "bundles/page-main/page-main.scss";
+
+/* /Main page */

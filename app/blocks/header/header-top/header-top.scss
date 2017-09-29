@@ -1,0 +1,22 @@
+/* header-top - раскладка */
+@import "header-top-layout.scss";
+/* /header-top - раскладка */
+
+/* header-top - модификаторы */
+@import "header-top-mods.scss";
+/* /header-top - модификаторы */
+
+/* Переключатель языка */
+@import "../../lang-switcher/lang-switcher.scss";
+/* /Переключатель языка */
+
+.header-top__inner-item {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
+.header-top__inner-item-icon {
+	height: 28px;
+	margin-right: 10px;
+}

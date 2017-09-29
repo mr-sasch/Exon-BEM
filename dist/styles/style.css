@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* Технические стили */
+.temp_b-w {
+  border: 1px solid #fff; }
+
+.temp_b-b {
+  border: 1px solid #000; }
+
+html {
+  background-color: rgba(124, 77, 33, 0.56); }
+
+/* /Технические стили */
+/* Общие стили проекта */
+* {
+  font-family: 'Roboto', sans-serif; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+/* /Общие стили проекта */
+/* Глобальные модификаторы */
+.mod_d-n {
+  display: none; }
+
+.mod_rounded {
+  border-radius: 50px; }
+
+/* /Глобальные модификаторы */
+/* Переменные - Цвета */
+/* Цвета шапки */
+/* /Цвета шапки */
+/* /Переменные - Цвета */
+/* Main page */
+/* Header */
+/* header-top - раскладка */
+.header-top {
+  position: relative; }
+
+.header-top__inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center; }
+
+.header-top__outer {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+/* /header-top - раскладка */
+/* header-top - модификаторы */
+.header-top_colors {
+  background-color: grey;
+  color: #fff; }
+
+/* /header-top - модификаторы */
+/* Переключатель языка */
+.lang-switcher {
+  border: 1px solid #fff;
+  padding: 3px 7px; }
+
+.lang-switcher-lang {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+
+.lang-switcher-lang__text {
+  margin-right: 5px;
+  font-size: 15px; }
+
+/* /Переключатель языка */
+.header-top__inner-item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+
+.header-top__inner-item-icon {
+  height: 28px;
+  margin-right: 10px; }
+
+/* /Header */
+/* /Main page */
+
+/*# sourceMappingURL=style.css.map */

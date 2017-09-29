@@ -1,0 +1,3 @@
+pug -w --pretty /home/xander/GitHub/Exon-BEM/app/bundles -o /home/xander/GitHub/Exon-BEM/dist/pages/
+
+sass --watch /home/xander/GitHub/Exon-BEM/app/style.scss:/home/xander/GitHub/Exon-BEM/dist/styles/style.css

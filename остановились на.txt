@@ -1,0 +1,1 @@
+настройка Extends для контента модальных окон - modals__content-login.pug в modal.pug

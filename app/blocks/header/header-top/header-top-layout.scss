@@ -1,0 +1,19 @@
+.header-top {
+	position: relative;
+}
+
+.header-top__inner {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	width: 1000px;
+	margin: auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-top__outer {
+	position: absolute;
+	right: 0;
+	top: 50%; transform: translateY(-50%);
+}

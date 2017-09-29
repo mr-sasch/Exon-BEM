@@ -1,0 +1,15 @@
+.lang-switcher {
+	border: 1px solid #fff;
+	padding: 3px 7px;
+}
+
+.lang-switcher-lang {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
+.lang-switcher-lang__text {
+	margin-right: 5px;
+	font-size: 15px;
+}
