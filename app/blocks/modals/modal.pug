@@ -1,5 +1,8 @@
 // Модальное окно Bootstrap
+
+include __content/modals__content-login.pug
+
 .modal.fade#modal-box(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
 	.modal-box.modal-dialog 
-		block modals__content-login
-		//- вставить нужный блок контента, созданный через Extends
+		+modals__content-login
+		//- вставляем миксин содержимого нужного модального окна

@@ -16,5 +16,28 @@
 
 /* Main page */
 @import "bundles/page-main/page-main.scss";
-
 /* /Main page */
+
+/* Header */
+	/* Header-top */
+		/* header-top - раскладка */
+		@import "header-top-layout.scss";
+		/* /header-top - раскладка */
+
+		/* header-top - модификаторы */
+		@import "header-top-mods.scss";
+		/* /header-top - модификаторы */
+
+		/* Переключатель языка */
+		@import "../../lang-switcher/lang-switcher.scss";
+		/* /Переключатель языка */
+
+		/* Вход для клиентов */
+		@import "header-top__login.scss";
+		/* /Вход для клиентов */
+	/* /Header-top */
+	/* Header-bottom */
+	/* /Header-bottom */
+
+
+/* /Header */
