@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* Раскладка */
+.footer-bottom {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end; }
+
+.footer-bottom__inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 760px;
+  width: 100%; }
+
+/* /Раскладка */
+/* Обратная связь */
+.footer-feedback {
+  color: grey;
+  padding: 3px 10px; }
+
+/* /Обратная связь */
+/* Присоединяйтесь */
+.footer-join-us {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.footer-join-us__socials {
+  margin-left: 10px; }
+
+/* /Присоединяйтесь */
+
+/*# sourceMappingURL=footer-bottom.css.map */

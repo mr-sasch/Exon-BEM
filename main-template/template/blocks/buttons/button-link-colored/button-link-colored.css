@@ -1,0 +1,44 @@
+.button {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer; }
+
+.button::before, .button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px; }
+
+.button::before {
+  z-index: -2;
+  background-color: #222222;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out; }
+
+.button::after {
+  z-index: -1;
+  margin: 2px;
+  background-color: #ffffff; }
+
+.button--gradient {
+  border: none; }
+
+.button--gradient:focus {
+  outline: none; }
+
+.button--gradient::before {
+  background-image: linear-gradient(to right, #4ab75e, #4fb2f6); }
+
+a.button--gradient {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+
+/*# sourceMappingURL=button-link-colored.css.map */

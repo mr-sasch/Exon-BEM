@@ -1,0 +1,115 @@
+@charset "UTF-8";
+html {
+  background-color: #6eb47f; }
+
+body {
+  background-color: #c2ff8e; }
+
+body {
+  margin-bottom: 15px; }
+
+/* Ширина сайта */
+.site-width {
+  max-width: 1300px; }
+
+/* Внутренние отступы родительских блоков сайта */
+.inn_padd {
+  padding: 5px; }
+
+/* Стили кавычек */
+q {
+  quotes: "\00ab" "\00bb"; }
+
+/* Общий шаблон кнопки со ссылкой */
+a.button-link {
+  color: grey !important;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  transition: .2s ease;
+  padding: 8px 15px; }
+
+a.button-link:hover {
+  color: grey !important;
+  text-decoration: none;
+  border-color: grey; }
+
+/* Шаблон цветной кнопки со ссылкой */
+.button {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer; }
+
+.button::before, .button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px; }
+
+.button::before {
+  z-index: -2;
+  background-color: #222222;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out; }
+
+.button::after {
+  z-index: -1;
+  margin: 2px;
+  background-color: #ffffff; }
+
+.button--gradient {
+  border: none; }
+
+.button--gradient:focus {
+  outline: none; }
+
+.button--gradient::before {
+  background-image: linear-gradient(to right, #4ab75e, #4fb2f6); }
+
+a.button--gradient {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+
+/* Форма поиска в хэдере */
+/*header-bottom__search*/
+.header-search {
+  position: relative;
+  width: 35px;
+  height: 32px;
+  z-index: 10; }
+
+.header-search input[type=text] {
+  position: absolute;
+  width: 25px;
+  left: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0);
+  background: url("../template/layout/template-images/header-search.png") no-repeat;
+  padding: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  color: rgba(87, 36, 68, 0); }
+
+.header-search input[type=text]:focus {
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 250px;
+  padding: 5px 5px 5px 40px;
+  background-color: #fff;
+  outline: none;
+  background: url("../template/layout/template-images/header-search.png") 7px 50% no-repeat;
+  color: grey; }
+
+/*/header-bottom__search*/
+
+/*# sourceMappingURL=style.css.map */

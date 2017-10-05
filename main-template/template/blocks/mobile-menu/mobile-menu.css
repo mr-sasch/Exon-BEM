@@ -1,0 +1,92 @@
+.mobile-menu {
+  display: block;
+  right: 10px;
+  bottom: 10px;
+  width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 3px;
+  text-align: center; }
+
+.mobile-menu__strokes {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  opacity: 1; }
+
+.mobile-menu__stroke {
+  position: relative;
+  height: 3px;
+  background: #000;
+  transition: .2s ease;
+  width: 80%; }
+
+#mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross1 {
+  transform: rotate(45deg);
+  top: 11px; }
+
+#mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross2 {
+  transform: rotate(-45deg);
+  top: 0px; }
+
+#mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross3 {
+  opacity: 0; }
+
+.mobile-menu__menu {
+  position: absolute;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  top: 40px;
+  color: #545454;
+  font-weight: 600;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px rgba(128, 128, 128, 0.59);
+  left: 10px;
+  right: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  max-height: 0;
+  border: 0px solid #b9b8b8;
+  padding: 0 11px;
+  opacity: 0;
+  transition: .3s ease;
+  display: block; }
+
+#mobile-menu_stroke-cross:checked ~ .mobile-menu__menu {
+  border-width: 1px;
+  padding: 5px 11px;
+  opacity: 1;
+  max-height: 500px;
+  margin-top: 10px;
+  z-index: 10; }
+
+.mobile-menu__item {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.mobile-menu__item li {
+  margin: 10px 0; }
+
+.mobile-menu__item-a {
+  text-decoration: none;
+  color: #000; }
+
+.mobile-menu__item-a:active,
+.mobile-menu__item-a:focus {
+  color: #79758A; }
+
+/*# sourceMappingURL=mobile-menu.css.map */

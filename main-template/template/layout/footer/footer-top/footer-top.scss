@@ -1,0 +1,67 @@
+.footer-top__col { /* обводка блока */
+	border: 1px solid rgba(43, 52, 228, 0.41);
+}
+/* Раскладка */
+.footer-top {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+}
+/* /Раскладка */
+
+/* Блок с лого */
+.footer-logo {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.footer-logo__img {
+	height: 92px;
+	margin-right: 18px;
+}
+.footer-logo__text-title,
+.footer-logo__text-title q {
+	font-weight: 500;
+	font-size: 30px;
+}
+.footer-logo__text-description1 {
+	margin-bottom: -5px;
+}
+.footer-logo__text-description1,
+.footer-logo__text-description1 {
+	font-size: 16px;
+}
+/* /Блок с лого */
+
+/* Телефоны */
+.footer__phones {
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+/* /Телефоны */
+
+/* Адрес */
+.footer__address {
+	margin-bottom: 30px;
+}
+/* /Адрес */
+
+/* Меню в футере */
+	/* Заголовок */
+.footer-top__col-title {
+	font-family: 'Roboto Slab', serif;
+	font-size: 28px;
+	font-weight: 600;
+	color: #4ab75e;
+	margin-bottom: 20px;
+}
+.footer-top__col-row {
+	margin-bottom: 15px;
+}
+	/* /Заголовок */
+	/* Ряды */
+	/* /Ряды */
+
+
+/* /Меню в футере */

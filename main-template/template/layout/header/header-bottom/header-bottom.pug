@@ -1,0 +1,53 @@
+// Header-bottom
+.header-bottom.inn_padd
+	.header-bottom__inner.site-width
+		// Левое крыло
+		.header-bottom__left
+			ul.menu.header-menu
+				li
+					+button-link('header-menu__button', '#', 'Каталог продукции')
+				li
+					+button-link('header-menu__button', '#', 'О Компании')
+				li
+					+button-link('header-menu__button', '#', 'Новости')
+		// Центр
+		.header-bottom__center
+			.header-bottom-logo
+				img.header-bottom-logo__img(src='template-images/header-logo.png')
+				.header-bottom-logo__text
+					.header-bottom-logo__text-text
+						.header-bottom-logo__text-title ОАО 
+							q ЭКЗОН
+						.header-bottom-logo__text-description1 Производство натуральных 
+						.header-bottom-logo__text-description2 лекарственных средств
+		// Правое крыло
+		.header-bottom__right
+			ul.menu.header-menu
+				li
+					+button-link('header-menu__button', '#', 'Партнерам')
+				li
+					+button-link('header-menu__button', '#', 'Контакты').online-order
+				li
+					+button-modal-colored('online-order', '#modal-box', 'Онлайн заявка')
+		.header-bottom__right-top.header-bottom__right-top-phone 
+			span 8 01644 
+			strong 3-24-09	
+		.header-bottom__left-top
+			+header-search
+
+	// Мобильная шапка
+	.header-bottom__inner-mobile.site-width
+		.header-bottom-mobile__col.footer-logo
+			img.footer-logo__img(src='template-images/header-logo.png')
+			.footer-logo__text
+				.footer-logo__text-title ОАО 
+					q ЭКЗОН
+				.footer-logo__text-description1 Производство натуральных
+				.footer-logo__text-description2 лекарственных средств
+		.header-bottom-mobile__col.header-bottom-mobile__col2
+			.header__phone
+				span 8 01644 
+				strong 3-24-09
+			+button-modal-colored('online-order', '#modal-box', 'Онлайн заявка')
+		.header-bottom-mobile__col.header-mobile-menu
+			+menu-mobile('theme-exon', ['link1.com','link1'], ['link2.com','link2'])

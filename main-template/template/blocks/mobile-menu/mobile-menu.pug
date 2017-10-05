@@ -1,0 +1,25 @@
+//- Миксин мобильного меню
+mixin menu-mobile(classname, ...content)
+	.menu-mobile(class= classname)
+		// Кнопка 
+		input(type="checkbox" name="mobile-menu" id="mobile-menu_stroke-cross" style="display:none;")
+
+		.mobile-menu
+			label.mobile-menu__strokes(for="mobile-menu_stroke-cross")
+				.mobile-menu__stroke.mobile-menu__stroke-cross1
+				.mobile-menu__stroke.mobile-menu__stroke-cross2
+				.mobile-menu__stroke.mobile-menu__stroke-cross3
+					
+		// Меню 
+		.mobile-menu__menu
+			ul.mobile-menu__item#mobile-menu
+				// Ссылка меню
+				each item in content
+					li
+						a(href= item[0])= item[1]
+
+//- Вызов меню
+//- +menu-mobile('class-menu', ['link1.com','link1'], ['link2.com','link2'])
+//- link(rel='stylesheet' href='mobile-menu.css')
+	
+script(src="http://localhost:35729/livereload.js")

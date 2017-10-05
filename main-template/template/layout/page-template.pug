@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		
+		// Шрифты 
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900&amp;subset=cyrillic" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=cyrillic" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet")
+		//- link(rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css")
+		
+		// Стили
+				
+		// Нормалайзер 
+		link(rel="stylesheet" href="style/normalize.css")
+
+		// Bootstrap 		
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
+		// /Bootstrap 
+		
+		// Slick Slider
+		//- link(rel="stylesheet" type="text/css" href="scripts/slick/slick.css")		
+		
+		// Стиль сайта
+		link(rel="stylesheet" href="../../styles/style.css")
+			
+		// Стиль шаблона(header - footer)
+		link(rel='stylesheet' href='style/page-template.css')
+			
+		// /Стили
+		
+		// Тело сайта 
+		body
+			// Модальные окна
+			// Модальное окно - Вход для клиентов
+			include ../blocks/modals/modal__header-top-login/modal__header-top-login.pug
+			
+			//- Объявляем миксины
+				//- Кнопки
+					//- Кнопка-ссылка простая
+			include ../blocks/buttons/button-link/button-link.pug
+					//- Кнопка-ссылка с градиентом
+			include ../blocks/buttons/button-link-colored/button-link-colored.pug
+					//- Кнопка-модальное окно с градиентом
+			include ../blocks/buttons/button-modal-colored/button-modal-colored.pug
+					//- Кнопка поиска в шапке
+			include ../blocks/header-search/header-search.pug
+			include ../blocks/mobile-menu/mobile-menu.pug
+			
+			
+			
+			// ***** Хэдер ***** 
+			include header/header.pug
+			// ***** /Хэдер ***** 
+
+			// ***** Контент ***** 
+			block content
+			// ***** /Контент *****
+
+			// ***** Футер ***** 
+			//- include footer/footer.pug
+			// ***** /Футер *****
+				
+// !плагин LiveReload. по завершении разработки - удалить!
+script(src="http://localhost:35729/livereload.js")
+			

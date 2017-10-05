@@ -1,0 +1,31 @@
+/* header */
+	/* header top */
+@import "../header/header-top/style/header-top.scss";
+	/* header bottom */
+@import "../header/header-bottom/style/header-bottom.scss";
+@import "../../blocks/mobile-menu/mobile-menu.scss";
+/* footer */
+	/* Верхний блок */
+
+	/* Нижний блок */
+
+	/* Копирайт */
+
+
+	/* footer */
+		/* Общие стили футера */
+@import "../footer/style/footer.scss";
+		/* Верхний блок футера */
+@import "../footer/footer-top/footer-top.scss";
+		/* Нижний блок футера */
+@import "../footer/footer-bottom/footer-bottom.scss";
+		/* Секция Копирайт */
+@import "../footer/footer-copyright/footer-copyright.scss";
+
+
+
+/* /footer */
+	// /* Кнопки */
+	// 	/* Кнопка Главного меню */
+	// @import "../../blocks/buttons/button-link/button-link.scss";
+	// /* /Кнопки */

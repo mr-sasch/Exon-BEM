@@ -1,0 +1,26 @@
+.footer-copyright {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* Разделитель */
+.separator {
+	width: 100%;
+	height: 1px;
+	border: 1px solid #4fb1f6;
+	margin: 25px 0;
+}
+/* /Разделитель */
+/* Разработчик сайта */
+.site-developer {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
+.site-developer__text {
+	margin-right: 15px;
+}
+/* /Разработчик сайта */
