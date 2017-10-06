@@ -1,10 +1,12 @@
 @charset "UTF-8";
+/* Глобальный серый цвет */
 /* Раскладка */
 .footer-bottom {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin-top: -14px; }
 
 .footer-bottom__inner {
   display: -webkit-flex;
@@ -18,8 +20,10 @@
 /* /Раскладка */
 /* Обратная связь */
 .footer-feedback {
-  color: grey;
-  padding: 3px 10px; }
+  color: #4a4a4a;
+  padding: 4px 14px;
+  font-size: 24px;
+  font-weight: 300; }
 
 /* /Обратная связь */
 /* Присоединяйтесь */
@@ -30,9 +34,26 @@
   justify-content: space-between;
   align-items: center; }
 
+.footer-join-us__text {
+  font-size: 18px;
+  font-weight: 400; }
+
 .footer-join-us__socials {
   margin-left: 10px; }
 
 /* /Присоединяйтесь */
+/* Адаптация */
+@media screen and (max-width: 830px) {
+  .footer-bottom,
+  .footer-bottom__inner {
+    justify-content: center; } }
+@media screen and (max-width: 410px) {
+  .footer-join-us {
+    flex-direction: column; }
+
+  .footer-join-us__socials {
+    margin: 7px;
+    margin-top: 5px; } }
+/* /Адаптация */
 
 /*# sourceMappingURL=footer-bottom.css.map */

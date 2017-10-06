@@ -1,6 +1,3 @@
-.footer-top__col { /* обводка блока */
-	border: 1px solid rgba(43, 52, 228, 0.41);
-}
 /* Раскладка */
 .footer-top {
 	display: -webkit-flex;
@@ -15,6 +12,7 @@
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+	margin-bottom: 30px;
 }
 .footer-logo__img {
 	height: 92px;
@@ -24,44 +22,132 @@
 .footer-logo__text-title q {
 	font-weight: 500;
 	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
 }
 .footer-logo__text-description1 {
 	margin-bottom: -5px;
 }
 .footer-logo__text-description1,
-.footer-logo__text-description1 {
+.footer-logo__text-description2 {
 	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
 }
 /* /Блок с лого */
 
 /* Телефоны */
 .footer__phones {
-	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 30px;
 	margin-bottom: 30px;
+}
+.footer__phones strong {
+	font-weight: 500;
 }
 /* /Телефоны */
 
 /* Адрес */
 .footer__address {
 	margin-bottom: 30px;
+	max-width: 300px;
+	font-size: 18px;
 }
 /* /Адрес */
+
+/* Электронная почта */
+.footer__mail {
+	font-size: 18px;
+}
+/* /Электронная почта */
 
 /* Меню в футере */
 	/* Заголовок */
 .footer-top__col-title {
 	font-family: 'Roboto Slab', serif;
-	font-size: 28px;
-	font-weight: 600;
+	font-size: 30px;
+	font-weight: 400;
 	color: #4ab75e;
 	margin-bottom: 20px;
 }
 .footer-top__col-row {
 	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 300;
 }
 	/* /Заголовок */
-	/* Ряды */
-	/* /Ряды */
-
-
 /* /Меню в футере */
+
+/* Мобильная кнопка обратной связи */
+.footer-feedback_mobile {
+	display: none;
+}
+/* /Мобильная кнопка обратной связи */
+
+/* Адаптивность */
+@media screen and (max-width: 1040px) {
+	.footer-top {
+		flex-wrap: wrap;
+	}
+	.footer__mail {
+    margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 830px) {
+	.footer-feedback {
+		display: none;
+	}
+	.footer-feedback_mobile {
+		display: inline-block;
+		top: 8px;
+	}
+}
+@media screen and (max-width: 690px) {
+	.footer__mail {
+		margin-bottom: 0;
+	}
+	.footer-top__col {
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.footer-top .footer-logo__img {
+    height: 60px
+	}
+	.footer-top .footer-logo__text {
+    margin-top: -5px;
+}
+	.footer-top .footer-logo__text-title,
+	.footer-logo__text-title q {
+		font-size: 26px;
+		font-weight: 500;
+	}
+	.footer-top .footer-logo__text-description1,
+	.footer-top .footer-logo__text-description2 {
+    font-size: 12px;
+		font-weight: 400;
+	}
+	.footer-top .footer-feedback {
+    font-size: 16px;
+    font-weight: 300;
+	}
+	// .footer-top
+	// .footer-top
+	// .footer-top
+	// .footer-top
+	// .footer-top
+}
+@media screen and (max-width: 450px) {
+	.footer-top {
+		flex-direction: column;
+	}
+	.footer-top__footer-feedback {
+		text-align: center;
+		margin: 30px 0 40px;
+	}
+	.footer-top .footer-feedback {
+    font-size: 24px;
+    font-weight: 300;
+	}
+}
+
+/* /Адаптивность */

@@ -1,7 +1,6 @@
 .mobile-menu {
   display: block;
-  right: 10px;
-  bottom: 10px;
+  position: relative;
   width: 35px;
   height: 35px;
   box-sizing: border-box;
@@ -27,7 +26,7 @@
   height: 3px;
   background: #000;
   transition: .2s ease;
-  width: 80%; }
+  width: 100%; }
 
 #mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross1 {
   transform: rotate(45deg);
@@ -39,6 +38,14 @@
 
 #mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross3 {
   opacity: 0; }
+
+#mobile-menu_stroke-cross:checked ~ .mobile-menu__menu {
+  border-width: 1px;
+  padding: 5px 11px;
+  opacity: 1;
+  max-height: 500px;
+  margin-top: 26px;
+  z-index: 10; }
 
 .mobile-menu__menu {
   position: absolute;
@@ -64,14 +71,6 @@
   opacity: 0;
   transition: .3s ease;
   display: block; }
-
-#mobile-menu_stroke-cross:checked ~ .mobile-menu__menu {
-  border-width: 1px;
-  padding: 5px 11px;
-  opacity: 1;
-  max-height: 500px;
-  margin-top: 10px;
-  z-index: 10; }
 
 .mobile-menu__item {
   list-style: none;

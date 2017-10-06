@@ -3,7 +3,10 @@
 @import "../header/header-top/style/header-top.scss";
 	/* header bottom */
 @import "../header/header-bottom/style/header-bottom.scss";
+	/* Мобильное меню общее и стилизованное под Экзон */
 @import "../../blocks/mobile-menu/mobile-menu.scss";
+@import "../../blocks/mobile-menu/mobile-menu_theme-exon.scss";
+
 /* footer */
 	/* Верхний блок */
 

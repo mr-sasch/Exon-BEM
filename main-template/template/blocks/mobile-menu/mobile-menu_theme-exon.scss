@@ -1,0 +1,41 @@
+/* Стили для темы Экзон */
+/* Кнопка */
+.theme-exon .mobile-menu {
+  width: 50px;
+  height: 50px;
+	border: 2px solid $grey;
+  border-radius: 50px;
+}
+.theme-exon .mobile-menu__strokes {
+	position: absolute;
+	padding: 10px 8px;
+	height: 100%; width: 100%;
+
+}
+.theme-exon .mobile-menu__stroke {
+	background: $grey;
+}
+#mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross1 {
+	top: 10px;
+	width: 100%;
+}
+#mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross2 {
+	width: 100%;
+	top: 1px;
+}
+/* /Кнопка */
+/* Меню */
+.theme-exon .mobile-menu__menu {
+	top: 160px;
+}
+.mobile-menu__item-a {
+  text-decoration: none;
+  color: $grey; }
+
+.mobile-menu__item-a:active,
+.mobile-menu__item-a:focus {
+  color: $grey;
+	text-decoration: none;
+}
+/* /Меню */
+/* /Стили для темы Экзон */

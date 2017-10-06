@@ -6,24 +6,33 @@ body {
 }
 body {
 	margin-bottom: 15px;
+	font-family: 'Roboto', sans-serif;
 }
 /* Ширина сайта */
 .site-width {
-	max-width: 1300px;
+	max-width: 1360px;
 }
 /* Внутренние отступы родительских блоков сайта */
 .inn_padd {
 	padding: 5px;
 }
 
+strong {
+	font-weight: 500 !important;
+}
+
 /* Стили кавычек */
 q {
     quotes: "\00ab" "\00bb";
 }
-
+/* Переменные */
+@import "vars.scss";
+/* /Переменные */
 /* Общий шаблон кнопки со ссылкой */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/buttons/button-link/button-link.scss";
 /* Шаблон цветной кнопки со ссылкой */
 @import "../template/blocks/buttons/button-link-colored/button-link-colored.scss";
 /* Форма поиска в хэдере */
 @import "../template/blocks/header-search/header-search.scss";
+/* Главный шаблон "Шапка - Футер" */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/style/page-template.scss";

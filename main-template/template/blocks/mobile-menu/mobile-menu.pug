@@ -16,7 +16,7 @@ mixin menu-mobile(classname, ...content)
 				// Ссылка меню
 				each item in content
 					li
-						a(href= item[0])= item[1]
+						a.mobile-menu__item-a(href= item[0])= item[1]
 
 //- Вызов меню
 //- +menu-mobile('class-menu', ['link1.com','link1'], ['link2.com','link2'])

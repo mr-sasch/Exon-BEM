@@ -4,7 +4,7 @@
   /* временный отступ */
   padding-top: 70px;
   background-color: #fff;
-  color: grey; }
+  color: $grey; }
 
 .footer__inner {
   position: relative;

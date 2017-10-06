@@ -1,13 +1,17 @@
+@import "/home/xander/GitHub/Exon-BEM/main-template/styles/vars.scss";
+
 a.button-link {
-	color: grey !important;
+	color: $grey !important;
 	border: 1px solid #fff;
-	border-radius: 20px;
+	border-radius: 50px;
 	transition: .2s ease;
 	padding: 8px 15px;
+	font-size: 22px;
+	font-weight: 300;
 }
 
 a.button-link:hover {
-	color: grey !important;
+	color: $grey !important;
 	text-decoration: none;
-	border-color: grey;
+	border-color: $grey;
 }

@@ -4,7 +4,9 @@
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300; }
 
 /* Разделитель */
 .separator {
@@ -25,5 +27,16 @@
   margin-right: 15px; }
 
 /* /Разработчик сайта */
+/* Адаптация */
+@media screen and (max-width: 660px) {
+  .footer-copyright {
+    flex-direction: column; }
+
+  .footer-copyright__col1 {
+    margin-bottom: 15px; } }
+@media screen and (max-width: 340px) {
+  .footer-copyright__col1 {
+    font-size: 15px; } }
+/* /Адаптация */
 
 /*# sourceMappingURL=footer-copyright.css.map */
