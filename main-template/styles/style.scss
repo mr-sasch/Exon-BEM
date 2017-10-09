@@ -2,7 +2,7 @@ html {
 	background-color: #6eb47f;
 }
 body {
-	background-color: rgb(194, 255, 142);
+	// background-color: rgb(194, 255, 142);
 }
 body {
 	margin-bottom: 15px;
@@ -36,3 +36,12 @@ q {
 @import "../template/blocks/header-search/header-search.scss";
 /* Главный шаблон "Шапка - Футер" */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/style/page-template.scss";
+/* Главная страница */
+/* Slick Slider - выравнивание буллетов и стрелок */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/main-slider-slick/slider-slick_bullets-centered.scss";
+/* /Slick Slider - выравнивание буллетов и стрелок */
+/* Slick Slider - стилизация */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/main-slider-slick/slider-slick_theme-exon.scss";
+/* /Slick Slider - стилизация */
+
+/* /Главная страница */

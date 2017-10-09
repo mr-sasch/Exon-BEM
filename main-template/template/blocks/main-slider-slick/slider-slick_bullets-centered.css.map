@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,mCAAmC;AACnC,WAAY;EACV,KAAK,EAAE,EAAE;;AAEX,aAAc;EACb,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,QAAQ;EACjB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;;AAExB,WAAY;EACX,KAAK,EAAE,CAAC;;AAET,WAAY;EACV,KAAK,EAAE,CAAC;;AAEV,WAAY;EACX,KAAK,EAAE,CAAC;;AAET,oCAAoC",
+"sources": ["slider-slick_bullets-centered.scss"],
+"names": [],
+"file": "slider-slick_bullets-centered.css"
+}

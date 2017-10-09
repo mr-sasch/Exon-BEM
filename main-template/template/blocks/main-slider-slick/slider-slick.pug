@@ -1,0 +1,11 @@
+mixin main-slider-slick(classname, ...content)
+	.main-slider-slick(class= classname)
+		each item in content
+			.main-slider-slick__item
+				img.main-slider__img(src= item[0])
+				.main-slider__txt
+					.main-slider__txt-title= item[1]
+					.main-slider__txt-text= item[2]
+		
+//- Пример вызова
+//- +menu-mobile('class-menu', ['link1.com','link1'], ['link2.com','link2'])

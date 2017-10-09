@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* header */
 /* header top */
-/* Глобальный серый цвет */
 .header-top {
   position: relative;
   background-color: #6e6e6e;
@@ -83,6 +82,7 @@
 /* /Адаптация */
 /* header bottom */
 /* Глобальный серый цвет */
+/* Глобальный голубой цвет */
 .header-bottom {
   background-color: #fff;
   padding-top: 15px; }
@@ -619,7 +619,6 @@ a.online-order:hover {
     font-weight: 300; } }
 /* /Адаптивность */
 /* Нижний блок футера */
-/* Глобальный серый цвет */
 /* Раскладка */
 .footer-bottom {
   display: -webkit-flex;

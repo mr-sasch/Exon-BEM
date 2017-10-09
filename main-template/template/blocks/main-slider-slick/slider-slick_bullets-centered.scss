@@ -1,0 +1,21 @@
+/* выравниваем буллеты по центру */
+.slick-list {
+  order: -1;
+}
+.slick-slider {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.slick-prev {
+	order: 0;
+}
+.slick-dots {
+  order: 1;
+}
+.slick-next {
+	order: 2;
+}
+/* /выравниваем буллеты по центру */
