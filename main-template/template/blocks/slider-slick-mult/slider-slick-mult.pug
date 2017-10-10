@@ -1,0 +1,11 @@
+mixin slider-slick-mult(classname, ...content)
+	.slider-slick-mult(class= classname)
+		each item in content
+			a(href= item[0]).slider-slick-mult__item
+				img.slider-slick-mult__img(src= item[1])
+				.slider-slick-mult__txt
+					.slider-slick-mult__title= item[2]
+					.slider-slick-mult__text= item[3]
+		
+//- Пример вызова
+//- +slider-slick-mult('class-menu', ['link1.com','link1'], ['link2.com','link2'])

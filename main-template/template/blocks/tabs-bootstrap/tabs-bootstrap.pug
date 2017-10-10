@@ -1,0 +1,20 @@
+mixin tabs-bootstrap
+	ul.nav.nav-tabs#myTab(role="tablist")
+		li.nav-item
+			a.nav-link.active#home-tab(data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-expanded="true") Новое в каталоге
+		li.nav-item
+			a.nav-link#home-tab(data-toggle="tab" href="#tab2" role="tab" aria-controls="home" aria-expanded="true") Лекарственные средства
+		li.nav-item
+			a.nav-link#home-tab(data-toggle="tab" href="#tab3" role="tab" aria-controls="home" aria-expanded="true") Биологически активные добавки
+		li.nav-item
+			a.nav-link#home-tab(data-toggle="tab" href="#tab4" role="tab" aria-controls="home" aria-expanded="true") Пишевые продукты
+	// Содержимое табов 
+	.tab-content#myTabContent
+		.tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="home-tab")
+			+block__main-tabs-item
+		.tab-pane.fade#tab2(role="tabpanel" aria-labelledby="home-tab")
+			+block__main-tabs-item
+		.tab-pane.fade#tab3(role="tabpanel" aria-labelledby="home-tab")
+			+block__main-tabs-item
+		.tab-pane.fade#tab4(role="tabpanel" aria-labelledby="home-tab")
+			+block__main-tabs-item

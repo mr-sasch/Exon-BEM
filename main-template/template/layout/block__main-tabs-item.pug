@@ -1,0 +1,13 @@
+mixin block__main-tabs-item
+	.main-tabs-item
+		.main-tabs-item__text
+			.main-tabs-item__text-title Лекарственные средства
+			.main-tabs-item__text-txt Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля качества. Высококвалифицированный персонал выполняет работы по входному, промежуточному контролю
+			.main-tabs-item__text-btn
+				+button-link-colored('page-main__btn-to-catalog switch-on', '#', 'Смотреть в каталоге')
+		.main-tabs-item__slider
+			// Слайдер в табах
+			include ../blocks/slider-slick-mult/slider-slick-mult.pug
+			+slider-slick-mult('theme-exon', ['#','template-images/main-page-slider-II__img1.png','Сироп "РОЗАВИТ"','Средство, регулирующее метаболические процессы'], ['#','template-images/main-page-slider-II__img2.png','Подорожник с витамином C','Средство, регулирующее метаболические процессы'], ['#','template-images/main-page-slider-II__img2.png','Подорожник с витамином C','Средство, регулирующее метаболические процессы'])
+		.main-tabs-item__text-btn
+			+button-link-colored('page-main__btn-to-catalog switch-off', '#', 'Смотреть в каталоге')

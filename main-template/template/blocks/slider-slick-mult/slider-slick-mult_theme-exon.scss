@@ -1,0 +1,108 @@
+@import "/home/xander/GitHub/Exon-BEM/main-template/styles/vars.scss";
+
+/* стилизуем слайдер */
+	/* стрелки */
+.theme-exon .slick-arrow {
+  height: 20px;
+  width: 20px;
+	background-color: rgba(235, 32, 4, 0);
+	border: 1px solid $grey;
+	transform: rotate(45deg);
+	transition: .2s ease;
+	outline: none;
+	margin-bottom: 30px;
+}
+.theme-exon .slick-prev {
+	border-top: none;
+	border-right: none;
+}
+.theme-exon .slick-next {
+	border-left: none;
+	border-bottom: none;
+}
+.theme-exon .slick-arrow:hover {
+	border-color: $blue;
+}
+	/* /стрелки */
+
+	/* буллеты */
+.theme-exon li button {
+	height: 8px; width: 8px;
+	box-sizing: border-box;
+	border: 1px solid $grey;
+	border-radius: 10px;
+	margin: 6px;
+	transition: .2s ease;
+}
+.theme-exon li.slick-active button,
+.theme-exon li button:hover {
+	border-color: $blue;
+	background-color: $blue;
+}
+	/* /буллеты */
+
+	/* Айтемы */
+.theme-exon	.slider-slick-mult__item.slick-slide {
+  text-align: center;
+	color: $grey;
+	padding: 30px 60px;
+	width: 347px; height: 600px;
+	position: relative;
+	z-index: 100;
+	background-color: #fff;
+}
+.theme-exon	.slider-slick-mult__item.slick-slide:hover {
+	text-decoration: none;
+}
+.slider-slick-mult__img {
+	margin: auto;
+}
+		/* Обводка градиентом */
+.theme-exon	.slider-slick-mult__item.slick-slide:before,
+.theme-exon	.slider-slick-mult__item.slick-slide:after {
+	content: '';
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	border-radius: 10px;
+}
+.theme-exon	.slider-slick-mult__item.slick-slide:before {
+	background: linear-gradient($blue, $green);
+	z-index: -2;
+	opacity: 0;
+	transition: .3s ease;
+}
+.theme-exon	.slider-slick-mult__item.slick-slide:hover:before {
+	opacity: 1;
+}
+.theme-exon	.slider-slick-mult__item.slick-slide:after {
+	background-color: #fff;
+	margin: 2px;
+	z-index: -1;
+}
+		/* /Обводка градиентом */
+	/* /Айтемы */
+
+	/* Текст */
+.slider-slick-mult__txt {
+	position: absolute;
+	left: 0; right: 0;
+	padding: 0 60px;
+	top: 450px;
+	bottom: 0;
+}
+.theme-exon .slider-slick-mult__title {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;
+	text-align: center;
+}
+.theme-exon .slider-slick-mult__text {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 25px;
+	margin-top: 15px;
+}
+	/* /Текст */
+
+
+/* /стилизуем слайдер */

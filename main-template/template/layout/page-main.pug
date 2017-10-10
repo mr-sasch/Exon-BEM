@@ -6,3 +6,8 @@ block content
 	//- Подключаем миксины на странице
 	include ../blocks/main-slider-slick/slider-slick.pug
 	+main-slider-slick('main-slider-slick__theme-exon', ['template-images/main-page-slider__img.png', 'Качество', 'Производство лекарственных средств соответствует стандарту GMP'], ['template-images/main-page-slider__img.png', 'Качество', 'Производство лекарственных средств соответствует стандарту GMP'], ['template-images/main-page-slider__img.png', 'Качество', 'Производство лекарственных средств соответствует стандарту GMP'])
+	// Блок с табами 
+	.page-main-tabs.inn_padd
+		.main-tabs__inner.site-width
+			// Табы 
+			+tabs-bootstrap

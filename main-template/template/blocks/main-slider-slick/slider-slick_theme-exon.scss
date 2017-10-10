@@ -1,3 +1,81 @@
+@import "/home/xander/GitHub/Exon-BEM/main-template/styles/vars.scss";
+
+/* Масштабирование изображения по высоте */
+.main-slider-slick__theme-exon .slick-slide img {
+	height: 100%;
+}
+/* /Масштабирование изображения по высоте */
+
+/* Блок с текстом */
+.slick-initialized .slick-slide {
+	position: relative;
+}
+.main-slider__txt {
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%;
+	min-width: 320px;
+  height: 570px;
+	background-color: rgba(#4fb1f6, 0.7);
+	border-radius: 0 0 0 150px;
+}
+.main-slider__txt-title {
+  font-family: 'Roboto Slab', serif;
+	font-size: 74px;
+	color: #fff;
+	position: absolute;
+	top: 35%;
+	left: 100px;
+}
+.main-slider__txt-text {
+  font-family: 'Roboto Slab', serif;
+	font-size: 30px;
+	color: #fff;
+	max-width: 600px;
+	position: absolute;
+	top: 55%;
+	left: 100px;
+}
+/* Адаптация */
+@media screen and (max-width: 1270px) {
+	.main-slider__txt-title {
+		top: 15%;
+	}
+	.main-slider__txt-text {
+		top: 40%;
+	}
+	.main-slider__txt-title,
+	.main-slider__txt-text {
+		left: 10%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.main-slider__txt-title {
+		font-size: 50px;
+	}
+	.main-slider__txt-text {
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.main-slider__txt {
+		height: 247px;
+		border-radius: 0 0 0 100px;
+	}
+	.main-slider__txt-title {
+		font-size: 35px;
+	}
+	.main-slider__txt-text {
+		font-size: 15px;
+	}
+}
+/* /Адаптация */
+
+
+/* /Блок с текстом */
+
+
+/* общие свойства кнопок Назад/Вперед */
 .main-slider-slick__theme-exon .slick-prev,
 .main-slider-slick__theme-exon .slick-arrow {
 	position: relative;
@@ -9,10 +87,12 @@
 	z-index: 100;
 	outline: none;
 	cursor: pointer;
-	margin-top: -80px;
+	margin: 0 30px;
+	margin-top: -34px;
 }
 
 /* Стрелка НАЗАД */
+	/* кнопка серая */
 .main-slider-slick__theme-exon .slick-prev:before {
 	content: '';
 	position: absolute;
@@ -27,6 +107,7 @@
 	transition: .2s ease;
 	z-index: 100;
 }
+	/* кнопка синяя */
 .main-slider-slick__theme-exon .slick-prev:after {
 	content: '';
 	position: absolute;
@@ -88,8 +169,9 @@
 	display: -ms-flex;
 	display: flex;
 	align-items: center;
-	margin-top: -90px;
+	margin-top: -35px;
 }
+/* белая подложка */
 .main-slider-slick__theme-exon .slick-dots button {
 	position: relative;
 	width: 60px; height: 60px;
@@ -97,9 +179,10 @@
 	color: rgba(184, 15, 14, 0);
 	background-color: #fff;
 	border: none;
-	margin: 0 25px;
+	margin: 0 20px;
 	outline: none;
 }
+/* синяя кнопка */
 .main-slider-slick__theme-exon .slick-dots button:before {
 	content: '';
 	position: absolute;
@@ -116,13 +199,84 @@
 .main-slider-slick__theme-exon .slick-dots button:hover:before {
 	opacity: 1;
 }
-.main-slider-slick__theme-exon {
-
-}
-.main-slider-slick__theme-exon {
-
-}
-.main-slider-slick__theme-exon {
-
-}
 /* /Буллеты */
+
+/* Настраиваем высоту вложенных контейнеров */
+.slick-list {
+	height: 100% !important;
+}
+.slick-track {
+    height: 100% !important;
+}
+/* /Настраиваем высоту вложенных контейнеров */
+
+/* Адаптация */
+@media screen and (max-width: 600px) {
+	.main-slider-slick__theme-exon {
+		height: 340px;
+	}
+	/* компенсируем вертикальное смещение буллетов и стрелок */
+	// .main-slider-slick__theme-exon .slick-dots {
+	// 	margin-top: -34px;
+	// }
+	.main-slider-slick__theme-exon .slick-dots,
+	.main-slider-slick__theme-exon .slick-prev,
+	.main-slider-slick__theme-exon .slick-arrow {
+		margin-top: -34px;
+	}
+	/* /компенсируем вертикальное смещение буллетов и стрелок */
+	/* расстояния между кнопками */
+	.main-slider-slick__theme-exon .slick-dots button {
+		margin: 0 10px;
+	}
+	.main-slider-slick__theme-exon .slick-prev,
+	.main-slider-slick__theme-exon .slick-arrow {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	/* /расстояния между кнопками */
+}
+
+@media screen and (max-width: 480px) {
+	/* уменьшаем размеры кнопок */
+		/* Вперед/Назад */
+	.main-slider-slick__theme-exon .slick-prev,
+	.main-slider-slick__theme-exon .slick-prev:before,
+	.main-slider-slick__theme-exon .slick-prev:after,
+	.main-slider-slick__theme-exon .slick-next,
+	.main-slider-slick__theme-exon .slick-next:before,
+	.main-slider-slick__theme-exon .slick-next:after {
+		height: 34px; width: 34px;
+	}
+	.main-slider-slick__theme-exon .slick-prev:before,
+	.main-slider-slick__theme-exon .slick-prev:after,
+	.main-slider-slick__theme-exon .slick-next:before,
+	.main-slider-slick__theme-exon .slick-next:after {
+		background-size: 20px 20px;
+	}
+		/* /Вперед/Назад */
+
+		/* Буллеты */
+			/* белая подложка */
+	.main-slider-slick__theme-exon .slick-dots button {
+		height: 29px; width: 29px;
+	}
+			/* синяя кнопка */
+	.main-slider-slick__theme-exon .slick-dots button:before {
+		height: 20px; width: 20px;
+	}
+		/* /Буллеты */
+	/* /уменьшаем размеры кнопок */
+
+	/* компенсируем вертикальное смещение буллетов и стрелок */
+	.main-slider-slick__theme-exon .slick-dots,
+	.main-slider-slick__theme-exon .slick-prev,
+	.main-slider-slick__theme-exon .slick-arrow {
+		margin-top: -16px;
+	}
+	/* /компенсируем вертикальное смещение буллетов и стрелок */
+
+}
+
+
+/* /Адаптация */

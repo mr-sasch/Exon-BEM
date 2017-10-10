@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";AAAgB,2BAA2B;AAC3B,6BAA6B",
+"mappings": ";AAAgB,2BAA2B;AAC3B,6BAA6B;AAC5B,6BAA6B",
 "sources": ["vars.scss"],
 "names": [],
 "file": "vars.css"

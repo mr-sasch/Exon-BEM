@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;kCACmC;EAClC,MAAM,EAAE,IAAI;;AAEb;yBAC0B;EACtB,YAAY,EAAE,sBAAsB",
+"sources": ["tabs-bootstrap.scss"],
+"names": [],
+"file": "tabs-bootstrap.css"
+}

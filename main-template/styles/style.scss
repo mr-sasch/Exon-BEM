@@ -37,11 +37,172 @@ q {
 /* Главный шаблон "Шапка - Футер" */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/style/page-template.scss";
 /* Главная страница */
+
 /* Slick Slider - выравнивание буллетов и стрелок */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/main-slider-slick/slider-slick_bullets-centered.scss";
 /* /Slick Slider - выравнивание буллетов и стрелок */
 /* Slick Slider - стилизация */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/main-slider-slick/slider-slick_theme-exon.scss";
 /* /Slick Slider - стилизация */
+
+/* Slick Slider в табах */
+/* Slick Slider - выравнивание буллетов и стрелок */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/slider-slick-mult/slider-slick-mult.scss";
+/* /Slick Slider - выравнивание буллетов и стрелок */
+/* Slick Slider - стилизация */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/slider-slick-mult/slider-slick-mult_theme-exon.scss";
+/* /Slick Slider - стилизация */
+/* /Slick Slider в табах */
+
+/* Главная - Блок с табами */
+	/* Раскладка блока */
+.main-tabs__inner {
+	margin: auto;
+}
+.page-main-tabs {
+	position: relative;
+}
+	/* /Раскладка блока */
+	/* Раскладка Айтема таба */
+.main-tabs-item {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.main-tabs-item__text {
+	width: 50%;
+}
+.main-tabs-item__slider {
+	position: absolute;
+	left: 50%; right: 0;
+}
+	/* /Раскладка Айтема таба */
+
+	/* Кнопка */
+.page-main__btn-to-catalog {
+	width: 350px; height: 60px;
+	font-size: 28px;
+	font-weight: 300;
+	color: $grey;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: center;
+}
+.page-main__btn-to-catalog:hover {
+	color: $grey;
+}
+.page-main__btn-to-catalog.switch-off {
+	display: none;
+}
+	/* /Кнопка */
+
+	/* Текст */
+.main-tabs-item__text {
+	padding-top: 50px;
+}
+.main-tabs-item__text-title {
+	font-family: 'Roboto Slab', serif;
+	font-size: 72px;
+	line-height: 90px;
+	background: linear-gradient(to right,$green,$blue);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.main-tabs-item__text-txt {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 36px;
+	margin: 50px 0;
+}
+	/* /Текст */
+
+/* Адаптация содержимого таба */
+@media screen and (max-width: 1200px) {
+	.main-tabs-item__text-title {
+		font-size: 60px;
+	}
+}
+@media screen and (max-width: 990px) {
+.main-tabs-item__text-title {
+    font-size: 50px;
+		line-height: 60px;
+	}
+}
+@media screen and (max-width: 820px) {
+	.main-tabs-item {
+    flex-direction: column;
+	}
+	.main-tabs-item__text {
+		width: 100%;
+	}
+	.main-tabs-item__slider {
+		position: relative;
+		left: inherit; right: inherit;
+		width: 347px;
+		margin: auto;
+	}
+	.theme-exon .slider-slick-mult__item.slick-slide {
+		width: 347px !important;
+	}
+	.theme-exon .slider-slick-mult__item.slick-slide:before {
+		opacity: 1;
+	}
+	.page-main__btn-to-catalog.switch-on {
+		display: none;
+	}
+	.page-main__btn-to-catalog.switch-off {
+		display: flex;
+    margin: auto;
+    margin-top: 40px;
+	}
+	.slider-slick-mult .slick-list {
+    order: -1;
+    margin-bottom: 30px;
+	}
+}
+@media screen and (max-width: 660px) {
+.main-tabs-item__text-title {
+		line-height: 60px;
+		font-size: 36px;
+	}
+.main-tabs-item__text-txt {
+		line-height: 26px;
+		font-size: 18px;
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 420px) {
+	.main-tabs-item__text-title {
+    font-size: 38px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.page-main__btn-to-catalog {
+    width: 300px;
+	}
+	.theme-exon .slider-slick-mult__item.slick-slide {
+    width: 300px !important;
+	}
+	.main-tabs-item__slider {
+    width: 300px;
+	}
+	.slider-slick-mult__txt {
+		padding: 0 10px;
+	}
+	.theme-exon .slider-slick-mult__item.slick-slide {
+		padding: 30px 10px;
+	}
+}
+/* /Адаптация содержимого таба */
+
+/* Стилизация табов */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/tabs-bootstrap/tabs-bootstrap.scss";
+
+/* /Главная - блок с табами */
+
 
 /* /Главная страница */

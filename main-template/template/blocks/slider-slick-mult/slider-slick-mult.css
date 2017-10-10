@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* выравниваем буллеты по центру */
+.slider-slick-mult .slick-list {
+  order: 3; }
+
+.slider-slick-mult .slick-slider {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.slider-slick-mult .slick-prev {
+  order: 0; }
+
+.slider-slick-mult .slick-dots {
+  order: 1; }
+
+.slider-slick-mult .slick-next {
+  order: 2; }
+
+/* /выравниваем буллеты по центру */
+/* обнуляем стили и выравниваем буллеты в горизонт */
+/* буллеты */
+.slider-slick-mult .slick-dots {
+  order: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex; }
+
+.slider-slick-mult .slick-dots button {
+  color: rgba(191, 134, 227, 0);
+  background-color: rgba(217, 16, 213, 0);
+  padding: 0;
+  outline: none; }
+
+/* /буллеты */
+/* стрелки */
+.slider-slick-mult .slick-prev,
+.slider-slick-mult .slick-next {
+  color: rgba(129, 123, 19, 0); }
+
+/* /стрелки */
+.slider-slick-mult__item {
+  outline: none; }
+
+/* /обнуляем стили и выравниваем буллеты в горизонт */
+
+/*# sourceMappingURL=slider-slick-mult.css.map */

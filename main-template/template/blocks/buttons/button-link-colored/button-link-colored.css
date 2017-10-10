@@ -41,4 +41,7 @@ a.button--gradient {
   display: flex;
   align-items: center; }
 
+a.button--gradient:hover {
+  text-decoration: none; }
+
 /*# sourceMappingURL=button-link-colored.css.map */
