@@ -1,20 +1,25 @@
 /*
 Error: Undefined variable: "$grey".
-        on line 4 of ./template/layout/footer/style/footer.scss
+        on line 5 of ./template/blocks/read-more-bootstrap/read-more-bootstrap.scss
 
-1: .footer {
-2: 	padding-top: 70px;
-3: 	background-color: #fff;
-4: 	color: $grey;
-5: }
-6: .footer__inner {
-7: 	position: relative;
-8: 	margin: auto;
+1: .btn {
+2: 	padding: 0;
+3: }
+4: .btn-primary {
+5: 	color: $grey !important;
+6: 	background-color: rgba(47, 43, 115, 0) !important;
+7: 	border-color: rgba(147, 90, 12, 0) !important;
+8: 	outline: none !important;
 9: }
+10: .btn-primary:focus {
 
 Backtrace:
-./template/layout/footer/style/footer.scss:4
+./template/blocks/read-more-bootstrap/read-more-bootstrap.scss:5
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/list_literal.rb:75:in `map'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/list_literal.rb:75:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -67,4 +72,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$grey\".\A         on line 4 of ./template/layout/footer/style/footer.scss\A \A 1: .footer {\A 2: 	padding-top: 70px;\A 3: 	background-color: #fff;\A 4: 	color: $grey;\A 5: }\A 6: .footer__inner {\A 7: 	position: relative;\A 8: 	margin: auto;\A 9: }"; }
+  content: "Error: Undefined variable: \"$grey\".\A         on line 5 of ./template/blocks/read-more-bootstrap/read-more-bootstrap.scss\A \A 1: .btn {\A 2: 	padding: 0;\A 3: }\A 4: .btn-primary {\A 5: 	color: $grey !important;\A 6: 	background-color: rgba(47, 43, 115, 0) !important;\A 7: 	border-color: rgba(147, 90, 12, 0) !important;\A 8: 	outline: none !important;\A 9: }\A 10: .btn-primary:focus {"; }

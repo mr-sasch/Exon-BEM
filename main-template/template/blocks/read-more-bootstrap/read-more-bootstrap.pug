@@ -1,0 +1,4 @@
+mixin read-more-bootstrap(btn, text)
+	.collapse#collapseExample
+		.card.card-body= text
+	a.btn.btn-primary(data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample")= btn

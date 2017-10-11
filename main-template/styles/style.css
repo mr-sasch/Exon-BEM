@@ -1,7 +1,4 @@
 @charset "UTF-8";
-html {
-  background-color: #6eb47f; }
-
 body {
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif; }
@@ -25,6 +22,7 @@ q {
 /* Глобальный серый цвет */
 /* Глобальный голубой цвет */
 /* Глобальный зеленый цвет */
+/* Красный цвет */
 /* /Переменные */
 /* Общий шаблон кнопки со ссылкой */
 a.button-link {
@@ -208,6 +206,7 @@ a.button--gradient:hover {
 /* Глобальный серый цвет */
 /* Глобальный голубой цвет */
 /* Глобальный зеленый цвет */
+/* Красный цвет */
 .header-bottom {
   background-color: #fff;
   padding-top: 15px; }
@@ -602,8 +601,6 @@ a.online-order:hover {
 /* footer */
 /* Общие стили футера */
 .footer {
-  margin-top: 150px;
-  /* временный отступ */
   padding-top: 70px;
   background-color: #fff;
   color: #4a4a4a; }
@@ -868,6 +865,7 @@ a.online-order:hover {
 /* Глобальный серый цвет */
 /* Глобальный голубой цвет */
 /* Глобальный зеленый цвет */
+/* Красный цвет */
 /* Масштабирование изображения по высоте */
 .main-slider-slick__theme-exon .slick-slide img {
   height: 100%; }
@@ -1194,6 +1192,7 @@ a.online-order:hover {
 /* Глобальный серый цвет */
 /* Глобальный голубой цвет */
 /* Глобальный зеленый цвет */
+/* Красный цвет */
 /* стилизуем слайдер */
 /* стрелки */
 .theme-exon .slick-arrow {
@@ -1325,7 +1324,8 @@ a.online-order:hover {
 .main-tabs-item__slider {
   position: absolute;
   left: 50%;
-  right: 0; }
+  right: 0;
+  padding-left: 30px; }
 
 /* /Раскладка Айтема таба */
 /* Кнопка */
@@ -1388,7 +1388,8 @@ a.online-order:hover {
     left: inherit;
     right: inherit;
     width: 347px;
-    margin: auto; }
+    margin: auto;
+    padding-left: 0; }
 
   .theme-exon .slider-slick-mult__item.slick-slide {
     width: 347px !important; }
@@ -1483,6 +1484,287 @@ a.online-order:hover {
     margin-bottom: -20px; } }
 /* /Адаптация */
 /* /Главная - блок с табами */
+/* Главная - Блок новостей */
+/* Раскладка */
+.page-main-news {
+  margin: 50px 0;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background: url("/home/xander/GitHub/Exon-BEM/main-template/template/layout/template-images/main-page-news__bg.png") center; }
+
+.page-main-news__col {
+  width: 50%; }
+
+.page-main-news__row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between; }
+
+.page-main-news__item-img {
+  position: relative; }
+
+.main-news__inner {
+  margin: auto; }
+
+/* /Раскладка */
+/* Стилизация */
+.page-main-news {
+  color: #fff; }
+
+.page-main-news__title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  margin-bottom: 40px; }
+
+/* Кнопка "Акция" */
+/* Раскладка */
+.page-main-news__item-img-action {
+  position: absolute;
+  right: 130px;
+  top: -16px; }
+
+/* /Раскладка */
+.page-main-news__item-img-action {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  border-radius: 50px;
+  background-color: #e7001f;
+  display: inline-block;
+  padding: 3px 17px;
+  display: none; }
+
+.page-main-news__item-img-action.switch-on {
+  display: inline-block; }
+
+.page-main-news__list-item-action {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  border-radius: 50px;
+  background-color: #e7001f;
+  display: inline-block;
+  padding: 0px 10px;
+  display: none;
+  margin-left: 20px; }
+
+a.page-main-news__list-item-action.switch-on {
+  display: inline-block; }
+
+/* /Кнопка "Акция" */
+/* Кнопка "Все новости" */
+a.button-link.btn-page-main-all-news {
+  color: #fff !important;
+  font-size: 28px !important;
+  border: 2px solid;
+  padding: 11px 36px; }
+
+.btn-page-main-all-news__container.switch-off {
+  display: none; }
+
+a.button-link.btn-page-main-all-news:hover {
+  color: #fff !important;
+  border-color: #fff; }
+
+.btn-page-main-all-news__list {
+  display: inline-block;
+  margin-top: 30px; }
+
+/* Кнопка "Все новости" */
+/* Карточка новости */
+a.page-main-news__item {
+  color: #fff; }
+
+.page-main-news__item-date {
+  margin: 30px 0;
+  font-size: 14px;
+  font-weight: 300; }
+
+.page-main-news__item-snippet-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px; }
+
+.page-main-news__item-snippet-description {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 500px; }
+
+.page-main-news__list-item {
+  font-size: 18px;
+  font-weight: 300; }
+
+/* /Карточка новости */
+/* Список новостей */
+a.page-main-news__list-item {
+  color: #fff; }
+
+.page-main-news__list-item-title {
+  font-size: 18px;
+  font-weight: 300; }
+
+.page-main-news__list-item-date {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.page-main-news__list-separator {
+  height: 1px;
+  border: 1px solid #fff;
+  margin: 60px 0 20px; }
+
+/* /Список новостей */
+/* /Стилизация */
+/* Адаптация */
+@media screen and (max-width: 1200px) {
+  .page-main-news__item-img {
+    padding-right: 30px; }
+
+  img.page-main-news__item-img-image {
+    width: 100%; } }
+@media screen and (max-width: 600px) {
+  .page-main-news__row {
+    flex-direction: column; }
+
+  .page-main-news__col {
+    width: 100%; }
+
+  .page-main-news__item-img {
+    padding-right: 0; }
+
+  .page-main-news__col.switch {
+    display: none; }
+
+  .btn-page-main-all-news__container.switch-off {
+    display: block;
+    text-align: center;
+    margin-top: 50px; }
+
+  .page-main-news__title {
+    font-size: 36px; }
+
+  .page-main-news__item-date {
+    font-size: 14px; }
+
+  .page-main-news__item-snippet-title {
+    font-size: 24px; }
+
+  .page-main-news__item-snippet-description {
+    font-size: 18px; }
+
+  .page-main-news__item-img-action {
+    right: 30px; } }
+/* /Адаптация */
+/* /Главная - Блок новостей */
+/* Главная - Текстовый блок */
+.btn {
+  padding: 0; }
+
+.btn-primary {
+  color: #4a4a4a !important;
+  background-color: rgba(47, 43, 115, 0) !important;
+  border-color: rgba(147, 90, 12, 0) !important;
+  outline: none !important; }
+
+.btn-primary:focus {
+  box-shadow: none; }
+
+.card {
+  border: none; }
+
+.card-body {
+  padding: 0; }
+
+.page-main-text {
+  padding-bottom: 100px !important;
+  padding-top: 80px; }
+
+.main-text__inner {
+  margin: auto; }
+
+.main-text__title {
+  font-size: 48px;
+  font-family: 'Roboto Slab', serif;
+  color: #4a4a4a;
+  margin-bottom: 60px; }
+
+.main-text__text {
+  font-size: 24px;
+  font-weight: 300; }
+
+/* Стилизация блока "Подробнее" */
+.card.card-body {
+  font-size: 24px;
+  font-weight: 300;
+  color: #4a4a4a; }
+
+.btn-primary {
+  color: #4fb1f6 !important;
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 300; }
+
+.btn-primary:hover {
+  text-decoration: underline; }
+
+/* /Стилизация блока "Подробнее" */
+/* Адаптация */
+@media screen and (max-width: 480px) {
+  .main-text__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    line-height: 40px; }
+
+  .main-text__text,
+  .card.card-body {
+    font-size: 18px; }
+
+  .btn-primary {
+    font-size: 18px; }
+
+  .page-main-text {
+    padding-bottom: 50px !important;
+    padding-top: 0; } }
+/* /Адаптация */
+/* /Главная - Текстовый блок */
+/* Принять участие в опросе */
+.main-interview__inner {
+  margin: auto;
+  text-align: center;
+  padding: 40px 0; }
+
+.page-main-interview__btn {
+  margin: 30px 0; }
+
+.page-main-interview {
+  background: url("/home/xander/GitHub/Exon-BEM/main-template/template/layout/template-images/main-page-interview.png") center;
+  background-size: cover; }
+
+.page-main-interview__txt {
+  font-size: 48px;
+  font-family: 'Roboto Slab', serif;
+  color: #fff; }
+
+.page-main-interview__text2 {
+  display: none; }
+
+/* Адаптация */
+@media screen and (max-width: 700px) {
+  .page-main-interview__text1 {
+    display: none; }
+
+  .page-main-interview__text2 {
+    display: inline-block; }
+
+  .page-main-text {
+    padding-bottom: 50px; } }
+@media screen and (max-width: 500px) {
+  .page-main-interview__txt {
+    font-size: 36px; } }
+@media screen and (max-width: 380px) {
+  .page-main-interview__txt {
+    font-size: 30px; } }
+/* /Адаптация */
+/* /Принять участие в опросе */
 /* /Главная страница */
 
 /*# sourceMappingURL=style.css.map */

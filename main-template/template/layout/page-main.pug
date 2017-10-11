@@ -11,3 +11,56 @@ block content
 		.main-tabs__inner.site-width
 			// Табы 
 			+tabs-bootstrap
+	// Блок новостей
+	.page-main-news.inn_padd
+		.main-news__inner.site-width
+			.page-main-news__title Новости
+			.page-main-news__row
+				.page-main-news__col
+					// Превью новости с картинкой
+					a.page-main-news__item(href='#')
+						.page-main-news__item-img
+							img.page-main-news__item-img-image(src='template-images/main-page-news__image.png')
+							// (лэйбл "акция" включается добавлением класса switch-on)
+							.page-main-news__item-img-action.switch-on Акция
+						.page-main-news__item-date 11 августа 2017
+						.page-main-news__item-snippet
+							.page-main-news__item-snippet-title Участие в выставке
+							.page-main-news__item-snippet-description Для акционеров ОАО "ЭКЗОН" об участии во внеочередном общем собрании акционеров
+					// Кнопка "Все новости" для мобильной версии
+					.btn-page-main-all-news__container.switch-off
+						+button-link('btn-page-main-all-news', '#', 'Все новости')
+				.page-main-news__col.switch
+					// Список последних новостей
+					.page-main-news__list
+						// айтем новости
+						a.page-main-news__list-item(href='#')
+							.page-main-news__list-item-title Для акционеров ОАО "ЭКЗОН" об участии во внеочередном общем собрании акционеров
+							.page-main-news__list-item-date 11 августа 2017
+								.page-main-news__list-item-action Акция
+							// разделитель
+							.page-main-news__list-separator
+						// айтем новости
+						a.page-main-news__list-item(href='#')
+							.page-main-news__list-item-title Для акционеров ОАО "ЭКЗОН" об участии во внеочередном общем собрании акционеров
+							.page-main-news__list-item-date 11 августа 2017
+								// (лэйбл "акция" включается добавлением класса switch-on)
+								.page-main-news__list-item-action.switch-on Акция
+							// разделитель
+							.page-main-news__list-separator
+						// айтем новости
+						a.page-main-news__list-item(href='#')
+							.page-main-news__list-item-title Для акционеров ОАО "ЭКЗОН" об участии во внеочередном общем собрании акционеров
+							.page-main-news__list-item-date 11 августа 2017
+								.page-main-news__list-item-action Акция
+					// Кнопка "Все новости"
+					+button-link('btn-page-main-all-news btn-page-main-all-news__list switch-on', '#', 'Все новости')
+	// Текстовый блок
+	.page-main-text.inn_padd
+		.main-text__inner.site-width
+			.main-text__title Лекарственные препараты и пищевые добавки
+			.main-text__text Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.
+			// Кнопка "Подробнее" с текстом
+			+read-more-bootstrap('Подробно', 'Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.')
+	// Принять участие в опросе
+	+page-main-interview

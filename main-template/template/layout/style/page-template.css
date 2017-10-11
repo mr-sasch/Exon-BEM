@@ -84,6 +84,7 @@
 /* Глобальный серый цвет */
 /* Глобальный голубой цвет */
 /* Глобальный зеленый цвет */
+/* Красный цвет */
 .header-bottom {
   background-color: #fff;
   padding-top: 15px; }
@@ -478,8 +479,6 @@ a.online-order:hover {
 /* footer */
 /* Общие стили футера */
 .footer {
-  margin-top: 150px;
-  /* временный отступ */
   padding-top: 70px;
   background-color: #fff;
   color: #4a4a4a; }
