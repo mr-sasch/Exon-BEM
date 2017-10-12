@@ -1,0 +1,21 @@
+.news-all__inner {
+	margin: auto;
+}
+.news-all-small-head {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.news-sort-by-date {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.news-sort-by-date__switch-old-first.switch-off {
+	display: none;
+}
+.news-sort-by-date__switch-new-first {
+	font-size: 18px;
+	font-weight: 300;
+}

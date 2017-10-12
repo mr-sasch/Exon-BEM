@@ -1,0 +1,41 @@
+.news-subscribe {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
+.news-subscribe__text {
+	margin-right: 30px;
+	color: $grey;
+	font-size: 18px;
+	font-weight: 300;
+}
+.news-subscribe-form {
+	position: relative;
+	width: 350px; height: 30px;
+	border: 1px solid $grey-brd;
+	border-radius: 50px;
+}
+.news-subscribe-form__input {
+	font-size: 16px;
+	font-weight: 300;
+	color: $grey;
+	position: absolute;
+	left: 20px; right: 146px;
+	border: none;
+	height: 100%;
+	outline: none;
+}
+.news-subscribe-form__submit {
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+	position: absolute;
+	height: 30px; width: 146px;
+	top: -1px; right: -2px;
+	padding-top: 0; 
+	border: 1px solid $green-d;
+	border-radius: 50px;
+	background-color: $green-d;
+	outline: none;
+}

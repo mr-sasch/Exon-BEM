@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.main-slider-slick.page__title {
+  position: relative; }
+
+.page__title .main-slider__txt {
+  height: 360px; }
+
+.page__title .main-slider__txt-title {
+  top: 50%; }
+
+.page__title .main-slider-slick__item {
+  overflow: hidden; }
+
+.page__title-crumbs__inner.site-width {
+  margin: auto; }
+
+.page__title-crumbs.inn_padd {
+  position: absolute;
+  width: 100%;
+  top: 50%; }
+
+.page__title-crumbs__inner {
+  color: #fff;
+  font-size: 18px; }
+
+/* Стили крошек */
+.page__title-crumbs__main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+
+a.page__title-crumbs__main,
+a.page__title-crumbs__child {
+  display: inline-block;
+  color: #fff;
+  cursor: pointer; }
+
+.page__title-crumbs__fa {
+  margin: 0 10px; }
+
+/* /Стили крошек */
+
+/*# sourceMappingURL=page__title.css.map */

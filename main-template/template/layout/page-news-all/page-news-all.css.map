@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EAChB,MAAM,EAAE,IAAI;;AAEb,oBAAqB;EACpB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,QAAQ;EACjB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;;AAE/B,kBAAmB;EAClB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,QAAQ;EACjB,OAAO,EAAE,IAAI;;AAEd,+CAAgD;EAC/C,OAAO,EAAE,IAAI;;AAEd,oCAAqC;EACpC,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG",
+"sources": ["page-news-all.scss"],
+"names": [],
+"file": "page-news-all.css"
+}

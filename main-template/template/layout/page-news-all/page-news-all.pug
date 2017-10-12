@@ -1,0 +1,19 @@
+//- page-contacts.pug
+extends ../page-template.pug
+
+block content
+	+crumbs('template-images/news-all-title.png', 'Новости', ['#', 'Новости'])
+	// Содержимое страницы "Новости"
+	.news-all.inn_padd
+		.news-all__inner.site-width
+			.news-all-small-head
+				.news-all-small-head__col
+					+subscribe
+				.news-all-small-head__col
+					.news-sort-by-date
+						.news-sort-by-date__txt Сортировать по дате:
+						.news-sort-by-date__switch
+							.news-sort-by-date__switch-new-first Сначала свежие
+							.news-sort-by-date__switch-old-first.switch-off Сначала ранние
+						
+				

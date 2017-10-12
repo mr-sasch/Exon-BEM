@@ -1,3 +1,209 @@
+@charset "UTF-8";
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
+/* Раскладка */
+.contacts-main__inner,
+.contacts-other__inner {
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between; }
 
+.contacts-main {
+  position: relative;
+  background-color: #f2f2f2;
+  padding-top: 120px;
+  padding-bottom: 130px; }
+
+.contacts-main__col {
+  width: 50%; }
+
+/* /Раскладка */
+/* Стили */
+.contacts-title {
+  display: inline-block;
+  color: #4fb1f6;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px; }
+
+/* Главные контакты */
+.contacts-main__item-title {
+  margin-bottom: 5px; }
+
+.contacts-main__item {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 25px;
+  position: relative;
+  padding-right: 30px;
+  margin-bottom: 40px; }
+
+.contacts-receiption:before,
+.contacts-email:before,
+.contacts-requisites:before,
+.contacts-rejim:before,
+.contacts-address:before {
+  font-family: FontAwesome;
+  color: #4ab75e;
+  position: absolute;
+  left: 3px; }
+
+.contacts-rejim:before,
+.contacts-receiption:before {
+  content: '\f095'; }
+
+.contacts-email:before {
+  content: '\f0e0';
+  left: 0; }
+
+.contacts-requisites:before,
+.contacts-address:before {
+  content: "\f041"; }
+
+.contacts-main__col-title {
+  margin-bottom: 40px; }
+
+/* Форма */
+.contacts-form {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column; }
+
+.contacts-form__phone,
+.contacts-form__city,
+.contacts-form__face {
+  max-width: 550px;
+  height: 47px;
+  margin-bottom: 15px;
+  position: relative; }
+
+.contacts-form input {
+  padding: 9px 0 9px 50px;
+  background-color: #f2f2f2;
+  border: 1px solid #4a4a4a;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #4a4a4a;
+  outline: none;
+  width: 100%; }
+
+.contacts-form input:focus {
+  background-color: #fff; }
+
+.contacts-form__submit {
+  color: #fff !important;
+  border-color: #4ab75e !important;
+  background-color: #4ab75e !important;
+  max-width: 232px !important;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  padding-left: 0 !important; }
+
+.contacts-form__phone:before,
+.contacts-form__city:before,
+.contacts-form__face:before {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #4ab75e; }
+
+.contacts-form__phone:before {
+  content: '\f095'; }
+
+.contacts-form__city:before {
+  content: '\f0f7'; }
+
+.contacts-form__face:before {
+  content: '\f007'; }
+
+/* /Форма */
+/* Карта */
+.contacts-main__map {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 450px;
+  top: 560px; }
+
+/* /Карта */
+/* /Главные контакты */
+/* Другие контакты */
+.contacts-other {
+  border-bottom: 1px solid #4ab75e;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.contacts-other__item {
+  margin-bottom: 40px; }
+
+.contacts-other__col {
+  width: 50%; }
+
+.contacts-other__sub-item {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px; }
+
+.contacts-other-phone:before,
+.contacts-other-fax:before,
+.contacts-other-mail:before {
+  font-family: FontAwesome;
+  color: #4ab75e;
+  margin-right: 5px; }
+
+.contacts-other-phone:before {
+  content: '\f095'; }
+
+.contacts-other-fax:before {
+  content: '\f1ac'; }
+
+.contacts-other-mail:before {
+  content: '\f0e0'; }
+
+/* /Другие контакты */
+/* Адаптация */
+@media screen and (max-width: 790px) {
+  .contacts-main__map {
+    top: 620px; } }
+@media screen and (max-width: 610px) {
+  .contacts-main__inner, .contacts-other__inner {
+    flex-direction: column; }
+
+  .contacts-main__col,
+  .contacts-other__col {
+    width: 100% !important; }
+
+  .contacts-main__map {
+    position: relative;
+    width: 100%;
+    top: 60px;
+    left: 0; }
+
+  .contacts-form input {
+    align-self: center; } }
+@media screen and (max-width: 600px) {
+  .page__title .main-slider__txt {
+    height: 220px; }
+
+  .page__title-crumbs.inn_padd {
+    top: 70%; } }
+/* /Адаптация */
+/* /Стили */
 
 /*# sourceMappingURL=page-contacts.css.map */

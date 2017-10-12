@@ -55,6 +55,7 @@ q {
 }
 .page-main-tabs {
 	position: relative;
+	margin-bottom: 100px;
 }
 		/* /Раскладка блока */
 		/* Раскладка Айтема таба */
@@ -485,4 +486,15 @@ a.page-main-news__list-item {
 /* /Главная страница */
 
 /* Заголовок обычной страницы */
-@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page-title/page-title.scss";
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page__title/page__title.scss";
+
+/* Страница "Контакты" */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page-contacts/page-contacts.scss";
+/* /Страница "Контакты" */
+
+/* Страницы Новости(все) */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page-news-all/page-news-all.scss";
+	/* Стили блока "Подписаться на новости" */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/subscribe-page-news/subscribe-page-news.scss";
+	/* /Стили блока "Подписаться на новости" */
+/* /Страницы Новости(все) */

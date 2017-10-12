@@ -1,16 +1,16 @@
 mixin crumbs(picture, title, ...crumbs)
-	.main-slider-slick.page-title
+	.main-slider-slick.page__title
 		.main-slider-slick__item
 			img.main-slider__img(src= picture)
 			.main-slider__txt
 				.main-slider__txt-title= title
 			// Крошки		
-			.page-title-crumbs.inn_padd
-				.page-title-crumbs__inner.site-width
-					a.page-title-crumbs__main(href='#') Главная
+			.page__title-crumbs.inn_padd
+				.page__title-crumbs__inner.site-width
+					a.page__title-crumbs__main(href='#') Главная
 						each crumb in crumbs
-							i.fa.fa-angle-double-right.page-title-crumbs__fa(aria-hidden="true")
-							a.page-title-crumbs__child(href= crumb[0])= crumb[1]
+							i.fa.fa-angle-double-right.page__title-crumbs__fa(aria-hidden="true")
+							a.page__title-crumbs__child(href= crumb[0])= crumb[1]
 
 //- Пример вызова
 //- +menu-mobile('class-menu', ['link1.com','link1'], ['link2.com','link2'])
