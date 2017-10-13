@@ -1,0 +1,11 @@
+mixin news-all__previews-item(lnk, picture, title, description, date)
+	// Превью новости
+	.news-all__previews-item
+		// Картинка
+		.news-all__previews-item-img
+			img.news-all__previews-item-img__img(src= picture)
+		// Текст
+		a.news-all__previews-item-text(href= lnk)
+			.news-all__previews-item-text-title= title
+			.news-all__previews-item-text-description= description
+			.news-all__previews-item-text-date= date

@@ -7,12 +7,12 @@
 				li
 					+button-link('header-menu__button', '#', 'Каталог продукции')
 				li
-					+button-link('header-menu__button', '#', 'О Компании')
+					+button-link('header-menu__button', 'page-about-company.html', 'О Компании')
 				li
-					+button-link('header-menu__button', 'file:///home/xander/GitHub/Exon-BEM/main-template/template/layout/page-news-all.html', 'Новости')
+					+button-link('header-menu__button', 'page-news-all.html', 'Новости')
 		// Центр
 		.header-bottom__center
-			a.header-bottom-logo(href='file:///home/xander/GitHub/Exon-BEM/main-template/template/layout/page-main.html')
+			a.header-bottom-logo(href='page-main.html')
 				img.header-bottom-logo__img(src='template-images/header-logo.png')
 				.header-bottom-logo__text
 					.header-bottom-logo__text-text
@@ -26,7 +26,7 @@
 				li
 					+button-link('header-menu__button', '#', 'Партнерам')
 				li
-					+button-link('header-menu__button', 'file:///home/xander/GitHub/Exon-BEM/main-template/template/layout/page-contacts.html', 'Контакты').online-order
+					+button-link('header-menu__button', 'page-contacts.html', 'Контакты').online-order
 				li
 					+button-modal-colored('online-order', '#modal-box', 'Онлайн заявка')
 		.header-bottom__right-top.header-bottom__right-top-phone 

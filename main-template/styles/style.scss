@@ -497,4 +497,19 @@ a.page-main-news__list-item {
 	/* Стили блока "Подписаться на новости" */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/subscribe-page-news/subscribe-page-news.scss";
 	/* /Стили блока "Подписаться на новости" */
+	/* Стили блока "Сортировать по дате" */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/switch-order/switch-order.scss";
+	/* /Стили блока "Сортировать по дате" */
+	/* Превью новости */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/news-all__previews-item/news-all__previews-item.scss";
+	/* /Превью новости */
 /* /Страницы Новости(все) */
+
+/* Страница новости - Одинарная */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page-news-single/page-news-single.scss";
+/* /Страница новости - Одинарная */
+
+/* Страница "О компании" */
+@import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page-about-company/page-about-company.scss";
+
+/* /Страница "О компании" */

@@ -58,14 +58,14 @@
               <ul class="menu header-menu">
                 <li><a class="button-link header-menu__button" href="#">Каталог продукции</a>
                 </li>
-                <li><a class="button-link header-menu__button" href="#">О Компании</a>
+                <li><a class="button-link header-menu__button" href="page-about-company.html">О Компании</a>
                 </li>
-                <li><a class="button-link header-menu__button" href="file:///home/xander/GitHub/Exon-BEM/main-template/template/layout/page-news-all.html">Новости</a>
+                <li><a class="button-link header-menu__button" href="page-news-all.html">Новости</a>
                 </li>
               </ul>
             </div>
             <!-- Центр-->
-            <div class="header-bottom__center"><a class="header-bottom-logo" href="file:///home/xander/GitHub/Exon-BEM/main-template/template/layout/page-main.html"><img class="header-bottom-logo__img" src="template-images/header-logo.png"/>
+            <div class="header-bottom__center"><a class="header-bottom-logo" href="page-main.html"><img class="header-bottom-logo__img" src="template-images/header-logo.png"/>
                 <div class="header-bottom-logo__text">
                   <div class="header-bottom-logo__text-text">
                     <div class="header-bottom-logo__text-title">ОАО 
@@ -80,7 +80,7 @@
               <ul class="menu header-menu">
                 <li><a class="button-link header-menu__button" href="#">Партнерам</a>
                 </li>
-                <li><a class="button-link header-menu__button" href="file:///home/xander/GitHub/Exon-BEM/main-template/template/layout/page-contacts.html">Контакты</a>
+                <li><a class="button-link header-menu__button" href="page-contacts.html">Контакты</a>
                 </li>
                 <li>
                         <button class="button button--gradient online-order" data-target="#modal-box" href="" data-toggle="modal">Онлайн заявка</button>
@@ -139,7 +139,7 @@
       <!-- ***** /Хэдер ***** -->
       <!-- ***** Контент ***** -->
             <div class="main-slider-slick page__title">
-              <div class="main-slider-slick__item"><img class="main-slider__img" src="template-images/news-all-title.png"/>
+              <div class="main-slider-slick__item"><img class="main-slider__img" src="template-images/news-all__title.png"/>
                 <div class="main-slider__txt">
                   <div class="main-slider__txt-title">Новости</div>
                 </div>
@@ -151,7 +151,66 @@
             </div>
       <!-- Содержимое страницы "Новости"-->
       <div class="news-all inn_padd">
-        <div class="news-all__inner site-width"></div>
+        <div class="news-all__inner site-width">
+          <!-- Строка "Подписаться" и "Сортировка"-->
+          <div class="news-all-small-head">
+            <div class="news-all-small-head__col">
+                    <div class="news-subscribe">
+                      <div class="news-subscribe__text">Подписаться на новости</div>
+                      <form class="news-subscribe-form">
+                        <input class="news-subscribe-form__input" type="text" name="subscribe-name" id="subscribe-name" placeholder="Ваш e-mail"/>
+                        <input class="news-subscribe-form__submit" type="submit" value="Подписаться"/>
+                      </form>
+                    </div>
+            </div>
+            <div class="news-all-small-head__col">
+              <div class="news-sort-by-date">
+                <div class="news-sort-by-date__txt">Сортировать по дате:</div>
+                <div class="news-sort-by-date__switch"><a class="news-sort-by-date__switch-new-first" href="#">Сначала свежие</a><a class="news-sort-by-date__switch-old-first" href="#" style="display:none;">Сначала ранние</a></div>
+              </div>
+            </div>
+          </div>
+          <!-- Список новостей-->
+          <div class="news-all__previews">
+                  <!-- Превью новости-->
+                  <div class="news-all__previews-item">
+                    <!-- Картинка-->
+                    <div class="news-all__previews-item-img"><img class="news-all__previews-item-img__img" src="template-images/news-all__preview1.png"/></div>
+                    <!-- Текст--><a class="news-all__previews-item-text" href="page-news-single.html">
+                      <div class="news-all__previews-item-text-title">Международная специализированная выставка «Здравоохранение и Фармация EXPO-2017» в Ереване с 22 по 27 февраля</div>
+                      <div class="news-all__previews-item-text-description">Сотрудники отдела маркетинга ОАО «Экзон» приняли участие в специализированной выставке «Здравоохранение и Фармация EXPO-2017», которая проходила 22-27 февраля в Ереване. В рамках участия в выставке была проведена дегустация продукции, а также были достигнуты договоренности о поставке гематогена в Республику Армения.</div>
+                      <div class="news-all__previews-item-text-date">18.09.2016</div></a>
+                  </div>
+                  <!-- Превью новости-->
+                  <div class="news-all__previews-item">
+                    <!-- Картинка-->
+                    <div class="news-all__previews-item-img"><img class="news-all__previews-item-img__img" src="template-images/news-all__preview2.png"/></div>
+                    <!-- Текст--><a class="news-all__previews-item-text" href="page-news-single.html">
+                      <div class="news-all__previews-item-text-title">Международная специализированная выставка «Здравоохранение Беларуси-2017»</div>
+                      <div class="news-all__previews-item-text-description">24-26 марта в столице Республике Беларусь проходила международная  специализированная выставка «Здравоохранение Беларуси-2017», в которой ОАО «Экзон» традиционно приняло участие. В рамках участия в выставке, были достигнуты договоренности по поводу поставок продукции in-bulk для дальнейшего их производства на площадке ОАО «Экзон».</div>
+                      <div class="news-all__previews-item-text-date">18.09.2016</div></a>
+                  </div>
+                  <!-- Превью новости-->
+                  <div class="news-all__previews-item">
+                    <!-- Картинка-->
+                    <div class="news-all__previews-item-img"><img class="news-all__previews-item-img__img" src="template-images/news-all__preview1.png"/></div>
+                    <!-- Текст--><a class="news-all__previews-item-text" href="page-news-single.html">
+                      <div class="news-all__previews-item-text-title">Назначение нового руководителя</div>
+                      <div class="news-all__previews-item-text-description">13 июня  2017 на пост руководителя предприятия  ОАО «Экзон» назначен Васкевич Валерий Федорович. Валерий Федорович работает на предприятии около 20 лет. До назначения директором, занимал пост главного инженера. Под его руководством на предыдущем посте  была проведена модернизация производства, введена в эксплуатацию новая котельная, а также проведены кадровые перестановки, которые позволили предприятию оптимизировать свои производственные возможности.</div>
+                      <div class="news-all__previews-item-text-date">18.09.2016</div></a>
+                  </div>
+                  <!-- Превью новости-->
+                  <div class="news-all__previews-item">
+                    <!-- Картинка-->
+                    <div class="news-all__previews-item-img"><img class="news-all__previews-item-img__img" src="template-images/news-all__preview3.png"/></div>
+                    <!-- Текст--><a class="news-all__previews-item-text" href="page-news-single.html">
+                      <div class="news-all__previews-item-text-title">Импортозамещение: с прицелом на перспективу</div>
+                      <div class="news-all__previews-item-text-description">В Минздраве состоялась встреча заместителя министра здравоохранения — директора Департамента фармпромышленности Валерия Шевчука с представителями Тяньцзинской электростроительной компании Китайской энергостроительной групповой корпорации, директором ОАО «Экзон» Валерием Васкевичем и директором ЗАО «Белалек групп» Игорем Стомой. Стороны обсудили перспективы реализации инвестиционного проекта — строительства нового цеха по производству готовых лекарственных средств, соответствующего всем</div>
+                      <div class="news-all__previews-item-text-date">18.09.2016</div></a>
+                  </div>
+          </div>
+          <div class="news-all__pagination"><a class="news-all__pagination-page active" href="#">1</a><a class="news-all__pagination-page" href="#">2</a><a class="news-all__pagination-page" href="#">3</a></div>
+        </div>
       </div>
       <!-- ***** /Контент *****-->
       <!-- ***** Футер ***** -->

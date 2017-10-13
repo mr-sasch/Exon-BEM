@@ -6,6 +6,7 @@
 	display: -ms-flex;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 30px; margin-bottom: 60px;
 }
 .news-sort-by-date {
 	display: -webkit-flex;
@@ -19,3 +20,24 @@
 	font-size: 18px;
 	font-weight: 300;
 }
+/* Адаптация */
+@media screen and (max-width: 930px) {
+	.news-all-small-head {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 600px) {
+	.news-subscribe {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	.news-sort-by-date {
+		justify-content: center;
+	}
+	.news-all__previews-item-img__img {
+		width: 100%;
+	}
+}
+
+
+/* /Адаптация */

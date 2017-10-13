@@ -1,0 +1,15 @@
+.news-sort-by-date {
+	font-size: 18px;
+	font-weight: 300;
+}
+.news-sort-by-date__txt {
+	color: $grey;
+	margin-right: 10px;
+}
+.news-sort-by-date__switch-new-first {
+	color: $blue;
+}
+a.news-sort-by-date__switch-new-first:hover,
+a.news-sort-by-date__switch-old-first:hover {
+	color: $blue;
+}

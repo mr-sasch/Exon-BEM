@@ -2041,7 +2041,9 @@ a.page__title-crumbs__child {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 60px; }
 
 .news-sort-by-date {
   display: -webkit-flex;
@@ -2055,6 +2057,21 @@ a.page__title-crumbs__child {
   font-size: 18px;
   font-weight: 300; }
 
+/* Адаптация */
+@media screen and (max-width: 930px) {
+  .news-all-small-head {
+    flex-direction: column; } }
+@media screen and (max-width: 600px) {
+  .news-subscribe {
+    flex-direction: column;
+    margin-bottom: 20px; }
+
+  .news-sort-by-date {
+    justify-content: center; }
+
+  .news-all__previews-item-img__img {
+    width: 100%; } }
+/* /Адаптация */
 /* Стили блока "Подписаться на новости" */
 .news-subscribe {
   display: -webkit-flex;
@@ -2102,6 +2119,236 @@ a.page__title-crumbs__child {
   outline: none; }
 
 /* /Стили блока "Подписаться на новости" */
+/* Стили блока "Сортировать по дате" */
+.news-sort-by-date {
+  font-size: 18px;
+  font-weight: 300; }
+
+.news-sort-by-date__txt {
+  color: #4a4a4a;
+  margin-right: 10px; }
+
+.news-sort-by-date__switch-new-first {
+  color: #4fb1f6; }
+
+a.news-sort-by-date__switch-new-first:hover,
+a.news-sort-by-date__switch-old-first:hover {
+  color: #4fb1f6; }
+
+/* /Стили блока "Сортировать по дате" */
+/* Превью новости */
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
+.news-all__previews-item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 60px; }
+
+.news-all {
+  border-bottom: 1px solid #4ab75e;
+  padding-bottom: 90px; }
+
+.news-all__previews-item-text {
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  color: #4a4a4a;
+  position: relative;
+  cursor: pointer; }
+
+a.news-all__previews-item-text:hover .news-all__previews-item-text-title {
+  text-decoration: underline;
+  text-decoration-color: #4fb1f6; }
+
+a.news-all__previews-item-text:hover .news-all__previews-item-text-description {
+  text-decoration: underline;
+  text-decoration-color: #4a4a4a;
+  color: #4a4a4a; }
+
+a.news-all__previews-item-text:hover .news-all__previews-item-text-date {
+  color: #4a4a4a; }
+
+.news-all__previews-item-text-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #4fb1f6;
+  line-height: 36px;
+  margin-bottom: 25px; }
+
+.news-all__previews-item-text-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px; }
+
+.news-all__previews-item-text-date {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #4a4a4a;
+  border-radius: 50px;
+  padding: 4px 15px 2px;
+  position: absolute;
+  bottom: 20px; }
+
+/* Пагинация */
+.news-all__pagination {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex; }
+
+.news-all__pagination-page {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #6e6e6e;
+  border-radius: 50px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 20px;
+  transition: .2s ease; }
+
+.news-all__pagination-page.active,
+.news-all__pagination-page:hover {
+  border-color: #4ab75e;
+  background-color: #4ab75e;
+  color: #fff;
+  text-decoration: none; }
+
+/* /Пагинация */
+/* Адаптация */
+@media screen and (max-width: 890px) {
+  .news-all__previews-item {
+    flex-direction: column; }
+
+  .news-all__previews-item-img {
+    width: 100%;
+    text-align: center; }
+
+  .news-all__previews-item-text {
+    padding-left: 0 !important; } }
+@media screen and (max-width: 350px) {
+  .news-subscribe-form {
+    width: 100%; }
+
+  .news-sort-by-date {
+    font-size: 15px; } }
+/* /Адаптация */
+/* /Превью новости */
 /* /Страницы Новости(все) */
+/* Страница новости - Одинарная */
+.news-all__back-to-all {
+  font-size: 18px;
+  font-weight: 400;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+
+a.news-all__back-to-all-txt {
+  font-family: 'Roboto', sans-serif;
+  color: #4a4a4a;
+  margin-left: 10px; }
+
+a.news-all__back-to-all-txt:hover {
+  color: #4a4a4a; }
+
+.back-to-all__arrow {
+  color: #4ab75e;
+  font-weight: 600;
+  font-size: 20px; }
+
+/* Переопределение слайдера */
+.news-single__slider .main-slider__txt,
+.news-single__slider .slick-dots {
+  display: none !important; }
+
+.news-single__slider .slick-slider {
+  justify-content: flex-end; }
+
+.news-single__slider .main-slider-slick__theme-exon .slick-prev,
+.news-single__slider .main-slider-slick__theme-exon .slick-arrow {
+  margin-left: 12px;
+  margin-right: 12px;
+  right: 80px; }
+
+/* /Переопределение слайдера */
+/* Пост */
+.news-single__post {
+  max-width: 1130px;
+  margin: auto; }
+
+.news-single .news-single__post-date {
+  position: relative !important;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.news-single .news-all__previews-item-text-date {
+  position: relative; }
+
+.news-single__post-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #4fb1f6;
+  margin-bottom: 60px; }
+
+.news-single__post-text {
+  font-size: 18px;
+  font-weight: 300;
+  color: #4a4a4a; }
+
+/* /Пост */
+/* Адаптация */
+@media screen and (max-width: 600px) {
+  .news-single .news-single__post-date {
+    margin-top: 60px; } }
+/* /Адаптация */
+/* /Страница новости - Одинарная */
+/* Страница "О компании" */
+.about-company {
+  position: relative;
+  padding-top: 100px; }
+
+.about-company__inner {
+  margin: auto; }
+
+/* Текстовый блок */
+.about-company__info {
+  padding: 50px 0; }
+
+.about-company__info-text {
+  background-color: #fff;
+  opacity: .7;
+  border-bottom-right-radius: 150px;
+  max-width: 750px;
+  font-size: 21px;
+  font-weight: 300;
+  z-index: 100;
+  padding: 60px 60px 30px 60px; }
+
+.about-company__info-img {
+  position: absolute;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: -1; }
+
+.about-company__info-img-image {
+  max-width: 1090px; }
+
+/* /Текстовый блок */
+/* /Страница "О компании" */
 
 /*# sourceMappingURL=style.css.map */
