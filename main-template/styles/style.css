@@ -2326,7 +2326,8 @@ a.news-all__back-to-all-txt:hover {
 
 /* Текстовый блок */
 .about-company__info {
-  padding: 50px 0; }
+  padding: 50px 0;
+  position: relative; }
 
 .about-company__info-text {
   background-color: #fff;
@@ -2341,14 +2342,103 @@ a.news-all__back-to-all-txt:hover {
 .about-company__info-img {
   position: absolute;
   right: 0;
-  top: 55%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 1090px;
   z-index: -1; }
 
 .about-company__info-img-image {
   max-width: 1090px; }
 
+/* Адаптация */
+@media screen and (max-width: 500px) {
+  .about-company__info-text {
+    padding: 30px 30px 15px 30px; } }
+@media screen and (max-width: 350px) {
+  .about-company__info-text {
+    padding: 20px 10px 10px 10px; } }
+/* /Адаптация */
 /* /Текстовый блок */
+/* В 2006 году мы произвели */
+.we-produced {
+  margin: 100px 0; }
+
+.we-produced__title {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 72px;
+  color: #4ab75e;
+  margin-bottom: 70px;
+  line-height: 70px; }
+
+.we-produced__body-bg {
+  background-image: url(../template/layout/template-images/about-company__production-bg.png);
+  background-size: cover;
+  padding: 70px 0; }
+
+.we-produced__body {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto; }
+
+/* Адаптация */
+@media screen and (max-width: 450px) {
+  .we-produced__title {
+    font-size: 50px;
+    line-height: 55px; } }
+/* /Адаптация */
+/* item */
+.we-produced__item {
+  text-align: center;
+  width: 300px;
+  margin: 30px; }
+
+.we-produced__item-img {
+  height: 190px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.we-produced__item-quantity {
+  font-size: 40px;
+  font-weight: 600;
+  color: #4ab75e;
+  border: 1px solid #4ab75e;
+  border-radius: 30px;
+  display: inline-block;
+  width: 262px;
+  height: 60px;
+  margin: 30px 0; }
+
+.we-produced__item-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 35px; }
+
+/* /item */
+/* /В 2006 году мы произвели */
+/* Наши партнеры */
+.our-partners {
+  margin-top: 120px;
+  margin-bottom: 150px; }
+
+.our-partners__content {
+  margin: auto; }
+
+.slick-slider__carousel-item {
+  margin: auto; }
+
+.our-partners__content .slick-initialized .slick-slide {
+  outline: none; }
+
+/* /Наши партнеры */
 /* /Страница "О компании" */
 
 /*# sourceMappingURL=style.css.map */
