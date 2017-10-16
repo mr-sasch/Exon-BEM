@@ -5,6 +5,8 @@ $(document).ready(function(){
 	  speed: 300,
 	  slidesToShow: 5,
 		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
 		responsive: [
 			{
 				breakpoint: 1300,
