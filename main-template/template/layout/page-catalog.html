@@ -139,204 +139,127 @@
       <!-- ***** /Хэдер ***** -->
       <!-- ***** Контент ***** -->
             <div class="main-slider-slick page__title">
-              <div class="main-slider-slick__item"><img class="main-slider__img" src="template-images/contacts-title.png"/>
+              <div class="main-slider-slick__item"><img class="main-slider__img" src="template-images/news-all__title.png"/>
                 <div class="main-slider__txt">
-                  <div class="main-slider__txt-title">Контакты</div>
+                  <div class="main-slider__txt-title">Каталог продукции</div>
                 </div>
                 <!-- Крошки		-->
                 <div class="page__title-crumbs inn_padd">
-                  <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная<i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i><a class="page__title-crumbs__child" href="#">Контакты</a></a></div>
+                  <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная<i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i><a class="page__title-crumbs__child" href="page-catalog.html">Каталог</a></a></div>
                 </div>
               </div>
             </div>
-      <!-- Главные контакты-->
-      <div class="contacts-main inn_padd">
-        <div class="contacts-main__inner site-width">
-          <!-- Левая колонка-->
-          <div class="contacts-main__col">
-            <!-- Заголовок колонки-->
-            <div class="contacts-main__col-title contacts-title">ОАО 
-              <q>ЭКЗОН</q>
+      <!-- Содержимое страницы "Каталог"-->
+      <div class="catalog inn_padd">
+        <div class="catalog__inner site-width">
+          <!-- Первая колонка-->
+          <div class="catalog__col1">
+            <!-- Меню-->
+            <div class="catalog__navbar">
+                            <div class="menu-accordion-bootstrap">
+                              <!-- Бутстрап Аккордион -->
+                              <div class="accordion" id="accordion" role="tablist">
+                                <div class="card">
+                                  <div class="card-header" id="headingOne" role="tab">
+                                    <div class="menu__title"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Лекарственные средства</a></div>
+                                  </div>
+                                  <div class="submenu-block collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <ul class="card-body">
+                                      <li class="active">
+                                        <div class="active-item"></div><a href="#">Сиропы</a>
+                                      </li>
+                                      <li>
+                                        <div class="active-item"></div><a href="#">Гематогены</a>
+                                      </li>
+                                      <li>
+                                        <div class="active-item"></div><a href="#">Таблетки</a>
+                                      </li>
+                                      <li>
+                                        <div class="active-item"></div><a href="#">Порошки и гранулы</a>
+                                      </li>
+                                      <li>
+                                        <div class="active-item"></div><a href="#">Капсулы</a>
+                                      </li>
+                                      <li>
+                                        <div class="active-item"></div><a href="#">Прочие лекарственные средства</a>
+                                      </li>
+                                    </ul>
+                                    <div class="border-active"></div>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <div class="card-header" role="tab" id="headingTwo">
+                                    <div class="menu__title"><a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Биологически активные добавки</a></div>
+                                  </div>
+                                  <div class="submenu-block collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <ul class="card-body">
+                                      <li><a href="#">Сиропы</a></li>
+                                      <li><a href="#">Гематогены</a></li>
+                                      <li><a href="#">Таблетки</a></li>
+                                      <li><a href="#">Порошки и гранулы</a></li>
+                                      <li><a href="#">Капсулы</a></li>
+                                      <li><a href="#">Прочие лекарственные средства</a></li>
+                                    </ul>
+                                    <div class="border-active"></div>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <div class="card-header" role="tab" id="headingThree">
+                                    <div class="menu__title"><a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Пищевые продукты</a></div>
+                                  </div>
+                                  <div class="submenu-block collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <ul class="card-body">
+                                      <li><a href="#">Сиропы</a></li>
+                                      <li><a href="#">Гематогены</a></li>
+                                      <li><a href="#">Таблетки</a></li>
+                                      <li><a href="#">Порошки и гранулы</a></li>
+                                      <li><a href="#">Капсулы</a></li>
+                                      <li><a href="#">Прочие лекарственные средства</a></li>
+                                    </ul>
+                                    <div class="border-active"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
             </div>
-            <div class="contacts-main__items">
-              <!-- Айтем-->
-              <div class="contacts-main__item">
-                <!-- Заголовок айтема-->
-                <div class="contacts-main__item-title contacts-address">Адрес</div>
-                <!-- Содержимое айтема-->
-                <div class="contacts-main__item-txt"><strong>225612, Республика Беларусь, Брестская обл., г.Дрогичин ул.Ленина 202</strong></div>
-              </div>
-              <!-- Айтем-->
-              <div class="contacts-main__item">
-                <!-- Заголовок айтема-->
-                <div class="contacts-main__item-title contacts-receiption">Приемная</div>
-                <!-- Содержимое айтема-->
-                <div class="contacts-main__item-txt"> <strong>3-07-29</strong><br/>код города для звонков из Республики Беларусь (01644)<br/>код страны и города для звонков из зарубежа (103751644)</div>
-              </div>
-              <!-- Айтем-->
-              <div class="contacts-main__item">
-                <!-- Заголовок айтема-->
-                <div class="contacts-main__item-title contacts-email">E-mail</div>
-                <!-- Содержимое айтема-->
-                <div class="contacts-main__item-txt"> <strong>director@ekzon.by - </strong>Приемная руководителя<br/><strong>bm@ekzon.by - </strong>Отдел продаж<br/><strong>reklama@ekzon.by - </strong>Бюро маркетинга<br/><strong>os@ekzon.by - </strong>Отдел материально-технического снабжения<br/><strong>pto@ekzon.by - </strong>Производственно-технический отдел	</div>
-              </div>
-              <!-- Айтем-->
-              <div class="contacts-main__item">
-                <!-- Заголовок айтема-->
-                <div class="contacts-main__item-title contacts-requisites">Реквизиты</div>
-                <!-- Содержимое айтема-->
-                <div class="contacts-main__item-txt"> <strong>Открытое акционерное общество "Экзон"<br/>УНП:200433278<br/>р/с 3012105610015 в ЦБУ №108 филиала №802 ОАО «АСБ Беларусбанк» в г. Дрогичине,<br/>код банка 150501245</strong></div>
-              </div>
-              <!-- Айтем-->
-              <div class="contacts-main__item">
-                <!-- Заголовок айтема-->
-                <div class="contacts-main__item-title contacts-rejim">Режим работы</div>
-                <!-- Содержимое айтема-->
-                <div class="contacts-main__item-txt"> </div>
-              </div>
-            </div>
+            <!-- Баннер-->
+            <div class="catalog__banner"></div>
           </div>
-          <!-- Правая колонка-->
-          <div class="contacts-main__col">
-            <!-- Заголовок колонки-->
-            <div class="contacts-main__col-title contacts-title">СВЯЗЬ С МЕДИЦИНСКИМИ ПРЕДСТАВИТЕЛЯМИ</div>
-            <!-- Контактная форма-->
-            <div class="contacts-main__form">
-              <form class="contacts-form">
-                <div class="contacts-form__city">
-                  <input type="text" id="city" name="city" placeholder="Выбрать город"/>
-                </div>
-                <div class="contacts-form__phone">
-                  <input type="text" id="phone" name="phone" placeholder="Введите номер телефона"/>
-                </div>
-                <div class="contacts-form__face">
-                  <input type="text" id="face" name="face" placeholder="Контактное лицо"/>
-                </div>
-                <input class="contacts-form__submit" type="submit" value="Отправить заявку"/>
-              </form>
+          <!-- Вторая колонка-->
+          <div class="catalog__col2">
+            <!-- Карточка товаров-->
+            <div class="catalog__items"><a class="catalog__card" href="#"><img class="catalog_card-img" src="template-images/main-page-slider-II__img1.png"/>
+                      <div class="catalog__card-txt">
+                        <div class="catalog__card-txt-title">Подорожник с витамином C</div>
+                        <div class="catalog__card-txt-text">Средство, регулирующее метаболические процессы</div>
+                      </div></a>
             </div>
-            <!-- Карта-->
-            <div class="contacts-main__map">
-              <iframe src="https://yandex.by/map-widget/v1/-/CBUXiWFqTD" height="100%" width="100%" frameborder="0"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Другие контакты-->
-      <div class="contacts-other inn_padd">
-        <div class="contacts-other__inner site-width">
-          <!-- Левая колонка-->
-          <div class="contacts-other__col">
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Руководство</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Директор</strong></div>
-                <div class="contacts-other__sub-item-txt">Васкевич Валерий Федорович<br/>Приемная:
-                  <div class="contacts-other-phone">(016 44) 3-07-29 (приемная)</div>
-                  <div class="contacts-other-mail">director@ekzon.by</div>
-                </div>
-              </div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"><strong>Зам. директор по коммерческим вопросам</strong></div>
-                <div class="contacts-other__sub-item-txt">Митрофанов Игорь Александрович
-                  <div class="contacts-other-phone">(016 44) 3-25-43</div>
-                  <div class="contacts-other-mail">zamdirector@ekzon.by</div>
-                </div>
-              </div>
-            </div>
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Бюро маркетинга</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Начальник бюро</strong></div>
-                <div class="contacts-other__sub-item-txt">Репич Антон Дмитриевич
-                  <div class="contacts-other-phone">(01644) 3-24-09</div>
-                  <div class="contacts-other-mail">reklama@ekzon.by</div>
-                </div>
-              </div>
-            </div>
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Производственно-технологический отдел</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Начальник отдела</strong></div>
-                <div class="contacts-other__sub-item-txt">Максимчук Елена Ивановна
-                  <div class="contacts-other-phone">(01644) 3-65-68</div>
-                  <div class="contacts-other-mail">pto@ekzon.by</div>
-                </div>
-              </div>
-            </div>
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Управление обеспечения и контроля качества</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Начальник отдела</strong></div>
-                <div class="contacts-other__sub-item-txt">Рудая Наталья Викторовна
-                  <div class="contacts-other-phone">(01644) 3-03-42</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Правая колонка-->
-          <div class="contacts-other__col">
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Бухгалтерия</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Главный бухгалтер</strong></div>
-                <div class="contacts-other__sub-item-txt">Горностай Светлана Назимджановна
-                  <div class="contacts-other-phone">(01644) 3-02-43</div>
-                </div>
-              </div>
-            </div>
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Отдел продаж</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Начальник отдела</strong></div>
-                <div class="contacts-other__sub-item-txt">Малюга Павел Владимирович<br/>Приемная:
-                  <div class="contacts-other-phone">(01644) 3-25-01</div>
-                </div>
-              </div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Ведущий специалист по продаже </strong>(экспорт)</div>
-                <div class="contacts-other__sub-item-txt">Ярошевич Иван Александрович
-                  <div class="contacts-other-phone">(01644) 3-07-37</div>
-                </div>
-              </div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Специалисты по продаже ЛС и БАД</strong>
-                  <div class="contacts-other-fax">(01644) 3-02-29 (тел./факс)</div>
-                  <div class="contacts-other-phone">(01644) 3-17-84</div>
-                  <div class="contacts-other-mail">bm@ekzon.by</div>
-                </div>
-              </div>
-            </div>
-            <!-- Айтем-->
-            <div class="contacts-other__item">
-              <div class="contacts-other__item-title contacts-title">Отдел материально-технического снабжения</div>
-              <!-- Саб-айтем-->
-              <div class="contacts-other__sub-item">
-                <div class="contacts-other__sub-item-title"> <strong>Начальник отдела</strong></div>
-                <div class="contacts-other__sub-item-txt">Ваврушевич Анна Николаевна
-                  <div class="contacts-other-fax">(01644) 3-23-56 (тел./факс)</div>
-                  <div class="contacts-other-mail">os@ekzon.by</div>
-                </div>
-              </div>
+            <!-- Текст-->
+            <div class="catalog__text">
+              <div class="main-text__title">Лекарственные препараты и пищевые добавки</div>
+              <div class="main-text__text">Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.</div>
+              <!-- Кнопка "Подробнее" с текстом-->
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО &quot;Экзон&quot; гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.</div>
+                    </div><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Подробно</a>
             </div>
           </div>
         </div>
       </div>
+      <!-- Примите участие в опросе-->
+            <div class="page-main-interview inn_padd">
+              <div class="main-interview__inner site-width">
+                <div class="page-main-interview__text1">
+                  <div class="page-main-interview__txt">Примите участие в опросе, </div>
+                  <div class="page-main-interview__txt">чтобы помочь нам совершенствоваться</div>
+                </div>
+                <div class="page-main-interview__text2">
+                  <div class="page-main-interview__txt">Примите участиве в опросе, чтобы помочь нам совершенстоваться</div>
+                </div>
+                <div class="page-main-interview__btn"> <a class="button-link btn-page-main-all-news btn-page-main-all-news__list" href="#">Принять участие</a>
+                </div>
+              </div>
+            </div>
       <!-- ***** /Контент *****-->
       <!-- ***** Футер ***** -->
       <div class="footer inn_padd">

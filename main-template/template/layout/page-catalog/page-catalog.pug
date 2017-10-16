@@ -1,0 +1,95 @@
+extends ../page-template.pug
+
+block content
+	+crumbs('template-images/news-all__title.png', 'Каталог продукции', ['page-catalog.html', 'Каталог'])
+	// Содержимое страницы "Каталог"
+	.catalog.inn_padd
+		.catalog__inner.site-width
+			// Первая колонка
+			.catalog__col1
+				// Меню
+				.catalog__navbar
+					mixin menu-accordion-bootstrap
+						.menu-accordion-bootstrap
+							// Бутстрап Аккордион 
+							.accordion#accordion(role="tablist")
+								.card
+									.card-header#headingOne(role="tab")
+										.menu__title
+											a(data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne") Лекарственные средства
+									.submenu-block#collapseOne.collapse.show(role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion")
+										ul.card-body
+											li.active
+												.active-item
+												a(href='#') Сиропы
+											li
+												.active-item
+												a(href='#') Гематогены
+											li
+												.active-item
+												a(href='#') Таблетки
+											li
+												.active-item
+												a(href='#') Порошки и гранулы
+											li
+												.active-item
+												a(href='#') Капсулы
+											li
+												.active-item
+												a(href='#') Прочие лекарственные средства
+										.border-active
+								.card
+									.card-header(role="tab" id="headingTwo")
+										.menu__title
+											a.collapsed(data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Биологически активные добавки
+									.submenu-block#collapseTwo.collapse(role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion")
+										ul.card-body
+											li
+												a(href='#') Сиропы
+											li
+												a(href='#') Гематогены
+											li
+												a(href='#') Таблетки
+											li
+												a(href='#') Порошки и гранулы
+											li
+												a(href='#') Капсулы
+											li
+												a(href='#') Прочие лекарственные средства
+										.border-active
+								.card
+									.card-header(role="tab" id="headingThree")
+										.menu__title
+											a.collapsed(data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree") Пищевые продукты
+									.submenu-block#collapseThree.collapse(role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion")
+										ul.card-body
+											li
+												a(href='#') Сиропы
+											li
+												a(href='#') Гематогены
+											li
+												a(href='#') Таблетки
+											li
+												a(href='#') Порошки и гранулы
+											li
+												a(href='#') Капсулы
+											li
+												a(href='#') Прочие лекарственные средства
+										.border-active
+					+menu-accordion-bootstrap
+									
+				// Баннер
+				.catalog__banner
+			// Вторая колонка
+			.catalog__col2
+				// Карточка товаров
+				.catalog__items
+					+catalog__card
+				// Текст
+				.catalog__text
+					.main-text__title Лекарственные препараты и пищевые добавки
+					.main-text__text Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.
+					// Кнопка "Подробнее" с текстом
+					+read-more-bootstrap('Подробно', 'Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.')
+	// Примите участие в опросе
+	+page-main-interview

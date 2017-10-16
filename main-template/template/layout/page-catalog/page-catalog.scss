@@ -1,0 +1,122 @@
+@import "styles/vars.scss";
+
+.catalog__inner {
+	margin: auto;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.catalog__col1 {
+	max-width: 316px;
+}
+.catalog__col2 {
+	padding-left: 40px;
+}
+/* Меню */
+	/* Позиционирование */
+.catalog__navbar {
+	margin-top: 60px;
+}
+.catalog__navbar .card {
+	position: relative;
+	overflow: hidden;
+	background-color: #eeeeee;
+	border-radius: 30px;
+}
+.catalog__navbar .border-active {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	border: 2px solid $green-d;
+	z-index: 10;
+	border-radius: 30px;
+	transition: .2s ease;
+	opacity: 1;
+}
+.catalog__navbar .collapsed .border-active {
+	opacity: 0;
+}
+	/* /Позиционирование */
+
+.catalog__navbar .card-header {
+	border: none;
+	background-color: rgba(201, 55, 108, 0);
+	z-index: 30;
+}
+	/* стили */
+		/* заголовки Меню */
+.catalog__navbar .menu__title a {
+	color: $green-d;
+	font-size: 18px;
+	font-weight: 600;
+	transition: .2s ease;
+}
+.catalog__navbar .menu__title a.collapsed:hover {
+	color: $green-d;
+}
+.catalog__navbar .menu__title a.collapsed {
+	color: $grey;
+}
+	/* /заголовки Меню */
+
+	/* заголовки Подменю */
+.catalog__navbar .card-body {
+	z-index: 20;
+	position: relative;
+}
+.catalog__navbar .card-body a {
+	color: $grey;
+	font-size: 16px;
+	transition: .2s ease;
+}
+.catalog__navbar .card-body a:hover {
+	color: $green-d;
+}
+.catalog__navbar .card-body li.active a {
+	color: $green-d;
+}
+	/* /заголовки Подменю */
+
+.catalog__navbar .card-body li {
+	padding: 7px 0;
+	padding-left: 50px;
+	max-width: 290px;
+}
+// кружок активного пункта меню
+.catalog__navbar .card-body li {
+	position: relative;
+}
+.catalog__navbar .active-item {
+	width: 37px; height: 37px;
+	background-color: $green-d;
+	border-radius: 50%;
+	position: absolute;
+	left: -19px; top: -1px;
+	display: none;
+}
+.catalog__navbar .card-body li.active .active-item {
+	display: inline-block;
+}
+
+
+	/* /стили */
+
+.catalog__navbar .accordion {
+	background-color: #eeeeee;
+	border-radius: 30px;
+}
+.catalog__navbar .card-body {
+	list-style: none;
+	padding: 0;
+}
+/* /Меню */
+
+
+/* Текст */
+.catalog__text {
+	margin: 100px 0;
+}
+/* /Текст */
+
+/* Карточка товаров */
+@import "template/blocks/catalog__card/catalog__card.scss";
+/* /Карточка товаров */

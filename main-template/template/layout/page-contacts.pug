@@ -1,0 +1,190 @@
+//- page-contacts.pug
+extends ../page-template.pug
+
+block content
+	+crumbs('template-images/contacts-title.png', 'Контакты', ['#', 'Контакты'])
+	// Главные контакты
+	.contacts-main.inn_padd
+		.contacts-main__inner.site-width
+			// Левая колонка
+			.contacts-main__col
+				// Заголовок колонки
+				.contacts-main__col-title.contacts-title ОАО 
+					q ЭКЗОН
+				.contacts-main__items
+					// Айтем
+					.contacts-main__item
+						// Заголовок айтема
+						.contacts-main__item-title.contacts-address Адрес
+						// Содержимое айтема
+						.contacts-main__item-txt
+							strong 225612, Республика Беларусь, Брестская обл., г.Дрогичин ул.Ленина 202
+					// Айтем
+					.contacts-main__item
+						// Заголовок айтема
+						.contacts-main__item-title.contacts-receiption Приемная
+						// Содержимое айтема
+						.contacts-main__item-txt 
+							strong 3-07-29
+							br 
+							| код города для звонков из Республики Беларусь (01644)
+							br 
+							| код страны и города для звонков из зарубежа (103751644)
+					// Айтем
+					.contacts-main__item
+						// Заголовок айтема
+						.contacts-main__item-title.contacts-email E-mail
+						// Содержимое айтема
+						.contacts-main__item-txt 
+							strong director@ekzon.by - 
+							| Приемная руководителя
+							br
+							strong bm@ekzon.by - 
+							| Отдел продаж
+							br
+							strong reklama@ekzon.by - 
+							| Бюро маркетинга
+							br
+							strong os@ekzon.by - 
+							| Отдел материально-технического снабжения
+							br
+							strong pto@ekzon.by - 
+							| Производственно-технический отдел	
+					// Айтем
+					.contacts-main__item
+						// Заголовок айтема
+						.contacts-main__item-title.contacts-requisites Реквизиты
+						// Содержимое айтема
+						.contacts-main__item-txt 
+							strong Открытое акционерное общество "Экзон"
+								br
+								| УНП:200433278
+								br
+								| р/с 3012105610015 в ЦБУ №108 филиала №802 ОАО «АСБ Беларусбанк» в г. Дрогичине,
+								br
+								| код банка 150501245
+					// Айтем
+					.contacts-main__item
+						// Заголовок айтема
+						.contacts-main__item-title.contacts-rejim Режим работы
+						// Содержимое айтема
+						.contacts-main__item-txt 
+			// Правая колонка
+			.contacts-main__col
+				// Заголовок колонки
+				.contacts-main__col-title.contacts-title СВЯЗЬ С МЕДИЦИНСКИМИ ПРЕДСТАВИТЕЛЯМИ
+				// Контактная форма
+				.contacts-main__form
+					form.contacts-form
+						.contacts-form__city
+							input(type="text" id="city" name="city" placeholder="Выбрать город")
+						.contacts-form__phone
+							input(type="text" id="phone" name="phone" placeholder="Введите номер телефона")
+						.contacts-form__face
+							input(type="text" id="face" name="face" placeholder="Контактное лицо")
+						input(type="submit" value="Отправить заявку").contacts-form__submit
+				// Карта
+				.contacts-main__map
+					iframe(src="https://yandex.by/map-widget/v1/-/CBUXiWFqTD" height="100%" width="100%" frameborder="0")
+	
+	// Другие контакты
+	.contacts-other.inn_padd
+		.contacts-other__inner.site-width
+			// Левая колонка
+			.contacts-other__col
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Руководство
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Директор
+						.contacts-other__sub-item-txt Васкевич Валерий Федорович
+							br
+							| Приемная:
+							.contacts-other-phone (016 44) 3-07-29 (приемная)
+							.contacts-other-mail director@ekzon.by
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title
+							strong Зам. директор по коммерческим вопросам
+						.contacts-other__sub-item-txt Митрофанов Игорь Александрович
+							.contacts-other-phone (016 44) 3-25-43
+							.contacts-other-mail zamdirector@ekzon.by
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Бюро маркетинга
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Начальник бюро
+						.contacts-other__sub-item-txt Репич Антон Дмитриевич
+							.contacts-other-phone (01644) 3-24-09
+							.contacts-other-mail reklama@ekzon.by
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Производственно-технологический отдел
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Начальник отдела
+						.contacts-other__sub-item-txt Максимчук Елена Ивановна
+							.contacts-other-phone (01644) 3-65-68
+							.contacts-other-mail pto@ekzon.by
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Управление обеспечения и контроля качества
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Начальник отдела
+						.contacts-other__sub-item-txt Рудая Наталья Викторовна
+							.contacts-other-phone (01644) 3-03-42
+					
+			// Правая колонка
+			.contacts-other__col
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Бухгалтерия
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Главный бухгалтер
+						.contacts-other__sub-item-txt Горностай Светлана Назимджановна
+							.contacts-other-phone (01644) 3-02-43
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Отдел продаж
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Начальник отдела
+						.contacts-other__sub-item-txt Малюга Павел Владимирович
+							br
+							| Приемная:
+							.contacts-other-phone (01644) 3-25-01
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Ведущий специалист по продаже 
+							| (экспорт)
+						.contacts-other__sub-item-txt Ярошевич Иван Александрович
+							.contacts-other-phone (01644) 3-07-37
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Специалисты по продаже ЛС и БАД
+							.contacts-other-fax (01644) 3-02-29 (тел./факс)
+							.contacts-other-phone (01644) 3-17-84
+							.contacts-other-mail bm@ekzon.by
+				// Айтем
+				.contacts-other__item
+					.contacts-other__item-title.contacts-title Отдел материально-технического снабжения
+					// Саб-айтем
+					.contacts-other__sub-item
+						.contacts-other__sub-item-title 
+							strong Начальник отдела
+						.contacts-other__sub-item-txt Ваврушевич Анна Николаевна
+							.contacts-other-fax (01644) 3-23-56 (тел./факс)
+							.contacts-other-mail os@ekzon.by
+		

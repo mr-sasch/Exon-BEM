@@ -1,0 +1,41 @@
+//- page-about-company.pug
+extends ../page-template.pug
+
+block content
+	+crumbs('template-images/about-company__title.png', 'О компании', ['#', 'О компании'])
+	.about-company.news-single
+		// Текст о компании
+		.about-company__info.inn_padd
+			.about-company__inner.site-width
+				.about-company__info-text
+					p В эпоху технического прогресса и рыночных отношений, здоровье – это наш капитал, мы можем его растратить, а можем приумножить. Будучи больным, трудно воплотить в жизнь свои мечты, полностью реализоваться в современном мире.  Забота о Вашем здоровье – миссия существования ОАО «ЭКЗОН» вот уже 20 лет. На фармацевтическом рынке Беларуси ОАО «ЭКЗОН» занимает значительную долю, осуществляя производство более 100 наименований лекарственных средств и биологически активных добавок. Нашими постоянными партнёрами на сегодняшний день являются более 60 предприятий оптовой и розничной торговли по всей Беларуси.
+					p Движение вперед, постоянное расширение и модернизация производства при сохранении высокого качества продукции, увеличение охвата географии сотрудничества – неизменные принципы деятельности нашего предприятия. Плодотворное международное партнёрство осуществляется со многими странами: Россия, Украина, Молдова, Грузия, Казахстан, Литва, Латвия, Германия, США, Польша.
+			img.about-company__info-img(src='template-images/about-company__text-image.png')
+		// В 2006 году мы произвели
+		.we-produced
+			.we-produced__title В 2006 году мы произвели:
+			.we-produced__body-bg
+				.we-produced__body.site-width
+					mixin we-produced__item(source, quantity, title)
+						.we-produced__item
+							.we-produced__item-img
+								img.we-produced__item-img-img(src= source)
+							.we-produced__item-quantity= quantity
+							.we-produced__item-title= title
+					+we-produced__item('template-images/about-company__production-candy.png', '25 185 798', 'Плиток гематогена')
+					+we-produced__item('template-images/about-company__production-pills.png', '6 927 004', 'Упаковок таблеток')
+					+we-produced__item('template-images/about-company__production-bottle.png', '1 202 073', 'Флаконов сиропов')
+					+we-produced__item('template-images/about-company__production-drugs.png', '1 129 027', 'Упаковок порошков и гранул')
+					+we-produced__item('template-images/about-company__production-eye-drops.png', '111 418', 'Упаковок аэрозолей')
+		// Наши партнеры - карусель
+		.our-partners
+			.our-partners__title.we-produced__title Наши партнеры
+			.our-partners__content.site-width
+				mixin slick-slider__carousel(classname, ...slides)
+					.slick-slider__carousel(class= classname)
+						each slide in slides
+							.slick-slider__carousel-item
+								img.slick-slider__carousel-item(src= slide)
+				+slick-slider__carousel('slider__about-company', 'template-images/about-company__partners1.png', 'template-images/about-company__partners2.png', 'template-images/about-company__partners3.png', 'template-images/about-company__partners4.png',  'template-images/about-company__partners1.png', 'template-images/about-company__partners2.png', 'template-images/about-company__partners3.png', 'template-images/about-company__partners4.png', 'template-images/about-company__partners5.png')
+		// Примите участие в опросе
+		+page-main-interview

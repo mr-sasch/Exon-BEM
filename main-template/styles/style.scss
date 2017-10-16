@@ -398,6 +398,7 @@ a.page-main-news__list-item {
 .main-text__text {
 	font-size: 24px;
 	font-weight: 300;
+	color: $grey;
 }
 
 		/* Стилизация блока "Подробнее" */
@@ -511,5 +512,8 @@ a.page-main-news__list-item {
 
 /* Страница "О компании" */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/layout/page-about-company/page-about-company.scss";
-
 /* /Страница "О компании" */
+
+/* Страница "Каталог" */
+@import "../template/layout/page-catalog/page-catalog.scss";
+/* /Страница "Каталог" */
