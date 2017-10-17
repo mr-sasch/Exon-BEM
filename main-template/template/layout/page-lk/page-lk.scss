@@ -1,0 +1,109 @@
+@import "../../../styles/vars.scss";
+
+.lk__inner {
+	margin: auto;
+	margin-top: 100px;
+}
+
+/* Табы */
+.lk .nav-tabs {
+	justify-content: space-around;
+}
+.lk .nav-tabs .nav-link {
+	font-size: 30px;
+	font-weight: 500;
+	width: 316px;
+	border: 2px solid rgba(74, 53, 105, 0);
+	border-radius: 50px;
+	text-align: center;
+}
+.lk .nav-tabs .nav-link:focus,
+.lk .nav-tabs .nav-link:hover,
+.lk .nav-tabs .nav-link.active {
+	border: 2px solid;
+}
+	/* Адаптация */
+@media screen and (max-width: 680px) {
+	.lk .nav-tabs {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+	.lk .nav-tabs .nav-item {
+		margin-bottom: 20px;
+	}
+}
+	/* /Адаптация */
+/* /Табы */
+
+/* Документы */
+.tab-content__item {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	max-width: 430px;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.tab-content__item-info-title {
+	font-size: 20px;
+	font-weight: 500;
+	color: $grey;
+}
+.tab-content__item-info-date {
+	font-size: 14px;
+	font-weight: 300;
+	color: $grey;
+}
+/* /Документы */
+
+/* Адаптация */
+@media screen and (max-width: 390px) {
+	.tab-content__item {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.tab-content__item-source-download,
+	.tab-content__item-source-see {
+		margin: 10px;
+	}
+	.tab-content__item {
+		margin-bottom: 10px;
+	}
+}
+/* /Адаптация */
+
+
+
+/* Таблица */
+table.lk__table {
+	width: 100%;
+	text-align: center;
+}
+th.lk__th {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 300;
+	color: #000;
+	background-color: $grey-bg;
+	height: 45px;
+	border: 1px solid #fff;
+}
+td.lk__td {
+	height: 50px;
+	border: 1px solid $grey-bg;
+	font-size: 18px;
+	font-weight: 400;
+}
+.lk__td-footer {
+	height: 154px;
+	background-color: $grey-bg;
+	text-align: justify;
+}
+
+
+
+
+
+/* /Таблица */

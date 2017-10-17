@@ -1,6 +1,13 @@
-mixin catalog__card
+mixin catalog__card(pict, title, text, noviy, recipe)
 	a.catalog__card(href='#')
-		img.catalog_card-img(src='template-images/main-page-slider-II__img1.png')
+		// Лэйбл Новинка добавляется переключателем .on к блоку .catalog__card-novelty 
+		.catalog__card-novelty(class= noviy) Новинка
+		img.catalog_card-img(src= pict)
 		.catalog__card-txt
-			.catalog__card-txt-title Подорожник с витамином C
-			.catalog__card-txt-text Средство, регулирующее метаболические процессы
+			.catalog__card-txt-title= title				
+			.catalog__card-txt-text= text
+		// Отпуск по рецепту осуществляется добавлением класса .on ОБОИМ блокам
+		.catalog__card-recipe(class= recipe) По рецепту
+			img.catalog__card-recipe-img(src='template-images/catalog__card-recipe.png')
+		.catalog__card-no-recipe(class= recipe) Без рецепта
+			img.catalog__card-no-recipe-img(src='template-images/catalog__card-no-recipe.png')

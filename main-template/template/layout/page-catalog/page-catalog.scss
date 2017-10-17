@@ -2,6 +2,9 @@
 
 .catalog__inner {
 	margin: auto;
+	margin-top: 80px;
+}
+.catalog__cols {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
@@ -12,10 +15,101 @@
 .catalog__col2 {
 	padding-left: 40px;
 }
+
+/* Сортировка */
+	/* Раскладка */
+.catalog__sorting {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 50px;
+}
+.catalog__sorting-float-block {
+	display: flex;
+	width: 50%;
+	float: right;
+	justify-content: space-between;
+}
+	/* /Раскладка */
+
+	// Новинки
+.catalog__sorting-only-new-a {
+	padding-left: 40px;
+	position: relative;
+	color: $grey;
+	font-size: 18px;
+	font-weight: 300;
+}
+.catalog__sorting-only-new-a:hover {
+	color: $grey;
+}
+.catalog__sorting-only-new-bullet {
+	position: absolute;
+	left: 0;
+	width: 30px; height: 30px;
+	border: 1px solid #aeaeae;
+	border-radius: 50%;
+	top: -5px;
+}
+.active .catalog__sorting-only-new-bullet {
+	border-color: $green-d;
+	background-color: $green-d;
+}
+
+// A-Z/Z-A
+.catalog__sorting-alphabet-a-z,
+.catalog__sorting-alphabet-z-a {
+	font-size: 18px;
+	font-weight: 300;
+	color: $grey;
+	display: none;
+}
+.catalog__sorting-alphabet-a-z.active,
+.catalog__sorting-alphabet-z-a.active {
+	display: inline-block;
+}
+.catalog__sorting-alphabet-a-z-txt,
+.catalog__sorting-alphabet-z-a-txt {
+	margin-right: 10px;
+	display: inline-block;
+}
+.catalog__sorting-alphabet-a-z strong,
+.catalog__sorting-alphabet-z-a strong {
+}
+a.catalog__sorting-alphabet-a-z:hover,
+a.catalog__sorting-alphabet-z-a:hover {
+	text-decoration: none;
+	color: $grey;
+}
+a.catalog__sorting-alphabet-a-z:hover .catalog__sorting-alphabet-a-z-txt,
+a.catalog__sorting-alphabet-z-a:hover .catalog__sorting-alphabet-z-a-txt {
+	text-decoration: underline;
+}
+	/* Адаптация */
+@media screen and (max-width: 880px) {
+	.catalog__sorting-float-block {
+    width: 100%;
+    justify-content: space-around;
+	}
+}
+@media screen and (max-width: 460px) {
+	.catalog__sorting-float-block {
+    flex-direction: column;
+    align-items: center;
+	}
+	.catalog__sorting-only-new {
+    margin-bottom: 20px;
+	}
+}
+	/* /Адаптация */
+
+/* /Сортировка */
+
+
 /* Меню */
 	/* Позиционирование */
 .catalog__navbar {
-	margin-top: 60px;
+	width: 316px;
 }
 .catalog__navbar .card {
 	position: relative;
@@ -113,10 +207,54 @@
 
 /* Текст */
 .catalog__text {
-	margin: 100px 0;
+	margin: 80px 0;
 }
 /* /Текст */
 
 /* Карточка товаров */
 @import "template/blocks/catalog__card/catalog__card.scss";
 /* /Карточка товаров */
+
+/* Блок карточек */
+.catalog__items {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+	/* Адаптация */
+@media screen and (max-width: 1300px) {
+	.catalog__items {
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 760px) {
+	.catalog__cols {
+		flex-direction: column;
+	}
+	.catalog__col1 {
+		max-width: 100%;
+    margin-bottom: 70px;
+	}
+	.catalog__col2 {
+    padding-left: 0;
+	}
+	.catalog__navbar {
+    margin: auto;
+	}
+	.catalog__banner {
+		display: none;
+	}
+}
+@media screen and (max-width: 350px) {
+	.catalog__navbar {
+    width: 305px;
+	}
+}
+	/* /Адаптация */
+/* /Блок карточек */
+
+.catalog__banner {
+	margin-top: 50px;
+}

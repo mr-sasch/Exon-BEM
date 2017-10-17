@@ -1,6 +1,100 @@
 .catalog__card {
 	text-align: center;
+	display: inline-block;
+	width: 318px;
+	height: 580px;
+	position: relative;
+	padding-top: 40px;
+	margin-bottom: 30px;
 }
 .catalog__card-txt-title {
+	font-size: 17px;
+	font-weight: 500;
+	color: $grey;
+	margin: 45px 0 30px;
+}
+.catalog__card-txt-text {
+	font-size: 15px;
+	font-weight: 300;
+	color: $grey;
+	width: 94%;
+  margin: auto;
+  line-height: 19px;
+}
+a.catalog__card:hover {
+	text-decoration: none;
+	color: $grey;
+}
 
+// Градиентная обводка
+.catalog__card:before {
+	background: linear-gradient(#4fb1f6, #53e1a9);
+  z-index: -2;
+  opacity: 0;
+  transition: .3s ease;
+}
+.catalog__card:hover:before {
+	opacity: 1;
+}
+.catalog__card:before,
+.catalog__card:after {
+	content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+}
+.catalog__card:after {
+	background-color: #fff;
+	z-index: -1;
+	transition: .2s ease;
+	margin: 2px;
+	opacity: 1;
+}
+.catalog__card:hover:after {
+	z-index: -1;
+	opacity: 1;
+}
+
+// С рецептом/Без рецепта
+.catalog__card-recipe,
+.catalog__card-no-recipe {
+	font-size: 13px;
+	font-weight: 300;
+	color: $grey;
+	position: absolute;
+	left: 20px; bottom: 10px;
+	padding-left: 20px;
+	background-color: #fff;
+}
+.catalog__card-recipe-img,
+.catalog__card-no-recipe-img {
+	position: absolute;
+	left: 0; top: -2px;
+}
+.catalog__card-no-recipe,
+.catalog__card-recipe.on {
+	display: inline-block;
+}
+.catalog__card-no-recipe.on,
+.catalog__card-recipe {
+	display: none;
+}
+
+// Новинка
+.catalog__card-novelty {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	background-color: $red;
+	display: none;
+	border-radius: 30px;
+	padding: 3px 22px;
+	position: absolute;
+	top: -15px; right: 20px;
+}
+.catalog__card-novelty.on {
+	display: inline-block;
 }

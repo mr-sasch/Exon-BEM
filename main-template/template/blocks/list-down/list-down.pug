@@ -1,0 +1,8 @@
+mixin tab-content__item(title, date, link)
+	.tab-content__item
+		.tab-content__item-info
+			.tab-content__item-info-title= title
+			.tab-content__item-info-date= date
+		.tab-content__item-source
+			a.tab-content__item-source-see(href= link target='blank')
+			a.tab-content__item-source-download(href= link download)

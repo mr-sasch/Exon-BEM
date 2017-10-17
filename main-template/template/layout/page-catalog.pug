@@ -1,4 +1,128 @@
-extends ../page-template.pug
+extends page-template.pug
 
 block content
-	+crumbs('template-images/news-all__title.png', 'Каталог', ['#', 'Каталог'])
+	+crumbs('template-images/news-all__title.png', 'Каталог продукции', ['page-catalog.html', 'Каталог'])
+	// Содержимое страницы "Каталог"
+	.catalog.inn_padd
+		.catalog__inner.site-width
+			// Сортировка
+			.catalog__sorting
+				.catalog__sorting-float-block
+					// Показать только новинки
+					.catalog__sorting-only-new
+						// Делается активным добавлением класса .active блоку .catalog__sorting-only-new-a
+						a.catalog__sorting-only-new-a(href='#') Показать только новинки
+							.catalog__sorting-only-new-bullet
+					// Сортировать по алфавиту
+					// Активный параметр определяется классом .active
+					.catalog__sorting-alphabet
+						a.catalog__sorting-alphabet-a-z.active(href='#') 
+							.catalog__sorting-alphabet-a-z-txt Сортировать:
+							strong А
+							i.fa.fa-long-arrow-right(aria-hidden="true")
+							strong Я
+						a.catalog__sorting-alphabet-z-a(href='#') 
+							.catalog__sorting-alphabet-z-a-txt Сортировать:
+							strong Я
+							i.fa.fa-long-arrow-right(aria-hidden="true")
+							strong А
+						
+			
+			.catalog__cols
+				// Первая колонка
+				.catalog__col1
+					// Меню
+					.catalog__navbar
+						mixin menu-accordion-bootstrap
+							.menu-accordion-bootstrap
+								// Бутстрап Аккордион 
+								.accordion#accordion(role="tablist")
+									.card
+										.card-header#headingOne(role="tab")
+											.menu__title
+												a(data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne") Лекарственные средства
+										.submenu-block#collapseOne.collapse.show(role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion")
+											ul.card-body
+												li.active
+													.active-item
+													a(href='#') Сиропы
+												li
+													.active-item
+													a(href='#') Гематогены
+												li
+													.active-item
+													a(href='#') Таблетки
+												li
+													.active-item
+													a(href='#') Порошки и гранулы
+												li
+													.active-item
+													a(href='#') Капсулы
+												li
+													.active-item
+													a(href='#') Прочие лекарственные средства
+											.border-active
+									.card
+										.card-header(role="tab" id="headingTwo")
+											.menu__title
+												a.collapsed(data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Биологически активные добавки
+										.submenu-block#collapseTwo.collapse(role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion")
+											ul.card-body
+												li
+													a(href='#') Сиропы
+												li
+													a(href='#') Гематогены
+												li
+													a(href='#') Таблетки
+												li
+													a(href='#') Порошки и гранулы
+												li
+													a(href='#') Капсулы
+												li
+													a(href='#') Прочие лекарственные средства
+											.border-active
+									.card
+										.card-header(role="tab" id="headingThree")
+											.menu__title
+												a.collapsed(data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree") Пищевые продукты
+										.submenu-block#collapseThree.collapse(role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion")
+											ul.card-body
+												li
+													a(href='#') Сиропы
+												li
+													a(href='#') Гематогены
+												li
+													a(href='#') Таблетки
+												li
+													a(href='#') Порошки и гранулы
+												li
+													a(href='#') Капсулы
+												li
+													a(href='#') Прочие лекарственные средства
+											.border-active
+						+menu-accordion-bootstrap
+					// Баннер
+					.catalog__banner
+						img.catalog__banner-img(src='template-images/catalog__banner.png')
+				// Вторая колонка
+				.catalog__col2
+					// Карточка товаров
+					.catalog__items
+						+catalog__card('template-images/catalog__card-img1.png', 'Сироп "Розавит"', 'Средство, регулирующее метаболические процессы', 'on', '')
+						+catalog__card('template-images/catalog__card-img2.png', 'Сироп "Подорожник с витамином С"', 'Средство, оказывающее отхаркивающее,  противовоспалительное и муколитическое действие.', '', 'on')
+						+catalog__card('template-images/catalog__card-img3.png', 'Сироп "Девясил с витамином С"', 'Средство, применяемое при кашле и простудных заболеваниях. Отхаркивающее средство', 'on', '')
+						+catalog__card('template-images/catalog__card-img4.png', 'Сироп "Алтей"', 'Средство, стимулирующее отхаркивание', '', '')
+						+catalog__card('template-images/catalog__card-img5.png', 'Сироп "Чебрец в витамином С"', 'Средство, применяемое при кашле и простудных заболеваниях. Отхаркивающее средство', '', '')
+						+catalog__card('template-images/catalog__card-img6.png', 'Сироп "Трависил"', 'Отхаркивающее средство растительного происхождения', 'on', '')
+						+catalog__card('template-images/catalog__card-img7.png', 'Сироп "Трависил без сахара"', 'Отхаркивающее средство растительного происхождения', '', '')
+						+catalog__card('template-images/catalog__card-img7.png', 'Сироп "Флюколд"', 'Симптоматическое лечение гриппа и простуды', '', '')
+						div(style='width: 318px')
+						div(style='width: 318px')
+					// Текст
+					.catalog__text
+						.main-text__title Лекарственные препараты и пищевые добавки
+						.main-text__text Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.
+						// Кнопка "Подробнее" с текстом
+						+read-more-bootstrap('Подробно', 'Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.')
+	// Примите участие в опросе
+	+page-main-interview

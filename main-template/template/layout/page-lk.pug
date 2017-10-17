@@ -1,0 +1,50 @@
+//- page-lk.pug
+extends page-template.pug
+
+block content
+	+crumbs('template-images/lk__title.png', 'Личный кабинет клиента', ['#', 'Личный кабинет клиента'])
+	.lk.inn_padd
+		.lk__inner.site-width
+			ul.nav.nav-tabs#myTab(role="tablist")
+				li.nav-item
+					a.nav-link.active#home-tab(data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-expanded="true") Документы
+				li.nav-item
+					a.nav-link#home-tab(data-toggle="tab" href="#tab2" role="tab" aria-controls="home" aria-expanded="true") Форма заказа
+			// Содержимое табов 
+			.tab-content#myTabContent
+				// Левый таб
+				.tab-pane.fade#tab1(role="tabpanel" aria-labelledby="home-tab")
+					+tab-content__item('Прайс-Лист', 'обновлено 21.05.2017', 'files/file.pdf')
+					+tab-content__item('Дистрибьюторам', 'обновлено 21.05.2017', 'files/file.pdf')
+					+tab-content__item('Информация по наличию', 'обновлено 21.05.2017', 'files/file.pdf')
+					+tab-content__item('Положение по скидкам', 'обновлено 21.05.2017', 'files/file.pdf')
+				// Правый таб
+				.tab-pane.fade.show.active#tab2(role="tabpanel" aria-labelledby="home-tab")
+					.lk__table-container
+						table.lk__table
+							tr.lk__tr
+								th.lk__th N п/п
+								th.lk__th Наименование продукции
+								th.lk__th Единица измерения
+								th.lk__th Франко-назначения
+								th.lk__th.availability Наличие
+								th.lk__th Количество
+							mixin lk__table-row
+								tr.lk__tr
+									td.lk__td 1
+									td.lk__td БАД 
+										q Гематоген витамины плюс
+									td.lk__td Плитка 50 г.
+									td.lk__td 0,32
+									td.lk__td В наличии
+									td.lk__td
+							+lk__table-row
+							+lk__table-row
+							+lk__table-row
+							tr.lk__tr
+								td.lk__td.lk__td-footer(colspan="6")
+									.lk__td-footer-text
+										.lk__td-footer-text-choose Вы выбрали:
+										.lk__td-footer-text-all Общее количество:
+									.lk__td-footer-btn Оформить заявку
+								

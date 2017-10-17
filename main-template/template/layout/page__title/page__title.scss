@@ -6,7 +6,15 @@
 }
 .page__title .main-slider__txt-title {
 	top: 50%;
+  line-height: 70px;
 }
+  /* Адаптация */
+@media screen and (max-width: 1270px) {
+  .page__title .main-slider__txt-title {
+  	top: 20%;
+  }
+}
+  /* /Адаптация */
 .page__title .main-slider-slick__item {
   overflow: hidden;
 }

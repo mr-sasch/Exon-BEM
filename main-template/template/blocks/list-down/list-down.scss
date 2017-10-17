@@ -1,0 +1,18 @@
+.tab-content__item-source-download,
+.tab-content__item-source-see {
+	width: 45px; height: 45px;
+	border: 2px solid $blue;
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 20px;
+}
+.tab-content__item-source-see {
+	background: url('../template/layout/template-images/lk__eye.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.tab-content__item-source-download {
+	background: url('../template/layout/template-images/lk__cloud.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}

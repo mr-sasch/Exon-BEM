@@ -517,3 +517,9 @@ a.page-main-news__list-item {
 /* Страница "Каталог" */
 @import "../template/layout/page-catalog/page-catalog.scss";
 /* /Страница "Каталог" */
+
+/* Страница "Личный кабинет" */
+@import "../template/layout/page-lk/page-lk.scss";
+// Список ссылок
+@import "../template/blocks/list-down/list-down.scss";
+/* /Страница "Личный кабинет" */
