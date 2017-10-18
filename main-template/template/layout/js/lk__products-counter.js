@@ -1,21 +1,59 @@
 // Блок +- количества
+
 $('.product-count .minus').click(function(){
 	count = $(this).parent().find('.value').text();
-	if (count > 1){
+	// Счетчик
+	if (count > 0){
 		$(this).parent().find('.value').text(--count);
+		$(this).parent().parent().parent().addClass('added_to_order');
+	};
+	// Добавление продуктов в заказ
+	if (count == 0){
+		$(this).parent().parent().parent().removeClass('added_to_order');
 	}
+	basket_calc();
 });
 $('.product-count .plus').click(function(){
 	count = $(this).parent().find('.value').text();
+	// Счетчик
 	if (count < 99){
 		$(this).parent().find('.value').text(++count);
+		$(this).parent().parent().parent().addClass('added_to_order');
+	};
+	// Добавление продуктов в заказ
+	if (count == 0){
+		$(this).parent().parent().parent().removeClass('added_to_order');
 	}
+	basket_calc();
 });
-// http://kv-trade.nolimit.by/basket.php
-/*
-<div class="product-count">
-	<span class="minus">-</span>
-	<span class="value">2</span>
-	<span class="plus">+</span>
-</div>
-*/
+
+// Общее количество выбранных товаров
+function basket_calc(){
+	var count_of_products = 0;
+	$('.product-count .value').each(function(){
+		item_product_count = Number($(this).text());
+		count_of_products += item_product_count;
+	});
+	$('.lk__table-footer-choose-number').text(count_of_products);
+};
+
+// Формирование заказа
+$('.lk__table-footer-btn').click(function(){
+	$('.lk__table').find('.added_to_order').clone().appendTo('.lk__table-order');
+	$('.lk__modal-order').find('.minus').remove();
+	$('.lk__modal-order').find('.plus').remove();
+})
+
+// Нажатие на кнопку "Изменить"
+$('.lk__table-footer-btn-change').click(function() {
+	$('.lk__modal-order').find('.added_to_order').remove();
+})
+// Нажатие на фон, чтобы закрыть модальное окно. Результат = нажатие "Изменить"
+$('#lk__modal-order').click(function() {
+	$('.lk__modal-order').find('.added_to_order').remove();
+})
+
+// Нажатие на кнопку закрытия окна Приветствия
+$('.lk__welcome-cross').click(function() {
+	$('.lk__welcome').css('display', 'none');
+})

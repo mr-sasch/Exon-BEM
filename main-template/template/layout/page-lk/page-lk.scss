@@ -77,9 +77,13 @@
 
 
 /* Таблица */
+.lk__table-container {
+  overflow: auto;
+}
 table.lk__table {
 	width: 100%;
 	text-align: center;
+	min-width: 850px;
 }
 th.lk__th {
 	text-align: center;
@@ -96,14 +100,167 @@ td.lk__td {
 	font-size: 18px;
 	font-weight: 400;
 }
-.lk__td-footer {
+
+.lk__table-footer {
 	height: 154px;
 	background-color: $grey-bg;
 	text-align: justify;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 85px;
+	padding-left: 35px;
+
+}
+.lk__table-footer-txt {
+	font-size: 18px;
+	font-weight: 300;
+	color: #000;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
+.lk__table-footer-btn {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 500;
+	background-color: $blue;
+	border: 2px solid $blue;
+	border-radius: 50px;
+	display: inline-block;
+	height: 60px; width: 316px;
+	text-align: center;
+	padding: 4px 0;
+	cursor: pointer;
+	outline: none !important;
+}
 
+// Наличие
+.lk__table .yes {
+	display: none;
+	color: $green-d;
+}
+.lk__table .no {
+	display: none;
+	color: $red;
+}
+.lk__table .yes.on,
+.lk__table .no.on {
+	display: inline-block;
+}
 
-
+/* Адаптация */
+@media screen and (max-width: 900px) {
+	.lk__table-footer {
+		flex-direction: column;
+		justify-content: center;
+		padding: 40px 0 20px;
+	}
+	.lk__table-footer-btn {
+		margin-top: 30px;
+	}
+}
+/* /Адаптация */
 
 /* /Таблица */
+
+
+/* Футер */
+.lk__table-footer-choose,
+.lk__table-footer-all {
+    display: flex;
+		align-items: center;
+}
+.lk__table-footer-choose-number,
+.lk__table-footer-all-number {
+	margin: 0 10px;
+	font-size: 30px;
+	font-weight: 500;
+	color: #000;
+}
+/* /Футер */
+
+/* Модальное окно форма заказа */
+.lk__modal-order-container {
+	background-color: #fff;
+}
+.lk__modal-order {
+	padding-top: 60px;
+}
+.lk__modal-order-title {
+	font-size: 30px; font-weight: 500;
+	color: $grey;
+	margin-left: 85px;
+	margin-bottom: 45px;
+}
+.lk__table-footer-btn-change {
+	color: #000;
+	font-size: 30px;
+	font-weight: 500;
+	background-color: $grey-bg;
+	border: 2px solid #000;
+	border-radius: 50px;
+	display: inline-block;
+	height: 60px; width: 316px;
+	text-align: center;
+	padding: 4px 0;
+	cursor: pointer;
+	margin-right: 30px;
+	outline: none;
+}
+.lk__table-footer-btn-send {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 500;
+	background-color: $blue;
+	border: 2px solid $blue;
+	border-radius: 50px;
+	display: inline-block;
+	height: 60px; width: 316px;
+	text-align: center;
+	padding: 4px 0;
+	cursor: pointer;
+	outline: none;
+}
+/* /Модальное окно форма заказа */
+
+/* Окно приветствия */
+.lk__welcome {
+	background-color: $grey-bg;
+	padding: 90px 0 50px;
+}
+.lk__welcome-inner {
+	position: relative;
+	margin: auto;
+}
+.lk__welcome-cross {
+	position: absolute;
+	top: -60px; right: 0;
+	cursor: pointer;
+}
+.lk__welcome-name {
+	font-size: 30px;
+	font-weight: 500;
+	color: $green-d;
+}
+.lk__welcome-name-client {
+	display: inline-block;
+}
+.lk__welcome-text {
+	font-size: 24px;
+	font-weight: 400;
+	color: $grey;
+	margin: 20px 0;
+}
+.lk__welcome-description {
+	font-size: 18px;
+	font-weight: 300;
+	color: $grey;
+}
+
+/* /Окно приветствия */

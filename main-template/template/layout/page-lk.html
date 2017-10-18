@@ -20,6 +20,8 @@
     <!-- Стиль шаблона(header - footer)-->
     <link rel="stylesheet" href="style/page-template.css"/>
     <!-- /Стили-->
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Тело сайта -->
     <body>
       <!-- Модальные окна-->
@@ -149,16 +151,30 @@
                 </div>
               </div>
             </div>
+      <!-- Приветствие-->
+      <div class="lk__welcome">
+        <div class="inn_padd">
+          <div class="lk__welcome-inner site-width">
+            <div class="lk__welcome-name">Здравствуйте,
+              <div class="lk__welcome-name-client">Александр Олегович!</div>
+            </div>
+            <div class="lk__welcome-text">Добро пожаловать в личный кабинет</div>
+            <div class="lk__welcome-description">В личном кабинете вы всегда можете иметь актуальную информацию по ценам и наличию лекарственных средств на складе ОАО "ЭКЗОН"</div><img class="lk__welcome-cross" src="template-images/lk__welcome-cross.png"/>
+          </div>
+        </div>
+      </div>
+      <!-- Контент		-->
       <div class="lk inn_padd">
         <div class="lk__inner site-width">
+          <!-- Табы-->
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-expanded="true">Документы</a></li>
             <li class="nav-item"><a class="nav-link" id="home-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="home" aria-expanded="true">Форма заказа</a></li>
           </ul>
           <!-- Содержимое табов -->
           <div class="tab-content" id="myTabContent">
-            <!-- Левый таб-->
-            <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+            <!-- Таб "Документы"-->
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="home-tab">
                     <div class="tab-content__item">
                       <div class="tab-content__item-info">
                         <div class="tab-content__item-info-title">Прайс-Лист</div>
@@ -188,8 +204,8 @@
                       <div class="tab-content__item-source"><a class="tab-content__item-source-see" href="files/file.pdf" target="blank"></a><a class="tab-content__item-source-download" href="files/file.pdf" download="download"></a></div>
                     </div>
             </div>
-            <!-- Правый таб-->
-            <div class="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="home-tab">
+            <!-- Таб "Форма заказа"-->
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="home-tab">
               <div class="lk__table-container">
                 <table class="lk__table">
                   <tr class="lk__tr">
@@ -198,51 +214,104 @@
                     <th class="lk__th">Единица измерения</th>
                     <th class="lk__th">Франко-назначения</th>
                     <th class="lk__th availability">Наличие</th>
-                    <th class="lk__th">Количество</th>
+                    <th class="lk__th">Количество </th>
                   </tr>
                                     <tr class="lk__tr">
                                       <td class="lk__td">1</td>
-                                      <td class="lk__td">БАД 
+                                      <td class="lk__td">БАД
                                         <q>Гематоген витамины плюс</q>
                                       </td>
                                       <td class="lk__td">Плитка 50 г.</td>
                                       <td class="lk__td">0,32</td>
-                                      <td class="lk__td">В наличии</td>
-                                      <td class="lk__td"></td>
+                                      <td class="lk__td">
+                                        <!-- Включается добавлением класса .on-->
+                                        <div class="yes on">В наличии</div>
+                                        <div class="no">Нет</div>
+                                      </td>
+                                      <td class="lk__td">
+                                              <div class="product-count"><span class="minus">-</span><span class="value">0</span><span class="plus">+</span></div>
+                                      </td>
                                     </tr>
                                     <tr class="lk__tr">
                                       <td class="lk__td">1</td>
-                                      <td class="lk__td">БАД 
+                                      <td class="lk__td">БАД
                                         <q>Гематоген витамины плюс</q>
                                       </td>
                                       <td class="lk__td">Плитка 50 г.</td>
                                       <td class="lk__td">0,32</td>
-                                      <td class="lk__td">В наличии</td>
-                                      <td class="lk__td"></td>
+                                      <td class="lk__td">
+                                        <!-- Включается добавлением класса .on-->
+                                        <div class="yes on">В наличии</div>
+                                        <div class="no">Нет</div>
+                                      </td>
+                                      <td class="lk__td">
+                                              <div class="product-count"><span class="minus">-</span><span class="value">0</span><span class="plus">+</span></div>
+                                      </td>
                                     </tr>
                                     <tr class="lk__tr">
                                       <td class="lk__td">1</td>
-                                      <td class="lk__td">БАД 
+                                      <td class="lk__td">БАД
                                         <q>Гематоген витамины плюс</q>
                                       </td>
                                       <td class="lk__td">Плитка 50 г.</td>
                                       <td class="lk__td">0,32</td>
-                                      <td class="lk__td">В наличии</td>
-                                      <td class="lk__td"></td>
+                                      <td class="lk__td">
+                                        <!-- Включается добавлением класса .on-->
+                                        <div class="yes on">В наличии</div>
+                                        <div class="no">Нет</div>
+                                      </td>
+                                      <td class="lk__td">
+                                              <div class="product-count"><span class="minus">-</span><span class="value">0</span><span class="plus">+</span></div>
+                                      </td>
                                     </tr>
-                  <tr class="lk__tr">
-                    <td class="lk__td lk__td-footer" colspan="6">
-                      <div class="lk__td-footer-text">
-                        <div class="lk__td-footer-text-choose">Вы выбрали:</div>
-                        <div class="lk__td-footer-text-all">Общее количество:</div>
-                      </div>
-                      <div class="lk__td-footer-btn">Оформить заявку</div>
-                    </td>
-                  </tr>
                 </table>
+              </div>
+              <div class="lk__table-footer">
+                <div class="lk__table-footer-txt">
+                  <div class="lk__table-footer-choose">Вы выбрали:
+                    <div class="lk__table-footer-choose-number">0</div>наименований товаров
+                  </div>
+                  <div class="lk__table-footer-all">Общее количество:
+                    <div class="lk__table-footer-all-number">0</div>позиций	
+                  </div>
+                </div>
+                <button class="lk__table-footer-btn" data-target="#lk__modal-order" href="" data-toggle="modal">Оформить заявку						</button>
+              </div>
+              <!-- Модальное окно подтверждения заказа		-->
+              <div class="modal fade" id="lk__modal-order" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+                <div class="lk__modal-order-container modal-box modal-dialog site-width">
+                  <div class="lk__modal-order">
+                    <div class="lk__modal-order-title">Ваш заказ:</div>
+                    <table class="lk__table lk__table-order">
+                      <tr class="lk__tr">
+                        <th class="lk__th">N п/п</th>
+                        <th class="lk__th">Наименование продукции</th>
+                        <th class="lk__th">Единица измерения</th>
+                        <th class="lk__th">Франко-назначения</th>
+                        <th class="lk__th availability">Наличие</th>
+                        <th class="lk__th">Количество</th>
+                      </tr>
+                    </table>
+                    <div class="lk__table-footer">
+                      <div class="lk__table-footer-txt">
+                        <div class="lk__table-footer-choose">Вы выбрали:
+                          <div class="lk__table-footer-choose-number">0</div>наименований товаров
+                        </div>
+                        <div class="lk__table-footer-all">Общее количество:
+                          <div class="lk__table-footer-all-number">0</div>позиций
+                        </div>
+                      </div>
+                      <div class="lk__modal-order-footer-btns">
+                        <div class="lk__table-footer-btn-change" data-dismiss="modal">Изменить</div>
+                        <div class="lk__table-footer-btn-send" data-dismiss="modal">Отправить заявку</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <script src="js/lk__products-counter.js"></script>
         </div>
       </div>
       <!-- ***** /Контент *****-->
@@ -336,8 +405,6 @@
         </div>
       </div>
       <!-- Библиотеки скриптов -->
-      <!-- jQuery-->
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Slick Slider -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
       <!-- Slick Slider - init -->

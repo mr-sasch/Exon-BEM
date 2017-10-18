@@ -3,8 +3,19 @@ extends page-template.pug
 
 block content
 	+crumbs('template-images/lk__title.png', 'Личный кабинет клиента', ['#', 'Личный кабинет клиента'])
+	// Приветствие
+	.lk__welcome
+		.inn_padd
+			.lk__welcome-inner.site-width
+				.lk__welcome-name Здравствуйте,
+					.lk__welcome-name-client Александр Олегович!
+				.lk__welcome-text Добро пожаловать в личный кабинет
+				.lk__welcome-description В личном кабинете вы всегда можете иметь актуальную информацию по ценам и наличию лекарственных средств на складе ОАО "ЭКЗОН"
+				img.lk__welcome-cross(src='template-images/lk__welcome-cross.png')
+	// Контент		
 	.lk.inn_padd
 		.lk__inner.site-width
+			// Табы
 			ul.nav.nav-tabs#myTab(role="tablist")
 				li.nav-item
 					a.nav-link.active#home-tab(data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-expanded="true") Документы
@@ -12,14 +23,14 @@ block content
 					a.nav-link#home-tab(data-toggle="tab" href="#tab2" role="tab" aria-controls="home" aria-expanded="true") Форма заказа
 			// Содержимое табов 
 			.tab-content#myTabContent
-				// Левый таб
-				.tab-pane.fade#tab1(role="tabpanel" aria-labelledby="home-tab")
+				// Таб "Документы"
+				.tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="home-tab")
 					+tab-content__item('Прайс-Лист', 'обновлено 21.05.2017', 'files/file.pdf')
 					+tab-content__item('Дистрибьюторам', 'обновлено 21.05.2017', 'files/file.pdf')
 					+tab-content__item('Информация по наличию', 'обновлено 21.05.2017', 'files/file.pdf')
 					+tab-content__item('Положение по скидкам', 'обновлено 21.05.2017', 'files/file.pdf')
-				// Правый таб
-				.tab-pane.fade.show.active#tab2(role="tabpanel" aria-labelledby="home-tab")
+				// Таб "Форма заказа"
+				.tab-pane.fade#tab2(role="tabpanel" aria-labelledby="home-tab")
 					.lk__table-container
 						table.lk__table
 							tr.lk__tr
@@ -28,23 +39,54 @@ block content
 								th.lk__th Единица измерения
 								th.lk__th Франко-назначения
 								th.lk__th.availability Наличие
-								th.lk__th Количество
+								th.lk__th Количество 
 							mixin lk__table-row
 								tr.lk__tr
 									td.lk__td 1
-									td.lk__td БАД 
+									td.lk__td БАД
 										q Гематоген витамины плюс
 									td.lk__td Плитка 50 г.
 									td.lk__td 0,32
-									td.lk__td В наличии
 									td.lk__td
+										// Включается добавлением класса .on
+										.yes.on В наличии
+										.no Нет
+									td.lk__td
+										+count-plus-minus
 							+lk__table-row
 							+lk__table-row
 							+lk__table-row
-							tr.lk__tr
-								td.lk__td.lk__td-footer(colspan="6")
-									.lk__td-footer-text
-										.lk__td-footer-text-choose Вы выбрали:
-										.lk__td-footer-text-all Общее количество:
-									.lk__td-footer-btn Оформить заявку
-								
+					.lk__table-footer
+						.lk__table-footer-txt
+							.lk__table-footer-choose Вы выбрали:
+								.lk__table-footer-choose-number 0
+								| наименований товаров
+							.lk__table-footer-all Общее количество:
+								.lk__table-footer-all-number 0
+								| позиций	
+						button.lk__table-footer-btn(data-target='#lk__modal-order' href='' data-toggle='modal') Оформить заявку						
+					// Модальное окно подтверждения заказа		
+					.modal.fade#lk__modal-order(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+						.lk__modal-order-container.modal-box.modal-dialog.site-width
+							.lk__modal-order
+								.lk__modal-order-title Ваш заказ:
+								table.lk__table.lk__table-order
+									tr.lk__tr
+										th.lk__th N п/п
+										th.lk__th Наименование продукции
+										th.lk__th Единица измерения
+										th.lk__th Франко-назначения
+										th.lk__th.availability Наличие
+										th.lk__th Количество
+								.lk__table-footer
+									.lk__table-footer-txt
+										.lk__table-footer-choose Вы выбрали:
+											.lk__table-footer-choose-number 0
+											| наименований товаров
+										.lk__table-footer-all Общее количество:
+											.lk__table-footer-all-number 0
+											| позиций
+									.lk__modal-order-footer-btns
+										.lk__table-footer-btn-change(data-dismiss="modal") Изменить
+										.lk__table-footer-btn-send(data-dismiss="modal") Отправить заявку
+			script(src='js/lk__products-counter.js')
