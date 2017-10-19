@@ -29,8 +29,15 @@
   display: flex;
   align-items: center; }
 
+.header-top__item-pharma,
+.header-top__item-pharma:hover {
+  color: #fff; }
+
 .header-top-login {
   cursor: pointer; }
+
+.header-top-login:hover {
+  text-decoration: underline; }
 
 /* Переключатель языка */
 .header-top__item-abs {

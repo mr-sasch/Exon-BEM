@@ -1,5 +1,5 @@
 //- page-contacts.pug
-extends ../page-template.pug
+extends page-template.pug
 
 block content
 	+crumbs('template-images/news-all__title.png', 'Новости', ['#', 'Новости'])
@@ -26,3 +26,5 @@ block content
 				a.news-all__pagination-page.active(href='#') 1
 				a.news-all__pagination-page(href='#') 2
 				a.news-all__pagination-page(href='#') 3
+	// серый футер
+	script(src='js/footer-grey.js')

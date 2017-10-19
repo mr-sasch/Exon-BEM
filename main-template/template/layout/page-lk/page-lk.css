@@ -11,6 +11,18 @@
   margin: auto;
   margin-top: 100px; }
 
+/* Корректировка Тайтла */
+@media screen and (max-width: 1500px) {
+  .page-lk .main-slider__txt-title {
+    font-size: 60px; } }
+@media screen and (max-width: 600px) {
+  .page-lk .main-slider__txt-title {
+    font-size: 60px;
+    line-height: 55px; }
+
+  .page-lk .main-slider__txt {
+    height: 270px; } }
+/* /Корректировка Тайтла */
 /* Табы */
 .lk .nav-tabs {
   justify-content: space-around; }
@@ -98,7 +110,6 @@ td.lk__td {
   font-weight: 400; }
 
 .lk__table-footer {
-  height: 154px;
   background-color: #f2f2f2;
   text-align: justify;
   display: -webkit-flex;
@@ -106,6 +117,7 @@ td.lk__td {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 32px 0;
   padding-right: 85px;
   padding-left: 35px; }
 
@@ -151,17 +163,23 @@ td.lk__td {
   .lk__table-footer {
     flex-direction: column;
     justify-content: center;
-    padding: 40px 0 20px; }
+    padding: 40px 0 50px; }
 
   .lk__table-footer-btn {
     margin-top: 30px; } }
+@media screen and (max-width: 370px) {
+  .lk__table-footer-btn {
+    width: 300px; } }
 /* /Адаптация */
 /* /Таблица */
 /* Футер */
 .lk__table-footer-choose,
 .lk__table-footer-all {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 28px;
+  padding: 10px; }
 
 .lk__table-footer-choose-number,
 .lk__table-footer-all-number {
@@ -178,12 +196,21 @@ td.lk__td {
 .lk__modal-order {
   padding-top: 60px; }
 
+.lk__table-order-modal-container {
+  overflow: auto; }
+
+.lk__modal-order .lk__table {
+  min-width: 880px; }
+
 .lk__modal-order-title {
   font-size: 30px;
   font-weight: 500;
   color: #4a4a4a;
   margin-left: 85px;
   margin-bottom: 45px; }
+
+.lk__modal-order-footer-btns {
+  text-align: center; }
 
 .lk__table-footer-btn-change {
   color: #000;
@@ -216,6 +243,24 @@ td.lk__td {
   cursor: pointer;
   outline: none; }
 
+/* Адапатция */
+@media screen and (max-width: 1150px) {
+  .lk__modal-order .lk__table-footer {
+    padding-right: 0; }
+
+  .lk__modal-order .lk__table-footer {
+    justify-content: space-around; }
+
+  .lk__modal-order .lk__table-footer-btn-change {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px; } }
+@media screen and (max-width: 350px) {
+  .lk__table-footer-btn-change,
+  .lk__table-footer-btn-send {
+    width: 280px; } }
+/* /Адапатция */
 /* /Модальное окно форма заказа */
 /* Окно приветствия */
 .lk__welcome {
@@ -252,5 +297,8 @@ td.lk__td {
   color: #4a4a4a; }
 
 /* /Окно приветствия */
+.footer-separator {
+  border-bottom: 1px solid #4ab75e;
+  padding-bottom: 90px; }
 
 /*# sourceMappingURL=page-lk.css.map */

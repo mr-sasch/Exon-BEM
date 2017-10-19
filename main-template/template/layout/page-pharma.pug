@@ -1,0 +1,100 @@
+extends page-template.pug
+
+block content
+	+crumbs('template-images/pharma__title.png', 'Фарма-', ['', 'Фармаконадзор'])
+	// Содержимое страницы "Каталог"
+	.pharma.inn_padd
+		.pharma__inner.site-width
+			form.pharma-form
+				// Информация о человеке
+				.pharma-form__block
+					.pharma-form__block-title Медицинский или фармацевтический работник, сообщающий о нежелательной реакции
+						.pharma-form__cols
+							.pharma-form__col-1_2
+								//- Миксим поля input
+								mixin pharma-input(classname, type, name, placeholder)
+									input(class= classname type= type name= name placeholder= placeholder)
+								//- /Миксим поля input
+								+pharma-input('', 'text', 'pharma__person-name', 'Ф.И.О.')
+								+pharma-input('', 'text', 'pharma__person-phone', 'Телефон')
+								+pharma-input('', 'text', 'pharma__person-address', 'Адрес учреждения')
+								//- Миксин выпадающего списка
+								mixin pharma-select(selectClassname, selectName, ...options)
+									.pharma-select__container(class= selectClassname)
+										select(name= selectName)
+											each option in options
+												option(value= option[0])= option[1]
+								//- /Миксин выпадающего списка
+								+pharma-select('', 'message', ['message','Сообщение'], ['complaint','Жалоба'], ['pretenzia','Претензия'], ['exclaim','Крик души'])
+							.pharma-form__col-1_2
+								+pharma-input('', 'text', 'pharma__person-position', 'Должность и место работы')
+								+pharma-select('', 'lechenie', ['lechenie','Лечение'], ['lechenie2','Лечение2'], ['lechenie3','Лечение3'])
+				// Информация о пациенте
+				.pharma-form__block 
+					.pharma-form__block-title Информация о пациенте
+					.pharma-form__cols
+						.pharma-form__col-1_2
+							+pharma-input('', 'text', 'pharma__pacient-name', 'Ф.И.О.')
+						.pharma-form__col-1_2
+							+pharma-input('', 'text', 'pharma__pacient-name', 'Номер медицинской карты')
+					.pharma-form__cols
+						.pharma-form__col-1_3
+							+pharma-select('', 'pacientSex', ['pacientSex','Выберите пол'], ['male','Мужчина'], ['female','Женщина'])
+						.pharma-form__col-1_3
+							+pharma-input('', 'text', 'age', 'Возраст')
+						.pharma-form__col-1_3
+							+pharma-input('', 'text', 'weight', 'Вес,кг')
+					.pharma-form__cols
+						.pharma-form__col-1_3
+							+pharma-select('', 'pechen', ['pechen','Нарушение функции печени'], ['male','Мужчина'], ['female','Женщина'])
+						.pharma-form__col-1_3
+							+pharma-select('', 'pochki', ['pochki','Нарушение функции почек'], ['male','Мужчина'], ['female','Женщина'])
+						.pharma-form__col-1_3
+							+pharma-input('', 'text', 'allergia', 'Аллергия (указать на что)')
+				// Подозреваемое лекарственное средство
+				.pharma-form__block 
+					.pharma-form__block-title Подозреваемое лекарственное средство
+					.pharma-form__cols
+						.pharma-form__col-1_2
+							+pharma-input('', 'text', 'internationalName', 'Международное непатентованное название')
+						.pharma-form__col-1_2
+							+pharma-input('', 'text', 'tradeName', 'Торговое название')
+					// Подозреваемое лекарственное средство - Таблица
+					.pharma-form__table
+					//- ВСТАВИТЬ ТАБЛИЦУ
+				// Другие одновременно принимаемые лекарственные средства
+				.pharma-form__block 
+					.pharma-form__block-title Другие одновременно принимаемые лекарственные средства
+					.pharma-form__block-description (Укажите "нет", если других лекарственных средств не принимал)
+					// Другие одновременно принимаемые лекарственные средства - Таблица
+					.pharma-form__table
+					//- ВСТАВИТЬ ТАБЛИЦУ
+					.pharma-form__cols
+						.pharma-form__col-1_2
+							+pharma-input('', 'textarea', 'internationalName', 'Международное непатентованное название')
+						.pharma-form__col-1_2
+					.pharma-form__cols
+						.pharma-form__col-1_2
+						.pharma-form__col-1_2
+					.pharma-form__cols
+						.pharma-form__col-1_2
+						.pharma-form__col-1_2
+					.pharma-form__cols
+						.pharma-form__col-1_2
+						.pharma-form__col-1_2
+					.pharma-form__cols
+						.pharma-form__col-1_2
+						.pharma-form__col-1_2
+					.pharma-form__cols
+						.pharma-form__col-1_2
+						.pharma-form__col-1_2
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							

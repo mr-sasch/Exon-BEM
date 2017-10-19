@@ -20,6 +20,8 @@
     <!-- Стиль шаблона(header - footer)-->
     <link rel="stylesheet" href="style/page-template.css"/>
     <!-- /Стили-->
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Тело сайта -->
     <body>
       <!-- Модальные окна-->
@@ -36,10 +38,8 @@
           <div class="header-top__inner site-width">
             <div class="header-top__item header-adress"><img class="header-top__icon" src="template-images/header-top-point.png"/>
               <div class="header-top__text">225612, Республика Беларусь, г.Дрогичин, ул.Ленина 202</div>
-            </div>
-            <div class="header-top__item"><img class="header-top__icon" src="template-images/header-top-nadzor.png"/>
-              <div class="header-top__text">Формаконадзор</div>
-            </div>
+            </div><a class="header-top__item header-top__item-pharma" href="page-pharma.html"><img class="header-top__icon" src="template-images/header-top-nadzor.png"/>
+              <div class="header-top__text">Фармаконадзор</div></a>
             <div class="header-top__item header-top-login" data-target="#modal-box" href="" data-toggle="modal"><img class="header-top__icon" src="template-images/header-top-login.png"/>
               <div class="header-top__text">Вход для клиентов</div>
             </div>
@@ -195,6 +195,8 @@
           </div>
         </div>
       </div>
+      <!-- серый футер-->
+      <script src="js/footer-grey.js"></script>
       <!-- ***** /Контент *****-->
       <!-- ***** Футер ***** -->
       <div class="footer inn_padd">
@@ -286,8 +288,6 @@
         </div>
       </div>
       <!-- Библиотеки скриптов -->
-      <!-- jQuery-->
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Slick Slider -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
       <!-- Slick Slider - init -->

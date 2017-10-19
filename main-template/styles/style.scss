@@ -1,5 +1,4 @@
 body {
-	margin-bottom: 15px;
 	font-family: 'Roboto', sans-serif;
 }
 /* Ширина сайта */
@@ -525,3 +524,16 @@ a.page-main-news__list-item {
 // Счетчик
 @import "../template/blocks/count-plus-minus/count-plus-minus.scss";
 /* /Страница "Личный кабинет" */
+
+/* Серый футер */
+.footer-grey {
+	background-color: $grey-bg !important;
+}
+.footer-grey__btn:after {
+  background-color: $grey-bg !important;
+}
+/* /Серый футер */
+
+/* Фармаконадзор */
+@import "../template/layout/page-pharma/page-pharma.scss";
+/* /Фармаконадзор */

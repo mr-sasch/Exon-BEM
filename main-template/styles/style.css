@@ -1,6 +1,5 @@
 @charset "UTF-8";
 body {
-  margin-bottom: 15px;
   font-family: 'Roboto', sans-serif; }
 
 /* Ширина сайта */
@@ -157,8 +156,15 @@ a.button--gradient:hover {
   display: flex;
   align-items: center; }
 
+.header-top__item-pharma,
+.header-top__item-pharma:hover {
+  color: #fff; }
+
 .header-top-login {
   cursor: pointer; }
+
+.header-top-login:hover {
+  text-decoration: underline; }
 
 /* Переключатель языка */
 .header-top__item-abs {
@@ -610,6 +616,7 @@ a.online-order:hover {
 /* Общие стили футера */
 .footer {
   padding-top: 70px;
+  padding-bottom: 20px;
   background-color: #fff;
   color: #4a4a4a; }
 
@@ -2797,6 +2804,18 @@ a.catalog__card:hover {
   margin: auto;
   margin-top: 100px; }
 
+/* Корректировка Тайтла */
+@media screen and (max-width: 1500px) {
+  .page-lk .main-slider__txt-title {
+    font-size: 60px; } }
+@media screen and (max-width: 600px) {
+  .page-lk .main-slider__txt-title {
+    font-size: 60px;
+    line-height: 55px; }
+
+  .page-lk .main-slider__txt {
+    height: 270px; } }
+/* /Корректировка Тайтла */
 /* Табы */
 .lk .nav-tabs {
   justify-content: space-around; }
@@ -2884,7 +2903,6 @@ td.lk__td {
   font-weight: 400; }
 
 .lk__table-footer {
-  height: 154px;
   background-color: #f2f2f2;
   text-align: justify;
   display: -webkit-flex;
@@ -2892,6 +2910,7 @@ td.lk__td {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 32px 0;
   padding-right: 85px;
   padding-left: 35px; }
 
@@ -2937,17 +2956,23 @@ td.lk__td {
   .lk__table-footer {
     flex-direction: column;
     justify-content: center;
-    padding: 40px 0 20px; }
+    padding: 40px 0 50px; }
 
   .lk__table-footer-btn {
     margin-top: 30px; } }
+@media screen and (max-width: 370px) {
+  .lk__table-footer-btn {
+    width: 300px; } }
 /* /Адаптация */
 /* /Таблица */
 /* Футер */
 .lk__table-footer-choose,
 .lk__table-footer-all {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 28px;
+  padding: 10px; }
 
 .lk__table-footer-choose-number,
 .lk__table-footer-all-number {
@@ -2964,12 +2989,21 @@ td.lk__td {
 .lk__modal-order {
   padding-top: 60px; }
 
+.lk__table-order-modal-container {
+  overflow: auto; }
+
+.lk__modal-order .lk__table {
+  min-width: 880px; }
+
 .lk__modal-order-title {
   font-size: 30px;
   font-weight: 500;
   color: #4a4a4a;
   margin-left: 85px;
   margin-bottom: 45px; }
+
+.lk__modal-order-footer-btns {
+  text-align: center; }
 
 .lk__table-footer-btn-change {
   color: #000;
@@ -3002,6 +3036,24 @@ td.lk__td {
   cursor: pointer;
   outline: none; }
 
+/* Адапатция */
+@media screen and (max-width: 1150px) {
+  .lk__modal-order .lk__table-footer {
+    padding-right: 0; }
+
+  .lk__modal-order .lk__table-footer {
+    justify-content: space-around; }
+
+  .lk__modal-order .lk__table-footer-btn-change {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px; } }
+@media screen and (max-width: 350px) {
+  .lk__table-footer-btn-change,
+  .lk__table-footer-btn-send {
+    width: 280px; } }
+/* /Адапатция */
 /* /Модальное окно форма заказа */
 /* Окно приветствия */
 .lk__welcome {
@@ -3038,6 +3090,10 @@ td.lk__td {
   color: #4a4a4a; }
 
 /* /Окно приветствия */
+.footer-separator {
+  border-bottom: 1px solid #4ab75e;
+  padding-bottom: 90px; }
+
 .tab-content__item-source-download,
 .tab-content__item-source-see {
   width: 45px;
@@ -3077,5 +3133,94 @@ td.lk__td {
   cursor: pointer; }
 
 /* /Страница "Личный кабинет" */
+/* Серый футер */
+.footer-grey {
+  background-color: #f2f2f2 !important; }
+
+.footer-grey__btn:after {
+  background-color: #f2f2f2 !important; }
+
+/* /Серый футер */
+/* Фармаконадзор */
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
+.pharma__inner {
+  margin: auto; }
+
+/* Форма */
+.pharma-form__block-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #4a4a4a; }
+
+.pharma-form__block-description {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center; }
+
+.pharma-form__cols {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between; }
+
+.pharma-form__col-1_2 {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  justify-content: center; }
+
+.pharma-form__col-1_3 {
+  width: 30%; }
+
+.pharma-form input,
+.pharma-select__container {
+  border: 1px solid #6e6e6e;
+  border-radius: 50px;
+  outline: none;
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #4a4a4a;
+  height: 47px;
+  margin: 20px 0; }
+
+.pharma-form input {
+  width: 100%; }
+
+.pharma-form input:focus,
+.pharma-form input:active {
+  border-color: #4fb1f6; }
+
+.pharma-select__container {
+  position: relative; }
+
+.pharma-form select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 98%;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(74, 74, 74, 0.8);
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  padding-left: 25px; }
+
+/* /Форма */
+/* /Фармаконадзор */
 
 /*# sourceMappingURL=style.css.map */

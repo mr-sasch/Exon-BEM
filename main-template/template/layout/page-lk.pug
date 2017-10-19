@@ -70,14 +70,15 @@ block content
 						.lk__modal-order-container.modal-box.modal-dialog.site-width
 							.lk__modal-order
 								.lk__modal-order-title Ваш заказ:
-								table.lk__table.lk__table-order
-									tr.lk__tr
-										th.lk__th N п/п
-										th.lk__th Наименование продукции
-										th.lk__th Единица измерения
-										th.lk__th Франко-назначения
-										th.lk__th.availability Наличие
-										th.lk__th Количество
+								.lk__table-order-modal-container
+									table.lk__table.lk__table-order
+										tr.lk__tr
+											th.lk__th N п/п
+											th.lk__th Наименование продукции
+											th.lk__th Единица измерения
+											th.lk__th Франко-назначения
+											th.lk__th.availability Наличие
+											th.lk__th Количество
 								.lk__table-footer
 									.lk__table-footer-txt
 										.lk__table-footer-choose Вы выбрали:
@@ -89,4 +90,10 @@ block content
 									.lk__modal-order-footer-btns
 										.lk__table-footer-btn-change(data-dismiss="modal") Изменить
 										.lk__table-footer-btn-send(data-dismiss="modal") Отправить заявку
-			script(src='js/lk__products-counter.js')
+	.footer-separator
+	script(src='js/lk__products-counter.js')
+	// серый футер
+	script(src='js/footer-grey.js')
+	// корректировка Тайтла
+	script(src='js/lk__change-title.js')
+			

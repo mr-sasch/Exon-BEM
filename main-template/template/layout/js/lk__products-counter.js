@@ -42,6 +42,12 @@ $('.lk__table-footer-btn').click(function(){
 	$('.lk__table').find('.added_to_order').clone().appendTo('.lk__table-order');
 	$('.lk__modal-order').find('.minus').remove();
 	$('.lk__modal-order').find('.plus').remove();
+	// При нажатии кнопки Esc выполняется то же действие, что и при "Изменить"
+	$(document).keydown(function(e) {
+   	if (e.keyCode == 27) {
+			$('.lk__modal-order').find('.added_to_order').remove();
+  	}
+	});
 })
 
 // Нажатие на кнопку "Изменить"
@@ -52,6 +58,7 @@ $('.lk__table-footer-btn-change').click(function() {
 $('#lk__modal-order').click(function() {
 	$('.lk__modal-order').find('.added_to_order').remove();
 })
+
 
 // Нажатие на кнопку закрытия окна Приветствия
 $('.lk__welcome-cross').click(function() {

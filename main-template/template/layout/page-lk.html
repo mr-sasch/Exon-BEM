@@ -38,10 +38,8 @@
           <div class="header-top__inner site-width">
             <div class="header-top__item header-adress"><img class="header-top__icon" src="template-images/header-top-point.png"/>
               <div class="header-top__text">225612, Республика Беларусь, г.Дрогичин, ул.Ленина 202</div>
-            </div>
-            <div class="header-top__item"><img class="header-top__icon" src="template-images/header-top-nadzor.png"/>
-              <div class="header-top__text">Формаконадзор</div>
-            </div>
+            </div><a class="header-top__item header-top__item-pharma" href="page-pharma.html"><img class="header-top__icon" src="template-images/header-top-nadzor.png"/>
+              <div class="header-top__text">Фармаконадзор</div></a>
             <div class="header-top__item header-top-login" data-target="#modal-box" href="" data-toggle="modal"><img class="header-top__icon" src="template-images/header-top-login.png"/>
               <div class="header-top__text">Вход для клиентов</div>
             </div>
@@ -282,16 +280,18 @@
                 <div class="lk__modal-order-container modal-box modal-dialog site-width">
                   <div class="lk__modal-order">
                     <div class="lk__modal-order-title">Ваш заказ:</div>
-                    <table class="lk__table lk__table-order">
-                      <tr class="lk__tr">
-                        <th class="lk__th">N п/п</th>
-                        <th class="lk__th">Наименование продукции</th>
-                        <th class="lk__th">Единица измерения</th>
-                        <th class="lk__th">Франко-назначения</th>
-                        <th class="lk__th availability">Наличие</th>
-                        <th class="lk__th">Количество</th>
-                      </tr>
-                    </table>
+                    <div class="lk__table-order-modal-container">
+                      <table class="lk__table lk__table-order">
+                        <tr class="lk__tr">
+                          <th class="lk__th">N п/п</th>
+                          <th class="lk__th">Наименование продукции</th>
+                          <th class="lk__th">Единица измерения</th>
+                          <th class="lk__th">Франко-назначения</th>
+                          <th class="lk__th availability">Наличие</th>
+                          <th class="lk__th">Количество</th>
+                        </tr>
+                      </table>
+                    </div>
                     <div class="lk__table-footer">
                       <div class="lk__table-footer-txt">
                         <div class="lk__table-footer-choose">Вы выбрали:
@@ -311,9 +311,14 @@
               </div>
             </div>
           </div>
-          <script src="js/lk__products-counter.js"></script>
         </div>
       </div>
+      <div class="footer-separator"></div>
+      <script src="js/lk__products-counter.js"></script>
+      <!-- серый футер-->
+      <script src="js/footer-grey.js"></script>
+      <!-- корректировка Тайтла-->
+      <script src="js/lk__change-title.js"></script>
       <!-- ***** /Контент *****-->
       <!-- ***** Футер ***** -->
       <div class="footer inn_padd">
