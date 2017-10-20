@@ -5,7 +5,7 @@ block content
 	// Содержимое страницы "Каталог"
 	.pharma.inn_padd
 		.pharma__inner.site-width
-			form.pharma-form
+			form.pharma-form#pharma-form
 				// Информация о человеке
 				.pharma-form__block
 					.pharma-form__block-title Медицинский или фармацевтический работник, сообщающий о нежелательной реакции
@@ -19,16 +19,17 @@ block content
 								+pharma-input('', 'text', 'pharma__person-phone', 'Телефон')
 								+pharma-input('', 'text', 'pharma__person-address', 'Адрес учреждения')
 								//- Миксин выпадающего списка
-								mixin pharma-select(selectClassname, selectName, ...options)
+								mixin pharma-select(selectClassname, selectName, selectedPlaceholder, ...options)
 									.pharma-select__container(class= selectClassname)
 										select(name= selectName)
+											option(selected disabled)= selectedPlaceholder
 											each option in options
 												option(value= option[0])= option[1]
 								//- /Миксин выпадающего списка
-								+pharma-select('', 'message', ['message','Сообщение'], ['complaint','Жалоба'], ['pretenzia','Претензия'], ['exclaim','Крик души'])
+								+pharma-select('', 'message', 'Сообщение', ['pervichnoe','Первичное'], ['povtornoe','Повторное'])
 							.pharma-form__col-1_2
 								+pharma-input('', 'text', 'pharma__person-position', 'Должность и место работы')
-								+pharma-select('', 'lechenie', ['lechenie','Лечение'], ['lechenie2','Лечение2'], ['lechenie3','Лечение3'])
+								+pharma-select('', 'lechenie', 'Лечение', ['stacionarnoe','Стационарное'], ['ambulatornoe','Амбулаторное'], ['samolechenie','Самолечение'])
 				// Информация о пациенте
 				.pharma-form__block 
 					.pharma-form__block-title Информация о пациенте
@@ -39,16 +40,16 @@ block content
 							+pharma-input('', 'text', 'pharma__pacient-name', 'Номер медицинской карты')
 					.pharma-form__cols
 						.pharma-form__col-1_3
-							+pharma-select('', 'pacientSex', ['pacientSex','Выберите пол'], ['male','Мужчина'], ['female','Женщина'])
+							+pharma-select('', 'pacientSex', 'Выберите пол', ['male','Мужской'], ['female','Женский'])
 						.pharma-form__col-1_3
 							+pharma-input('', 'text', 'age', 'Возраст')
 						.pharma-form__col-1_3
 							+pharma-input('', 'text', 'weight', 'Вес,кг')
 					.pharma-form__cols
 						.pharma-form__col-1_3
-							+pharma-select('', 'pechen', ['pechen','Нарушение функции печени'], ['male','Мужчина'], ['female','Женщина'])
+							+pharma-select('', 'pechen','Нарушение функции печени', ['da','Да'], ['net','Нет'], ['neizvestno','Неизвестно'])
 						.pharma-form__col-1_3
-							+pharma-select('', 'pochki', ['pochki','Нарушение функции почек'], ['male','Мужчина'], ['female','Женщина'])
+							+pharma-select('', 'pochki', 'Нарушение функции почек', ['da','Да'], ['net','Нет'], ['neizvestno','Неизвестно'])
 						.pharma-form__col-1_3
 							+pharma-input('', 'text', 'allergia', 'Аллергия (указать на что)')
 				// Подозреваемое лекарственное средство
@@ -71,30 +72,75 @@ block content
 					//- ВСТАВИТЬ ТАБЛИЦУ
 					.pharma-form__cols
 						.pharma-form__col-1_2
-							+pharma-input('', 'textarea', 'internationalName', 'Международное непатентованное название')
+							mixin pharma-textarea(textareaClassName, rows, cols, formId, textareaName, textareaPlaceholder)
+								textarea(class= textareaClassName rows= rows cols= cols name= textareaName form= formId placeholder= textareaPlaceholder)
+							+pharma-textarea('opisaniePodProd', '5', '50', 'opisaniePodProd', 'pharma-form', 'Описание подозреваемой нежелательной реакции')
+						.pharma-form__col-1_2
+							mixin pharma-input-date(inputDateClassName, inputDateFormName, inputDateFormPlaceholder)
+								input(class= inputDateClassName name= inputDateFormName placeholder= inputDateFormPlaceholder type="text").inputDateForm
+							+pharma-input-date('startDate', 'startDate', 'Дата начала   дд.мм.гг')
+							+pharma-input-date('finishDate', 'finishDate', 'Дата окончания   дд.мм.гг')
+					.pharma-form__cols
+						.pharma-form__col-1_2
+							.pharma-form__input-description Результат прекращения приема подозреваемого лекарственного средства
+							+pharma-select('', 'resultatPrekrPriema','Выберите результат', ['yavnoeUluchshenie','Явное улучшение'], ['netUluchshenia','Нет улучшения'], ['neOtmenyalos','Не отменялось'], ['neizvestno','Неизвестно'], ['nePrimenimo','Неприменимо'])
+						.pharma-form__col-1_2.mod_jc-flex-end
+							.pharma-form__input-description Сопутствующие заболевания, иные состояния или факторы риска
+							+pharma-input('', 'text', 'soputstvZabolevania', 'Сопутствующие заболевания')
+					.pharma-form__cols
+						.pharma-form__col-1_2.mod_jc-flex-end
+							.pharma-form__input-description Оценка причинно-следственной связи
+							+pharma-select('', 'ocenkaPricinnoSledstvSvyazi','Выберите тип оценки', ['dostovernaya','Достоверная'], ['veroyatnaya','Вероятная'], ['vozmojnaya','Возможная'], ['somnitelnaya','Сомнительная'], ['uslovnaya','Условная'], ['zatrudnyayusOtvetit','Затрудняюсь ответить'])
+						.pharma-form__col-1_2
+							.pharma-form__input-description Исход
+								+pharma-select('', 'ishod','Выберите исход', ['vizdorBezPosledstviy','Выздоровление без последствий'], ['uluchshenieSostoyaniya','Улучшение состояния'], ['vizdorovlenieSposledstviyami','Выздоровление с последствиями(указать)'], ['sostoyanieBezIzmeneniy','Состояние без изменений(Еще не выздоровел)'], ['smertSreakciyey','Смерть возможно связана с нежелательной реакцией'], ['smertBezReakcii','Смерть не связана с нежелательной реакцией'], ['IshodNeizvesten','Исход неизвестен'])
+					.pharma-form__cols
+						.pharma-form__col-1_2
+							.pharma-form__input-description Предпринятые меры
+								+pharma-select('', 'predprinyatieMeri','Выберите предпринятые меры', ['bezLecheniya','Без лечения'], ['otmenaSredstva','Отмена подозреваемого лекарственного средства'], ['snijenieDozi','Снижение дозы подозреваемого лекарственного средства'], ['otmenaLecheniya','Отмена сопутствующего лечения'], ['medikamentoznayaTerapiya','Применение медикаментозной терапии'], ['neMedikamentoznayaTerapiya','Немедикаментозная терапия(в том числе хирургическое вмешательство)'], ['drugoe','Другое, указать'])
+						.pharma-form__col-1_2
+							.pharma-form__input-description Лекарственные средства, применяемые для купирования нежелательной реакции(если потребовалось)
+							+pharma-input('', 'text', 'lekarstvennieSredstva', 'Лекарственные средства')
+					.pharma-form__cols
+						.pharma-form__col-1_2
+							.pharma-form__input-description Другие предпринятые меры
+							+pharma-input('', 'text', 'drugieMeri', 'Другие предпринятые меры')
 						.pharma-form__col-1_2
 					.pharma-form__cols
 						.pharma-form__col-1_2
+							.pharma-form__input-description Критерии отнесения к серьезным нежелательным реакциям(отметьте, если это подходит)
+							+pharma-select('', 'kriteriiOtneseniya','Выберите критерии', ['smert','Смерть'], ['ugrozaJizni','Угроза жизни'], ['gospitalizacija','Госпитализация и ее продление'], ['anomalii','Врожденные аномалии'], ['medikamentoznayaTerapiya','Применение медикаментозной терапии'], ['invalidnost','Инвалидность/Нетрудоспособность'], ['drugoe','Необходимость медицинского вмешательства для предотвращения вышеперечисленных состояний'], ['neprimenimo','Неприменимо'])
 						.pharma-form__col-1_2
+							.pharma-form__input-description Отмечено ли повторение нежелательной реакции после повторного назначения лекарственного средства
+							+pharma-select('', 'OtmechenoLiPovtorenie','Выберите вариант', ['vozobnovlenieReakcii','Возобновление нежелательной реакции'], ['otsutstvieReakcii','Отсутствие нежелательной реакции'], ['povtornoNeNaznachalos','Повторно не назначалось'], ['otsutstvieReakciipriSnijeniiDozi','Отсутствие нежелательной реакции при снижении дозы'], ['neizvestno','Неизвестно'])
 					.pharma-form__cols
-						.pharma-form__col-1_2
-						.pharma-form__col-1_2
-					.pharma-form__cols
-						.pharma-form__col-1_2
-						.pharma-form__col-1_2
-					.pharma-form__cols
-						.pharma-form__col-1_2
-						.pharma-form__col-1_2
-					.pharma-form__cols
-						.pharma-form__col-1_2
-						.pharma-form__col-1_2
+						.pharma-form__col.mod_d-f
+							.pharma-form__input-description Подозреваемое лекарственное средство применяется в
+							+pharma-select('', 'sredstvoPrimenyaetsyaV','Выберите вариант', ['bezLecheniya','Медицинской практике'], ['otmenaSredstva','Клинических испытаниях(Укажите номер протокола клинической операции)'])
+				// Важная дополнительная информация
+				.pharma-form__block 
+					.pharma-form__block-title Важная дополнительная информация
+					.pharma-form__thin
+						.pharma-form__input-description Данные клинических, лабораторных, рентгенологических исследований и аутопсии, включая определение концентрации лекарственных средств в крови (тканях), если таковые имеются и связаны с нежелательной реакцией (пожалуйста, приведите даты)      
+						+pharma-input-date('setDate', 'setDate', 'Укажите даты   дд.мм.гг')
+						+pharma-input('', 'text', 'soputZabolev', 'Сопутствующие заболевания, амнестические данные')
+						+pharma-input('', 'text', 'vzaimodeystviya', 'Подозреваемые лекарственные взаимодействия')
+						.pharma-form__input-description Для врожденных аномалий указать все другие лекарственные средства, принимаемые во время беременности, а также дату последней менструации (укажите «нет» если такие средства отсутствуют)
+						+pharma-input('', 'text', 'drugieSredstva', 'Другие лекарственные средства (укажите «нет», если такие средства отсутствуют')
+						.pharma-form__input-description Пожалуйста, приложите другие страницы, если это необходимо
+						+pharma-input('', 'file', 'dopStr', '')
+						.pharma-form__cols
+							.pharma-form__col-1_2
+								+pharma-input-date('date', 'date', 'Дата   дд.мм.гг')
+							.pharma-form__col-1_2
+								+pharma-input('', 'text', 'podpisVracha', 'Подпись (Инициалы врача)')
+						.pharma-form__cols
+							.pharma-form__note * - отмечены поля, обязательные для заполнения 
+						.pharma-form__cols.pharma-form__submit
+							input(type="submit" value="ОТПРАВИТЬ").contacts-form__submit
 							
 							
 							
 							
-							
-							
-							
-							
-							
-							
+	// Корректировка полей ввода даты
+	script(src='js/inputDateForm.js')

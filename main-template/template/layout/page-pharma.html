@@ -152,7 +152,7 @@
       <!-- Содержимое страницы "Каталог"-->
       <div class="pharma inn_padd">
         <div class="pharma__inner site-width">
-          <form class="pharma-form">
+          <form class="pharma-form" id="pharma-form">
             <!-- Информация о человеке-->
             <div class="pharma-form__block">
               <div class="pharma-form__block-title">Медицинский или фармацевтический работник, сообщающий о нежелательной реакции
@@ -163,10 +163,9 @@
                                         <input type="text" name="pharma__person-address" placeholder="Адрес учреждения"/>
                                         <div class="pharma-select__container">
                                           <select name="message">
-                                            <option value="message">Сообщение</option>
-                                            <option value="complaint">Жалоба</option>
-                                            <option value="pretenzia">Претензия</option>
-                                            <option value="exclaim">Крик души</option>
+                                            <option selected="selected" disabled="disabled">Сообщение</option>
+                                            <option value="pervichnoe">Первичное</option>
+                                            <option value="povtornoe">Повторное</option>
                                           </select>
                                         </div>
                   </div>
@@ -174,9 +173,10 @@
                                         <input type="text" name="pharma__person-position" placeholder="Должность и место работы"/>
                                         <div class="pharma-select__container">
                                           <select name="lechenie">
-                                            <option value="lechenie">Лечение</option>
-                                            <option value="lechenie2">Лечение2</option>
-                                            <option value="lechenie3">Лечение3</option>
+                                            <option selected="selected" disabled="disabled">Лечение</option>
+                                            <option value="stacionarnoe">Стационарное</option>
+                                            <option value="ambulatornoe">Амбулаторное</option>
+                                            <option value="samolechenie">Самолечение</option>
                                           </select>
                                         </div>
                   </div>
@@ -198,9 +198,9 @@
                 <div class="pharma-form__col-1_3">
                                       <div class="pharma-select__container">
                                         <select name="pacientSex">
-                                          <option value="pacientSex">Выберите пол</option>
-                                          <option value="male">Мужчина</option>
-                                          <option value="female">Женщина</option>
+                                          <option selected="selected" disabled="disabled">Выберите пол</option>
+                                          <option value="male">Мужской</option>
+                                          <option value="female">Женский</option>
                                         </select>
                                       </div>
                 </div>
@@ -215,18 +215,20 @@
                 <div class="pharma-form__col-1_3">
                                       <div class="pharma-select__container">
                                         <select name="pechen">
-                                          <option value="pechen">Нарушение функции печени</option>
-                                          <option value="male">Мужчина</option>
-                                          <option value="female">Женщина</option>
+                                          <option selected="selected" disabled="disabled">Нарушение функции печени</option>
+                                          <option value="da">Да</option>
+                                          <option value="net">Нет</option>
+                                          <option value="neizvestno">Неизвестно</option>
                                         </select>
                                       </div>
                 </div>
                 <div class="pharma-form__col-1_3">
                                       <div class="pharma-select__container">
                                         <select name="pochki">
-                                          <option value="pochki">Нарушение функции почек</option>
-                                          <option value="male">Мужчина</option>
-                                          <option value="female">Женщина</option>
+                                          <option selected="selected" disabled="disabled">Нарушение функции почек</option>
+                                          <option value="da">Да</option>
+                                          <option value="net">Нет</option>
+                                          <option value="neizvestno">Неизвестно</option>
                                         </select>
                                       </div>
                 </div>
@@ -257,34 +259,170 @@
               <div class="pharma-form__table"></div>
               <div class="pharma-form__cols">
                 <div class="pharma-form__col-1_2">
-                                      <input type="textarea" name="internationalName" placeholder="Международное непатентованное название"/>
+                                    <textarea class="opisaniePodProd" rows="5" cols="50" name="pharma-form" form="opisaniePodProd" placeholder="Описание подозреваемой нежелательной реакции"></textarea>
+                </div>
+                <div class="pharma-form__col-1_2">
+                                    <input class="startDate inputDateForm" name="startDate" placeholder="Дата начала   дд.мм.гг" type="text"/>
+                                    <input class="finishDate inputDateForm" name="finishDate" placeholder="Дата окончания   дд.мм.гг" type="text"/>
+                </div>
+              </div>
+              <div class="pharma-form__cols">
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Результат прекращения приема подозреваемого лекарственного средства</div>
+                                      <div class="pharma-select__container">
+                                        <select name="resultatPrekrPriema">
+                                          <option selected="selected" disabled="disabled">Выберите результат</option>
+                                          <option value="yavnoeUluchshenie">Явное улучшение</option>
+                                          <option value="netUluchshenia">Нет улучшения</option>
+                                          <option value="neOtmenyalos">Не отменялось</option>
+                                          <option value="neizvestno">Неизвестно</option>
+                                          <option value="nePrimenimo">Неприменимо</option>
+                                        </select>
+                                      </div>
+                </div>
+                <div class="pharma-form__col-1_2 mod_jc-flex-end">
+                  <div class="pharma-form__input-description">Сопутствующие заболевания, иные состояния или факторы риска</div>
+                                      <input type="text" name="soputstvZabolevania" placeholder="Сопутствующие заболевания"/>
+                </div>
+              </div>
+              <div class="pharma-form__cols">
+                <div class="pharma-form__col-1_2 mod_jc-flex-end">
+                  <div class="pharma-form__input-description">Оценка причинно-следственной связи</div>
+                                      <div class="pharma-select__container">
+                                        <select name="ocenkaPricinnoSledstvSvyazi">
+                                          <option selected="selected" disabled="disabled">Выберите тип оценки</option>
+                                          <option value="dostovernaya">Достоверная</option>
+                                          <option value="veroyatnaya">Вероятная</option>
+                                          <option value="vozmojnaya">Возможная</option>
+                                          <option value="somnitelnaya">Сомнительная</option>
+                                          <option value="uslovnaya">Условная</option>
+                                          <option value="zatrudnyayusOtvetit">Затрудняюсь ответить</option>
+                                        </select>
+                                      </div>
+                </div>
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Исход
+                                        <div class="pharma-select__container">
+                                          <select name="ishod">
+                                            <option selected="selected" disabled="disabled">Выберите исход</option>
+                                            <option value="vizdorBezPosledstviy">Выздоровление без последствий</option>
+                                            <option value="uluchshenieSostoyaniya">Улучшение состояния</option>
+                                            <option value="vizdorovlenieSposledstviyami">Выздоровление с последствиями(указать)</option>
+                                            <option value="sostoyanieBezIzmeneniy">Состояние без изменений(Еще не выздоровел)</option>
+                                            <option value="smertSreakciyey">Смерть возможно связана с нежелательной реакцией</option>
+                                            <option value="smertBezReakcii">Смерть не связана с нежелательной реакцией</option>
+                                            <option value="IshodNeizvesten">Исход неизвестен</option>
+                                          </select>
+                                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pharma-form__cols">
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Предпринятые меры
+                                        <div class="pharma-select__container">
+                                          <select name="predprinyatieMeri">
+                                            <option selected="selected" disabled="disabled">Выберите предпринятые меры</option>
+                                            <option value="bezLecheniya">Без лечения</option>
+                                            <option value="otmenaSredstva">Отмена подозреваемого лекарственного средства</option>
+                                            <option value="snijenieDozi">Снижение дозы подозреваемого лекарственного средства</option>
+                                            <option value="otmenaLecheniya">Отмена сопутствующего лечения</option>
+                                            <option value="medikamentoznayaTerapiya">Применение медикаментозной терапии</option>
+                                            <option value="neMedikamentoznayaTerapiya">Немедикаментозная терапия(в том числе хирургическое вмешательство)</option>
+                                            <option value="drugoe">Другое, указать</option>
+                                          </select>
+                                        </div>
+                  </div>
+                </div>
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Лекарственные средства, применяемые для купирования нежелательной реакции(если потребовалось)</div>
+                                      <input type="text" name="lekarstvennieSredstva" placeholder="Лекарственные средства"/>
+                </div>
+              </div>
+              <div class="pharma-form__cols">
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Другие предпринятые меры</div>
+                                      <input type="text" name="drugieMeri" placeholder="Другие предпринятые меры"/>
                 </div>
                 <div class="pharma-form__col-1_2"></div>
               </div>
               <div class="pharma-form__cols">
-                <div class="pharma-form__col-1_2"></div>
-                <div class="pharma-form__col-1_2"></div>
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Критерии отнесения к серьезным нежелательным реакциям(отметьте, если это подходит)</div>
+                                      <div class="pharma-select__container">
+                                        <select name="kriteriiOtneseniya">
+                                          <option selected="selected" disabled="disabled">Выберите критерии</option>
+                                          <option value="smert">Смерть</option>
+                                          <option value="ugrozaJizni">Угроза жизни</option>
+                                          <option value="gospitalizacija">Госпитализация и ее продление</option>
+                                          <option value="anomalii">Врожденные аномалии</option>
+                                          <option value="medikamentoznayaTerapiya">Применение медикаментозной терапии</option>
+                                          <option value="invalidnost">Инвалидность/Нетрудоспособность</option>
+                                          <option value="drugoe">Необходимость медицинского вмешательства для предотвращения вышеперечисленных состояний</option>
+                                          <option value="neprimenimo">Неприменимо</option>
+                                        </select>
+                                      </div>
+                </div>
+                <div class="pharma-form__col-1_2">
+                  <div class="pharma-form__input-description">Отмечено ли повторение нежелательной реакции после повторного назначения лекарственного средства</div>
+                                      <div class="pharma-select__container">
+                                        <select name="OtmechenoLiPovtorenie">
+                                          <option selected="selected" disabled="disabled">Выберите вариант</option>
+                                          <option value="vozobnovlenieReakcii">Возобновление нежелательной реакции</option>
+                                          <option value="otsutstvieReakcii">Отсутствие нежелательной реакции</option>
+                                          <option value="povtornoNeNaznachalos">Повторно не назначалось</option>
+                                          <option value="otsutstvieReakciipriSnijeniiDozi">Отсутствие нежелательной реакции при снижении дозы</option>
+                                          <option value="neizvestno">Неизвестно</option>
+                                        </select>
+                                      </div>
+                </div>
               </div>
               <div class="pharma-form__cols">
-                <div class="pharma-form__col-1_2"></div>
-                <div class="pharma-form__col-1_2"></div>
+                <div class="pharma-form__col mod_d-f">
+                  <div class="pharma-form__input-description">Подозреваемое лекарственное средство применяется в</div>
+                                      <div class="pharma-select__container">
+                                        <select name="sredstvoPrimenyaetsyaV">
+                                          <option selected="selected" disabled="disabled">Выберите вариант</option>
+                                          <option value="bezLecheniya">Медицинской практике</option>
+                                          <option value="otmenaSredstva">Клинических испытаниях(Укажите номер протокола клинической операции)</option>
+                                        </select>
+                                      </div>
+                </div>
               </div>
-              <div class="pharma-form__cols">
-                <div class="pharma-form__col-1_2"></div>
-                <div class="pharma-form__col-1_2"></div>
-              </div>
-              <div class="pharma-form__cols">
-                <div class="pharma-form__col-1_2"></div>
-                <div class="pharma-form__col-1_2"></div>
-              </div>
-              <div class="pharma-form__cols">
-                <div class="pharma-form__col-1_2"></div>
-                <div class="pharma-form__col-1_2"></div>
+            </div>
+            <!-- Важная дополнительная информация-->
+            <div class="pharma-form__block"> 
+              <div class="pharma-form__block-title">Важная дополнительная информация</div>
+              <div class="pharma-form__thin">
+                <div class="pharma-form__input-description">Данные клинических, лабораторных, рентгенологических исследований и аутопсии, включая определение концентрации лекарственных средств в крови (тканях), если таковые имеются и связаны с нежелательной реакцией (пожалуйста, приведите даты)      </div>
+                                  <input class="setDate inputDateForm" name="setDate" placeholder="Укажите даты   дд.мм.гг" type="text"/>
+                                    <input type="text" name="soputZabolev" placeholder="Сопутствующие заболевания, амнестические данные"/>
+                                    <input type="text" name="vzaimodeystviya" placeholder="Подозреваемые лекарственные взаимодействия"/>
+                <div class="pharma-form__input-description">Для врожденных аномалий указать все другие лекарственные средства, принимаемые во время беременности, а также дату последней менструации (укажите «нет» если такие средства отсутствуют)</div>
+                                    <input type="text" name="drugieSredstva" placeholder="Другие лекарственные средства (укажите «нет», если такие средства отсутствуют"/>
+                <div class="pharma-form__input-description">Пожалуйста, приложите другие страницы, если это необходимо</div>
+                                    <input type="file" name="dopStr" placeholder=""/>
+                <div class="pharma-form__cols">
+                  <div class="pharma-form__col-1_2">
+                                      <input class="date inputDateForm" name="date" placeholder="Дата   дд.мм.гг" type="text"/>
+                  </div>
+                  <div class="pharma-form__col-1_2">
+                                        <input type="text" name="podpisVracha" placeholder="Подпись (Инициалы врача)"/>
+                  </div>
+                </div>
+                <div class="pharma-form__cols">
+                  <div class="pharma-form__note">* - отмечены поля, обязательные для заполнения </div>
+                </div>
+                <div class="pharma-form__cols pharma-form__submit">
+                  <input class="contacts-form__submit" type="submit" value="ОТПРАВИТЬ"/>
+                </div>
               </div>
             </div>
           </form>
         </div>
       </div>
+      <!-- Корректировка полей ввода даты-->
+      <script src="js/inputDateForm.js"></script>
       <!-- ***** /Контент *****-->
       <!-- ***** Футер ***** -->
       <div class="footer inn_padd">

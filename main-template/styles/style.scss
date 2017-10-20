@@ -18,6 +18,14 @@ strong {
 q {
     quotes: "\00ab" "\00bb";
 }
+
+/* Модификаторы */
+.mod_jc-flex-end {
+	justify-content: flex-end !important;
+}
+
+/* /Модификаторы */
+
 /* Переменные */
 @import "vars.scss";
 /* /Переменные */
