@@ -24,7 +24,7 @@ html(lang="en")
 		//- link(rel="stylesheet" type="text/css" href="scripts/slick/slick.css")		
 		
 		// Стиль сайта
-		link(rel="stylesheet" href="../../styles/style.css")
+		link(rel="stylesheet" href="style/style.css")
 			
 		// Стиль шаблона(header - footer)
 		link(rel='stylesheet' href='style/page-template.css')
@@ -34,57 +34,57 @@ html(lang="en")
 		// jQuery
 		script(src="https://code.jquery.com/jquery-3.2.1.min.js")
 		
-		// Тело сайта 
-		body
-			// Модальные окна
-			// Модальное окно - Вход для клиентов
-			include ../blocks/modals/modal__header-top-login/modal__header-top-login.pug
-			
-			//- Объявляем миксины
-				//- Кнопки
-					//- Кнопка-ссылка простая
-			include ../blocks/buttons/button-link/button-link.pug
-					//- Кнопка-ссылка с градиентом
-			include ../blocks/buttons/button-link-colored/button-link-colored.pug
-					//- Кнопка-модальное окно с градиентом
-			include ../blocks/buttons/button-modal-colored/button-modal-colored.pug
-					//- Кнопка поиска в шапке
-			include ../blocks/header-search/header-search.pug
-			include ../blocks/mobile-menu/mobile-menu.pug
-			//- Блок с табами(bootstrap) на Главной
-			include ../blocks/tabs-bootstrap/tabs-bootstrap.pug
-			//- Содержимое блока с Табами на Главной
-			include block__main-tabs-item.pug
-			//- Блок Читать далее
-			include ../blocks/read-more-bootstrap/read-more-bootstrap.pug
-			//- Блок "Примите участие в опросе"
-			include block-main-interview.pug
-			//- Блок "Заголовок обычной страницы"
-			include ../layout/page__title/page__title.pug
-			//- Блок "Подписаться на новости" на странице Новостей
-			include ../blocks/subscribe-page-news/subscribe-page-news.pug
-			//- Превью новости на странице всех новостей
-			include ../layout/news-all__previews-item/news-all__previews-item.pug
-			//- Главный Slick Slider
-			include ../blocks/main-slider-slick/slider-slick.pug
-			//- Карточка товара на странице "Каталог"
-			include ../blocks/catalog__card/catalog__card.pug
-			//- Список ссылок для загрузки - Страница "Личный кабинет"
-			include ../blocks/list-down/list-down.pug
-			//- Счетчик на странице Личный кабинет
-			include ../blocks/count-plus-minus/count-plus-minus.pug
-			
-			// ***** Хэдер ***** 
-			include header/header.pug
-			// ***** /Хэдер ***** 
+	// Тело сайта 
+	body
+		// Модальные окна
+		// Модальное окно - Вход для клиентов
+		include ../blocks/modals/modal__header-top-login/modal__header-top-login.pug
+		
+		//- Объявляем миксины
+			//- Кнопки
+				//- Кнопка-ссылка простая
+		include ../blocks/buttons/button-link/button-link.pug
+				//- Кнопка-ссылка с градиентом
+		include ../blocks/buttons/button-link-colored/button-link-colored.pug
+				//- Кнопка-модальное окно с градиентом
+		include ../blocks/buttons/button-modal-colored/button-modal-colored.pug
+				//- Кнопка поиска в шапке
+		include ../blocks/header-search/header-search.pug
+		include ../blocks/mobile-menu/mobile-menu.pug
+		//- Блок с табами(bootstrap) на Главной
+		include ../blocks/tabs-bootstrap/tabs-bootstrap.pug
+		//- Содержимое блока с Табами на Главной
+		include block__main-tabs-item.pug
+		//- Блок Читать далее
+		include ../blocks/read-more-bootstrap/read-more-bootstrap.pug
+		//- Блок "Примите участие в опросе"
+		include block-main-interview.pug
+		//- Блок "Заголовок обычной страницы"
+		include ../layout/page__title/page__title.pug
+		//- Блок "Подписаться на новости" на странице Новостей
+		include ../blocks/subscribe-page-news/subscribe-page-news.pug
+		//- Превью новости на странице всех новостей
+		include ../layout/news-all__previews-item/news-all__previews-item.pug
+		//- Главный Slick Slider
+		include ../blocks/main-slider-slick/slider-slick.pug
+		//- Карточка товара на странице "Каталог"
+		include ../blocks/catalog__card/catalog__card.pug
+		//- Список ссылок для загрузки - Страница "Личный кабинет"
+		include ../blocks/list-down/list-down.pug
+		//- Счетчик на странице Личный кабинет
+		include ../blocks/count-plus-minus/count-plus-minus.pug
+		
+		// ***** Хэдер ***** 
+		include header/header.pug
+		// ***** /Хэдер ***** 
 
-			// ***** Контент ***** 
-			block content
-			// ***** /Контент *****
+		// ***** Контент ***** 
+		block content
+		// ***** /Контент *****
 
-			// ***** Футер ***** 
-			include footer/footer.pug
-			// ***** /Футер *****
+		// ***** Футер ***** 
+		include footer/footer.pug
+		// ***** /Футер *****
 				
 // !плагин LiveReload. по завершении разработки - удалить!
 script(src="http://localhost:35729/livereload.js")

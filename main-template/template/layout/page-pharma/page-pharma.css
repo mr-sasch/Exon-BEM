@@ -8,25 +8,31 @@
 /* Красный цвет */
 /* Верхний отстут контента страницы от заголовка */
 .pharma__inner {
-  margin: auto; }
+  margin: auto;
+  padding-top: 90px; }
 
 /* Форма */
 .pharma-form__block-title {
   text-align: center;
   font-size: 24px;
   font-weight: 400;
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  margin-top: 60px;
+  margin-bottom: 30px; }
 
 .pharma-form__block-description {
   font-size: 18px;
   font-weight: 300;
-  text-align: center; }
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 30px; }
 
 .pharma-form__cols {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 30px; }
 
 .pharma-form__col {
   width: 100%;
@@ -38,7 +44,7 @@
   display: flex;
   flex-direction: column;
   width: 49%;
-  justify-content: center; }
+  justify-content: flex-end; }
 
 .pharma-form__col-1_3 {
   width: 30%; }
@@ -61,6 +67,9 @@
 .pharma-form input:focus,
 .pharma-form input:active {
   border-color: #4fb1f6; }
+
+.pharma-form__col-1_3 input {
+  width: 100%; }
 
 .pharma-select__container {
   position: relative; }
@@ -86,6 +95,7 @@
   border-radius: 23.5px;
   outline: none;
   padding-left: 30px;
+  padding-right: 20px;
   padding-top: 15px;
   font-size: 18px;
   font-weight: 300; }
@@ -94,10 +104,17 @@
 .pharma-form textarea:active {
   border-color: #4fb1f6; }
 
+.pharma-form {
+  margin-top: 90px; }
+
 .pharma-form__input-description {
   font-size: 18px;
   font-weight: 300;
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  margin-bottom: -10px; }
+
+.pharma-form__thin {
+  max-width: 900px; }
 
 .pharma-form__thin input {
   width: 100%; }
@@ -113,16 +130,143 @@
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px; }
 
 .pharma-form__submit input {
   font-size: 18px;
   font-weight: 500;
-  width: 550px;
+  width: 100%;
   max-width: 550px !important;
   padding-right: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 60px; }
 
 /* /Форма */
+/* Таблицы */
+.pharma-form__table {
+  overflow: auto;
+  margin-bottom: 60px; }
+
+.pharma table {
+  width: 100%;
+  border: 1px solid #6e6e6e;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  min-width: 890px; }
+
+.pharma td,
+.pharma th {
+  border: 1px solid #6e6e6e;
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: 300;
+  text-align: center; }
+
+/* Таблица в форме */
+.pharma-form__table input {
+  margin: 0px;
+  width: 100%;
+  border: none;
+  padding-left: 10px; }
+
+/* /Таблица в форме */
+/* /Таблицы */
+/* Текст */
+.pharma-text {
+  font-size: 24px;
+  font-weight: 300;
+  color: #4a4a4a; }
+
+.pharma-text a {
+  color: #4fb1f6; }
+
+.pharma-text a:hover {
+  color: #4fb1f6; }
+
+.pharma-form__cols-text {
+  padding-left: 25px;
+  position: relative;
+  justify-content: flex-start; }
+
+.pharma-form__cols-text-txt {
+  font-size: 18px;
+  color: #4a4a4a; }
+
+.pharma .contacts-main__item-title {
+  font-size: 18px;
+  font-weight: 300; }
+
+.pharma .news-single__post-title {
+  margin-bottom: 30px;
+  margin-top: 90px; }
+
+.contacts-main__item-title.contacts-specialist:before {
+  content: "\f007" !important;
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0px;
+  color: #4ab75e; }
+
+/* /Текст */
+.pharma .nav-tabs .nav-link {
+  padding: 14px 101px;
+  font-size: 30px;
+  font-weight: 500;
+  border: 2px solid transparent; }
+
+.pharma-tabs {
+  max-width: 900px;
+  margin: auto; }
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+  border: 2px solid; }
+
+/* Форма "Потребитель" */
+.pharma-form-consumer .pharma-form__cols {
+  margin-bottom: 0; }
+
+/* /Форма "Потребитель" */
+/* Адаптация */
+@media screen and (max-width: 940px) {
+  .pharma-form__cols-3 {
+    flex-direction: column;
+    align-items: center; }
+
+  .pharma-form__col-1_3 {
+    width: 100%;
+    max-width: 550px; } }
+@media screen and (max-width: 780px) {
+  .pharma .nav-tabs .nav-link {
+    padding: 7px 50px;
+    font-weight: 500; } }
+@media screen and (max-width: 700px) {
+  .pharma-form__cols {
+    flex-direction: column;
+    align-items: center; }
+
+  .pharma-form__col-1_2 {
+    width: 100%;
+    max-width: 550px; }
+
+  .pharma-form textarea {
+    margin-bottom: 20px; } }
+@media screen and (max-width: 600px) {
+  .pharma .nav-tabs .nav-link {
+    border-radius: 50px !important; }
+
+  .pharma .nav-tabs, .nav-tabs .nav-item.show .nav-link {
+    flex-direction: column; }
+
+  .pharma-tabs {
+    max-width: 300px; }
+
+  .pharma .nav-tabs .nav-link {
+    text-align: center; } }
+/* /Адаптация */
 
 /*# sourceMappingURL=page-pharma.css.map */

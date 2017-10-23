@@ -1,4 +1,4 @@
-@import "styles/vars.scss";
+@import "../style/vars.scss";
 
 .catalog__inner {
 	margin: auto;
@@ -212,7 +212,7 @@ a.catalog__sorting-alphabet-z-a:hover .catalog__sorting-alphabet-z-a-txt {
 /* /Текст */
 
 /* Карточка товаров */
-@import "template/blocks/catalog__card/catalog__card.scss";
+@import "../../blocks/catalog__card/catalog__card.scss";
 /* /Карточка товаров */
 
 /* Блок карточек */

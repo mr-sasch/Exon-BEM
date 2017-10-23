@@ -1,3 +1,5 @@
+@import "../../layout/style/vars.scss";
+
 .nav-tabs,
 .nav-tabs .nav-item.show .nav-link {
 	border: none;
@@ -14,6 +16,7 @@
 	font-size: 20px;
   font-weight: 400;
 	text-align: center;
+	border-radius: 50px;
 }
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover,

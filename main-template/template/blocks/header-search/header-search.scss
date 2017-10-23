@@ -1,3 +1,5 @@
+@import "../../layout/style/vars.scss";
+
 /*header-bottom__search*/
 .header-search {
   position: relative;
@@ -13,7 +15,7 @@
   -webkit-box-sizing: border-box;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0);
-  background: url('../template/layout/template-images/header-search.png') no-repeat;
+  background: url('../template-images/header-search.png') no-repeat;
   padding: 0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
@@ -27,7 +29,7 @@
   padding: 5px 5px 5px 40px;
   background-color: #fff;
   outline: none;
-  background: url('../template/layout/template-images/header-search.png') 7px 50% no-repeat;
+  background: url('../template-images/header-search.png') 7px 50% no-repeat;
   color: $grey;
 }
 /*/header-bottom__search*/

@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$green-d".
-        on line 56 of ./template/layout/page-about-company/page-about-company.scss
+        on line 56 of ./layout/page-about-company/page-about-company.scss
 
 51: }
 52: .we-produced__title {
@@ -12,10 +12,10 @@ Error: Undefined variable: "$green-d".
 58: 	line-height: 70px;
 59: }
 60: .we-produced__body-bg {
-61: 	background-image: url(../template/layout/template-images/about-company__production-bg.png);
+61: 	background-image: url(../template-images/about-company__production-bg.png);
 
 Backtrace:
-./template/layout/page-about-company/page-about-company.scss:56
+./layout/page-about-company/page-about-company.scss:56
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -69,4 +69,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green-d\".\A         on line 56 of ./template/layout/page-about-company/page-about-company.scss\A \A 51: }\A 52: .we-produced__title {\A 53: 	text-align: center;\A 54: 	font-family: 'Roboto Slab', serif;\A 55: 	font-size: 72px;\A 56: 	color: $green-d;\A 57: 	margin-bottom: 70px;\A 58: 	line-height: 70px;\A 59: }\A 60: .we-produced__body-bg {\A 61: 	background-image: url(../template/layout/template-images/about-company__production-bg.png);"; }
+  content: "Error: Undefined variable: \"$green-d\".\A         on line 56 of ./layout/page-about-company/page-about-company.scss\A \A 51: }\A 52: .we-produced__title {\A 53: 	text-align: center;\A 54: 	font-family: 'Roboto Slab', serif;\A 55: 	font-size: 72px;\A 56: 	color: $green-d;\A 57: 	margin-bottom: 70px;\A 58: 	line-height: 70px;\A 59: }\A 60: .we-produced__body-bg {\A 61: 	background-image: url(../template-images/about-company__production-bg.png);"; }

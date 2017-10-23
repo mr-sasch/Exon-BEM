@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
 /*header-bottom__search*/
 .header-search {
   position: relative;
@@ -13,7 +22,7 @@
   -webkit-box-sizing: border-box;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0);
-  background: url("../template/layout/template-images/header-search.png") no-repeat;
+  background: url("../template-images/header-search.png") no-repeat;
   padding: 0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
@@ -21,14 +30,14 @@
   color: rgba(87, 36, 68, 0); }
 
 .header-search input[type=text]:focus {
-  border: 1px solid $grey;
+  border: 1px solid #4a4a4a;
   border-radius: 20px;
   width: 250px;
   padding: 5px 5px 5px 40px;
   background-color: #fff;
   outline: none;
-  background: url("../template/layout/template-images/header-search.png") 7px 50% no-repeat;
-  color: $grey; }
+  background: url("../template-images/header-search.png") 7px 50% no-repeat;
+  color: #4a4a4a; }
 
 /*/header-bottom__search*/
 
