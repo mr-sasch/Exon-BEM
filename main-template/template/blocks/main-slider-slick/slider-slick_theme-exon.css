@@ -8,13 +8,11 @@
 /* Красный цвет */
 /* Верхний отстут контента страницы от заголовка */
 /* Масштабирование изображения по высоте */
-.main-slider-slick__theme-exon .slick-slide img {
-  height: 100%; }
-
 /* /Масштабирование изображения по высоте */
 /* Блок с текстом */
 .slick-initialized .slick-slide {
-  position: relative; }
+  position: relative;
+  height: 600px; }
 
 .main-slider__txt {
   position: absolute;
@@ -22,8 +20,8 @@
   right: 0;
   width: 50%;
   min-width: 320px;
-  height: 570px;
-  background-color: rgba(79, 177, 246, 0.7);
+  height: 500px;
+  background-color: rgba(74, 183, 94, 0.7);
   border-radius: 0 0 0 150px; }
 
 .main-slider__txt-title {

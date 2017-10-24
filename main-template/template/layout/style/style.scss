@@ -548,3 +548,6 @@ a.page-main-news__list-item {
 /* Фармаконадзор */
 @import "../page-pharma/page-pharma.scss";
 /* /Фармаконадзор */
+
+// Модальное окно "Вход для клиентов"
+@import "../../blocks/modals/modal__header-top-login/modal__header-top-login.scss";

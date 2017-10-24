@@ -27,7 +27,8 @@
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   cursor: pointer;
-  color: rgba(87, 36, 68, 0); }
+  color: rgba(87, 36, 68, 0);
+  border-radius: 20px; }
 
 .header-search input[type=text]:focus {
   border: 1px solid #4a4a4a;
@@ -36,7 +37,7 @@
   padding: 5px 5px 5px 40px;
   background-color: #fff;
   outline: none;
-  background: url("../template-images/header-search.png") 7px 50% no-repeat;
+  background: #fff url("../template-images/header-search.png") 7px 50% no-repeat;
   color: #4a4a4a; }
 
 /*/header-bottom__search*/

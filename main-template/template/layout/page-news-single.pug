@@ -2,11 +2,12 @@
 extends page-template.pug
 
 block content
-	+crumbs('template-images/news-all__title.png', 'Новости', ['#', 'Новости'], ['#', 'Новость1'])
+	+crumbs-big('template-images/news-all__title.png', 'Новости', 'Новость1', '#', ['#', 'Новости'])
+	//- +crumbs('template-images/news-all__title.png', 'Новости', ['#', 'Новости'], ['#', 'Новость1'])
 	// Содержимое страницы "Новость"
 	.news-all.news-single.inn_padd
 		.news-all__inner.site-width
-			// Строка "Подписаться" и "Сортировка"
+			// Строка "Подписаться" и "Сортировка" 
 			.news-all-small-head
 				.news-all-small-head__col.news-all__back-to-all
 					i(class="fa fa-angle-left" aria-hidden="true").back-to-all__arrow

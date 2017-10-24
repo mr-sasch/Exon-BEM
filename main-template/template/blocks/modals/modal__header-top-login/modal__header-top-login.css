@@ -1,22 +1,22 @@
 /*
 Error: Undefined variable: "$grey".
-        on line 2 of ./template/blocks/buttons/button-link/button-link.scss
+        on line 34 of ./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss
 
-1: a.button-link {
-2: 	color: $grey !important;
-3: 	border: 1px solid #fff;
-4: 	border-radius: 50px;
-5: 	transition: .2s ease;
-6: 	padding: 8px 15px;
-7: 	font-size: 22px;
+29: 	color: transparent;
+30: }
+31: .modal__content-description {
+32: 	font-size: 18px;
+33: 	font-weight: 300;
+34: 	clear: $grey;
+35: 	margin-bottom: 50px;
+36: }
+37: 
+38: .modal__content-form {
+39: 	width: 100%;
 
 Backtrace:
-./template/blocks/buttons/button-link/button-link.scss:2
+./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss:34
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
-/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
-/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
-/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/list_literal.rb:75:in `map'
-/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/list_literal.rb:75:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -69,4 +69,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$grey\".\A         on line 2 of ./template/blocks/buttons/button-link/button-link.scss\A \A 1: a.button-link {\A 2: 	color: $grey !important;\A 3: 	border: 1px solid #fff;\A 4: 	border-radius: 50px;\A 5: 	transition: .2s ease;\A 6: 	padding: 8px 15px;\A 7: 	font-size: 22px;"; }
+  content: "Error: Undefined variable: \"$grey\".\A         on line 34 of ./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss\A \A 29: 	color: transparent;\A 30: }\A 31: .modal__content-description {\A 32: 	font-size: 18px;\A 33: 	font-weight: 300;\A 34: 	clear: $grey;\A 35: 	margin-bottom: 50px;\A 36: }\A 37: \A 38: .modal__content-form {\A 39: 	width: 100%;"; }

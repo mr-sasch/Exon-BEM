@@ -7,14 +7,26 @@
 		a.header-top__item.header-top__item-pharma(href='page-pharma.html')
 			img.header-top__icon(src='template-images/header-top-nadzor.png')
 			.header-top__text Фармаконадзор
-		.header-top__item.header-top-login(data-target='#modal-box' href='' data-toggle='modal')= text
+		// Вход для клиентов - Вход не совершен (активируется классом .active)
+		.header-top__item.header-top-login(data-target='#modal-box' href='' data-toggle='modal').active
 			img.header-top__icon(src='template-images/header-top-login.png')
 			.header-top__text Вход для клиентов
+		// Вход для клиентов - Вход совершен (активируется классом .active)
+		.header-top__item.header-top-login.header-top-logged
+			img.header-top__icon(src='template-images/header-top-client.png')
+			.header-top__text Клиент 123546
+			// Вход для клиентов - Меню
+			i.fa.fa-angle-up(aria-hidden="true").header-top-login__arrow
+			i.fa.fa-angle-down(aria-hidden="true").header-top-login__arrow
+			.header-top-logged__menu
+				a.header-top-logged__menu-btn.header-top-logged__menu-lk(href='page-lk.html') Личный кабинет
+				a.header-top-logged__menu-btn.header-top-logged__menu-logout(href='#') Выйти
+				
+		// Переключатель языков
 		.header-top__item-abs.ru-eng
-			.ru-eng__eng
+			a.ru-eng__eng.active(href='#')
 				.ru-eng__text ENG
 				img.ru-eng__img(src='template-images/header-top-eng.png')
-			//- .ru-eng__ru	
-			//- 	.ru-eng__text
-			//- 	.ru-eng__img
-  
+			a.ru-eng__ru(href='#')
+				.ru-eng__text РУС
+				img.ru-eng__img(src='template-images/header-top-eng.png')

@@ -284,4 +284,37 @@
 	}
 }
 
+	/* Корректировка Тайтла */
+@media screen and (max-width: 1400px) {
+	.page-pharma .main-slider__txt-title {
+		left: 50px;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.page-pharma .main-slider__txt-title {
+		left: 20px;
+	}
+}
+@media screen and (max-width: 1270px) {
+	.page-pharma .main-slider__txt-title {
+		left: 20px;
+	}
+}
+@media screen and (max-width: 1240px) {
+	.page-pharma .main-slider__txt-title {
+		font-size: 52px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.page-pharma .main-slider__txt-title {
+		font-size: 44px;
+	}
+}
+@media screen and (max-width: 760px) {
+	.page-pharma .main-slider__txt-title {
+		font-size: 32px;
+	}
+}
+	/* /Корректировка Тайтла */
+
 /* /Адаптация */

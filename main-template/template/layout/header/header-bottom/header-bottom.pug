@@ -4,8 +4,9 @@
 		// Левое крыло
 		.header-bottom__left
 			ul.menu.header-menu
+				// пункт меню активируется добавлением класса .active
 				li
-					+button-link('header-menu__button', 'page-catalog.html', 'Каталог продукции')
+					+button-link('header-menu__button active', 'page-catalog.html', 'Каталог продукции')
 				li
 					+button-link('header-menu__button', 'page-about-company.html', 'О Компании')
 				li

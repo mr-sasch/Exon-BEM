@@ -50,6 +50,12 @@ a.button-link:hover {
   text-decoration: none;
   border-color: #4a4a4a; }
 
+/* для пунктов Главного меню */
+.header-bottom a.button-link.active {
+  color: #4a4a4a !important;
+  text-decoration: none;
+  border-color: #4a4a4a; }
+
 /* Шаблон цветной кнопки со ссылкой */
 .button {
   z-index: 0;
@@ -126,7 +132,8 @@ a.button--gradient:hover {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   cursor: pointer;
-  color: rgba(87, 36, 68, 0); }
+  color: rgba(87, 36, 68, 0);
+  border-radius: 20px; }
 
 .header-search input[type=text]:focus {
   border: 1px solid #4a4a4a;
@@ -135,18 +142,26 @@ a.button--gradient:hover {
   padding: 5px 5px 5px 40px;
   background-color: #fff;
   outline: none;
-  background: url("../template-images/header-search.png") 7px 50% no-repeat;
+  background: #fff url("../template-images/header-search.png") 7px 50% no-repeat;
   color: #4a4a4a; }
 
 /*/header-bottom__search*/
 /* Главный шаблон "Шапка - Футер" */
 /* header */
 /* header top */
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
 .header-top {
   position: relative;
-  background-color: #6e6e6e;
+  background-color: #4ab75e;
   color: #fff;
-  z-index: 100; }
+  z-index: 1000; }
 
 .header-top__inner {
   display: -webkit-flex;
@@ -162,7 +177,7 @@ a.button--gradient:hover {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  padding: 5px 0; }
+  padding: 10px 0; }
 
 .header-top__icon {
   margin-right: 7px;
@@ -170,18 +185,91 @@ a.button--gradient:hover {
 
 .header-top__text {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 0 10px; }
 
 .header-top__item-pharma,
 .header-top__item-pharma:hover {
   color: #fff; }
 
+/* Кнопка входа */
 .header-top-login {
-  cursor: pointer; }
+  cursor: pointer;
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.header-top-login.active {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex; }
 
 .header-top-login:hover {
   text-decoration: underline; }
 
+.header-top-login.header-top-logged {
+  background-color: #6e6e6e;
+  padding-right: 40px; }
+
+.header-top-login.header-top-logged:hover {
+  text-decoration: none; }
+
+.header-top-login__arrow {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 18px; }
+
+.header-top-login .header-top__icon {
+  margin-left: 7px; }
+
+.header-top.inn_padd {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.header-top-logged {
+  position: relative; }
+
+/* Меню входа */
+.header-top-logged__menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  background-color: #6e6e6e;
+  top: -50px;
+  opacity: 0;
+  transition: .2s ease;
+  z-index: -1; }
+
+.header-top-logged:hover .header-top-logged__menu {
+  top: 100%;
+  opacity: 1; }
+
+.fa-angle-up {
+  opacity: 0;
+  transition: .2s ease; }
+
+.fa-angle-down {
+  transition: .2s ease; }
+
+.header-top-logged:hover .fa-angle-up {
+  opacity: 1; }
+
+.header-top-logged:hover .fa-angle-down {
+  opacity: 0; }
+
+a.header-top-logged__menu-btn {
+  color: #fff;
+  padding: 5px 5px;
+  cursor: pointer; }
+
+/* /Меню входа */
+/* /Кнопка входа */
 /* Переключатель языка */
 .header-top__item-abs {
   position: absolute;
@@ -191,10 +279,9 @@ a.button--gradient:hover {
   display: flex;
   align-items: center; }
 
-.ru-eng__eng {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+a.ru-eng__eng,
+a.ru-eng__ru {
+  display: none;
   align-items: center;
   border: 1px solid white;
   border-radius: 15px;
@@ -204,7 +291,14 @@ a.button--gradient:hover {
   cursor: pointer;
   height: 28px;
   font-size: 16px;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #fff; }
+
+.ru-eng__eng.active,
+.ru-eng__ru.active {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex; }
 
 .ru-eng__text {
   margin-top: 2px; }
@@ -910,13 +1004,11 @@ a.online-order:hover {
 /* Красный цвет */
 /* Верхний отстут контента страницы от заголовка */
 /* Масштабирование изображения по высоте */
-.main-slider-slick__theme-exon .slick-slide img {
-  height: 100%; }
-
 /* /Масштабирование изображения по высоте */
 /* Блок с текстом */
 .slick-initialized .slick-slide {
-  position: relative; }
+  position: relative;
+  height: 600px; }
 
 .main-slider__txt {
   position: absolute;
@@ -924,8 +1016,8 @@ a.online-order:hover {
   right: 0;
   width: 50%;
   min-width: 320px;
-  height: 570px;
-  background-color: rgba(79, 177, 246, 0.7);
+  height: 500px;
+  background-color: rgba(74, 183, 94, 0.7);
   border-radius: 0 0 0 150px; }
 
 .main-slider__txt-title {
@@ -1509,7 +1601,8 @@ a.online-order:hover {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  border-radius: 50px; }
+  border-radius: 50px;
+  border: 2px solid transparent; }
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover,
@@ -1526,19 +1619,24 @@ a.online-order:hover {
   .nav-tabs .nav-link {
     font-size: 12px;
     text-align: left;
-    padding: 5px; }
+    padding: 5px 28px; }
 
   .nav-tabs .nav-link,
   .nav-tabs .nav-link:focus,
   .nav-tabs .nav-link:hover,
   .nav-tabs .nav-link.active {
-    border: none; }
+    border: 2px solid transparent;
+    font-size: 20px; }
 
   .nav-tabs,
   .nav-tabs .nav-item.show .nav-link {
     border: none;
     margin-top: 70px;
-    margin-bottom: -20px; } }
+    margin-bottom: -20px;
+    flex-direction: column; }
+
+  li.nav-item {
+    margin-bottom: 10px !important; } }
 /* /Адаптация */
 /* /Главная - блок с табами */
 /* Главная - Блок новостей */
@@ -1871,6 +1969,10 @@ a.page__title-crumbs__child {
 .page__title-crumbs__fa {
   margin: 0 10px; }
 
+.page__title-crumbs__child {
+  display: inline-block;
+  margin-left: -5px; }
+
 /* /Стили крошек */
 /* Страница "Контакты" */
 /* Глобальный серый цвет */
@@ -2163,7 +2265,8 @@ a.page__title-crumbs__child {
   border: 1px solid #4ab75e;
   border-radius: 50px;
   background-color: #4ab75e;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 /* /Стили блока "Подписаться на новости" */
 /* Стили блока "Сортировать по дате" */
@@ -3443,7 +3546,145 @@ td.lk__td {
 
   .pharma .nav-tabs .nav-link {
     text-align: center; } }
+/* Корректировка Тайтла */
+@media screen and (max-width: 1400px) {
+  .page-pharma .main-slider__txt-title {
+    left: 50px; } }
+@media screen and (max-width: 1300px) {
+  .page-pharma .main-slider__txt-title {
+    left: 20px; } }
+@media screen and (max-width: 1270px) {
+  .page-pharma .main-slider__txt-title {
+    left: 20px; } }
+@media screen and (max-width: 1240px) {
+  .page-pharma .main-slider__txt-title {
+    font-size: 52px; } }
+@media screen and (max-width: 900px) {
+  .page-pharma .main-slider__txt-title {
+    font-size: 44px; } }
+@media screen and (max-width: 760px) {
+  .page-pharma .main-slider__txt-title {
+    font-size: 32px; } }
+/* /Корректировка Тайтла */
 /* /Адаптация */
 /* /Фармаконадзор */
+.modal-forms .modal-dialog {
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 45px !important;
+  display: -webkit-flex !important;
+  display: -ms-flex !important;
+  display: flex !important; }
+
+.modal__content {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin: auto; }
+
+.modal__content-title {
+  font-size: 48px;
+  font-weight: 300;
+  background: linear-gradient(to right, #53e1a9, #4fb1f6);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+
+.modal__content-description {
+  font-size: 18px;
+  font-weight: 300;
+  clear: #4a4a4a;
+  margin-bottom: 50px; }
+
+.modal__content-form {
+  width: 100%; }
+
+.modal-box.modal-dialog.button:before {
+  border-radius: 45px; }
+
+.modal-box.modal-dialog.button:after {
+  border-radius: 40px; }
+
+.modal-box.modal-dialog.button:after {
+  margin: 8px !important; }
+
+/* Инпуты */
+.modal__content-form-input {
+  position: relative;
+  height: 47px;
+  max-width: 494px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px; }
+
+.modal__content-form-input input {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid #6e6e6e;
+  padding-left: 50px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #4a4a4a; }
+
+.modal__content-form-input input:focus {
+  border-color: #4fb1f6; }
+
+.modal__content-form-input-user {
+  background: url("../template-images/forms__user-grey.png") 9px 50% no-repeat; }
+
+.modal__content-form-input-user:focus {
+  background: url("../template-images/forms__user-blue.png") 9px 50% no-repeat; }
+
+.modal__content-form-input-pass {
+  background: url("../template-images/forms__pass-grey.png") 12px 50% no-repeat; }
+
+.modal__content-form-input-pass:focus {
+  background: url("../template-images/forms__pass-blue.png") 12px 50% no-repeat; }
+
+/* /Инпуты */
+/* Кнопка */
+.modal__content-form-submit {
+  width: 100%;
+  max-width: 494px;
+  height: 60px;
+  margin: auto; }
+
+.modal__content-form-submit-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: none;
+  background-color: #4ab75e;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer; }
+
+/* /Кнопка */
+.modal__content-cols {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  max-width: 494px;
+  margin: auto;
+  margin-bottom: 40px; }
+
+a.modal__content-nat-a-partner {
+  color: #4fb1f6;
+  font-size: 14px; }
+
+.label-loginRemember {
+  font-size: 14px;
+  font-weight: 300;
+  color: #4a4a4a; }
 
 /*# sourceMappingURL=style.css.map */

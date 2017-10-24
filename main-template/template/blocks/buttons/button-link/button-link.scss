@@ -13,3 +13,10 @@ a.button-link:hover {
 	text-decoration: none;
 	border-color: $grey;
 }
+
+/* для пунктов Главного меню */
+.header-bottom a.button-link.active {
+	color: $grey !important;
+	text-decoration: none;
+	border-color: $grey;
+}

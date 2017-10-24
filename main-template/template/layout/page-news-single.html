@@ -27,9 +27,31 @@
   <body>
     <!-- Модальные окна-->
     <!-- Модальное окно - Вход для клиентов-->
-    <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
-      <div class="modal-box modal-dialog">
-        <div class="modal__content-login">ЗДЕСЬ СОДЕРЖИМОЕ МОДАЛЬНОГО ОКНА "ВХОД ДЛЯ КЛИЕНТОВ"</div>
+    <div class="modal modal-forms fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <div class="modal__content-title">Войти в личный кабинет</div>
+          <div class="modal__content-description">Для того, чтобы войти в личный кабинет, введите логин и пароль</div>
+          <form class="modal__content-form">
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-user" type="text" name="loginName" placeholder="Имя пользователя*"/>
+            </div>
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-pass" type="text" name="loginPass" placeholder="Пароль*"/>
+            </div>
+            <div class="modal__content-cols">
+              <div class="modal__content-col1-2">
+                <label class="label-loginRemember" for="loginRemember">Запомнить меня</label>
+                <input class="input-loginRemember" id="loginRemember" type="checkbox"/>
+              </div>
+              <div class="modal__content-col1-2"><a class="modal__content-nat-a-partner" href="#">Еще не наш партнер?</a></div>
+            </div>
+            <div class="modal__content-form-submit">
+              <input class="modal__content-form-submit-btn" type="submit" value="ВОЙТИ НА САЙТ"/>
+            </div>
+          </form>
+          <div class="modal__content-close"></div>
+        </div>
       </div>
     </div>
     <!-- ***** Хэдер ***** -->
@@ -41,14 +63,20 @@
             <div class="header-top__text">225612, Республика Беларусь, г.Дрогичин, ул.Ленина 202</div>
           </div><a class="header-top__item header-top__item-pharma" href="page-pharma.html"><img class="header-top__icon" src="template-images/header-top-nadzor.png"/>
             <div class="header-top__text">Фармаконадзор</div></a>
-          <div class="header-top__item header-top-login" data-target="#modal-box" href="" data-toggle="modal"><img class="header-top__icon" src="template-images/header-top-login.png"/>
+          <!-- Вход для клиентов - Вход не совершен (активируется классом .active)-->
+          <div class="header-top__item header-top-login active" data-target="#modal-box" href="" data-toggle="modal"><img class="header-top__icon" src="template-images/header-top-login.png"/>
             <div class="header-top__text">Вход для клиентов</div>
           </div>
-          <div class="header-top__item-abs ru-eng">
-            <div class="ru-eng__eng">
-              <div class="ru-eng__text">ENG</div><img class="ru-eng__img" src="template-images/header-top-eng.png"/>
-            </div>
+          <!-- Вход для клиентов - Вход совершен (активируется классом .active)-->
+          <div class="header-top__item header-top-login header-top-logged"><img class="header-top__icon" src="template-images/header-top-client.png"/>
+            <div class="header-top__text">Клиент 123546</div>
+            <!-- Вход для клиентов - Меню--><i class="fa fa-angle-up header-top-login__arrow" aria-hidden="true"></i><i class="fa fa-angle-down header-top-login__arrow" aria-hidden="true"></i>
+            <div class="header-top-logged__menu"><a class="header-top-logged__menu-btn header-top-logged__menu-lk" href="page-lk.html">Личный кабинет</a><a class="header-top-logged__menu-btn header-top-logged__menu-logout" href="#">Выйти</a></div>
           </div>
+          <!-- Переключатель языков-->
+          <div class="header-top__item-abs ru-eng"><a class="ru-eng__eng active" href="#">
+              <div class="ru-eng__text">ENG</div><img class="ru-eng__img" src="template-images/header-top-eng.png"/></a><a class="ru-eng__ru" href="#">
+              <div class="ru-eng__text">РУС</div><img class="ru-eng__img" src="template-images/header-top-eng.png"/></a></div>
         </div>
       </div>
       <!-- Header-bottom-->
@@ -57,7 +85,8 @@
           <!-- Левое крыло-->
           <div class="header-bottom__left">
             <ul class="menu header-menu">
-              <li><a class="button-link header-menu__button" href="page-catalog.html">Каталог продукции</a>
+              <!-- пункт меню активируется добавлением класса .active-->
+              <li><a class="button-link header-menu__button active" href="page-catalog.html">Каталог продукции</a>
               </li>
               <li><a class="button-link header-menu__button" href="page-about-company.html">О Компании</a>
               </li>
@@ -144,16 +173,17 @@
             <div class="main-slider__txt">
               <div class="main-slider__txt-title">Новости</div>
             </div>
-            <!-- Крошки		-->
+            <!-- Крошки -->
             <div class="page__title-crumbs inn_padd">
-              <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная<i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i><a class="page__title-crumbs__child" href="#">Новости</a><i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i><a class="page__title-crumbs__child" href="#">Новость1</a></a></div>
+              <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная<i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i><a class="page__title-crumbs__child" href="#">Новости</a><i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i>
+                  <div class="page__title-crumbs__child" href="#">Новость1</div></a></div>
             </div>
           </div>
         </div>
     <!-- Содержимое страницы "Новость"-->
     <div class="news-all news-single inn_padd">
       <div class="news-all__inner site-width">
-        <!-- Строка "Подписаться" и "Сортировка"-->
+        <!-- Строка "Подписаться" и "Сортировка" -->
         <div class="news-all-small-head">
           <div class="news-all-small-head__col news-all__back-to-all"><i class="fa fa-angle-left back-to-all__arrow" aria-hidden="true"></i><a class="news-all__back-to-all-txt" href="page-news-all.html">К списку новостей</a></div>
           <div class="news-all-small-head__col">

@@ -1,3 +1,21 @@
-extends ../modal.pug
-block modal__content
-	.modal__content-login ЗДЕСЬ СОДЕРЖИМОЕ МОДАЛЬНОГО ОКНА "ВХОД ДЛЯ КЛИЕНТОВ"
+mixin pharma-input(classname, type, name, placeholder)
+	input(class= classname type= type name= name placeholder= placeholder)
+.modal.modal-forms.fade#modal-box(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+	.modal-box.modal-dialog.button.button--gradient
+		.modal__content
+			.modal__content-title Войти в личный кабинет
+			.modal__content-description Для того, чтобы войти в личный кабинет, введите логин и пароль
+			form.modal__content-form
+				.modal__content-form-input
+					input(type='text' name='loginName' placeholder='Имя пользователя*').modal__content-form-input-user
+				.modal__content-form-input
+					input(type='text' name='loginPass' placeholder='Пароль*').modal__content-form-input-pass
+				.modal__content-cols
+					.modal__content-col1-2
+						label(for='loginRemember').label-loginRemember Запомнить меня
+						input#loginRemember(type='checkbox').input-loginRemember
+					.modal__content-col1-2
+						a.modal__content-nat-a-partner(href='#') Еще не наш партнер?
+				.modal__content-form-submit
+					input.modal__content-form-submit-btn(type='submit' value='ВОЙТИ НА САЙТ') 
+			.modal__content-close

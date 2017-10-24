@@ -45,6 +45,10 @@ a.page__title-crumbs__child {
 .page__title-crumbs__fa {
   margin: 0 10px; }
 
+.page__title-crumbs__child {
+  display: inline-block;
+  margin-left: -5px; }
+
 /* /Стили крошек */
 
 /*# sourceMappingURL=page__title.css.map */

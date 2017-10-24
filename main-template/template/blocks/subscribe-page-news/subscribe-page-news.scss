@@ -33,9 +33,10 @@
 	position: absolute;
 	height: 30px; width: 146px;
 	top: -1px; right: -2px;
-	padding-top: 0; 
+	padding-top: 0;
 	border: 1px solid $green-d;
 	border-radius: 50px;
 	background-color: $green-d;
 	outline: none;
+	cursor: pointer;
 }

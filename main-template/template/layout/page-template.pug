@@ -36,10 +36,6 @@ html(lang="en")
 		
 	// Тело сайта 
 	body
-		// Модальные окна
-		// Модальное окно - Вход для клиентов
-		include ../blocks/modals/modal__header-top-login/modal__header-top-login.pug
-		
 		//- Объявляем миксины
 			//- Кнопки
 				//- Кнопка-ссылка простая
@@ -60,7 +56,9 @@ html(lang="en")
 		//- Блок "Примите участие в опросе"
 		include block-main-interview.pug
 		//- Блок "Заголовок обычной страницы"
-		include ../layout/page__title/page__title.pug
+		include ../layout/page__title.pug
+		//- Блок "Заголовок обычной страницы с _длинными крошками_"
+		include ../layout/page__title-big.pug
 		//- Блок "Подписаться на новости" на странице Новостей
 		include ../blocks/subscribe-page-news/subscribe-page-news.pug
 		//- Превью новости на странице всех новостей
@@ -73,6 +71,10 @@ html(lang="en")
 		include ../blocks/list-down/list-down.pug
 		//- Счетчик на странице Личный кабинет
 		include ../blocks/count-plus-minus/count-plus-minus.pug
+		
+		// Модальные окна
+		// Модальное окно - Вход для клиентов
+		include ../blocks/modals/modal__header-top-login/modal__header-top-login.pug
 		
 		// ***** Хэдер ***** 
 		include header/header.pug

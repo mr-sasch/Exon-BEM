@@ -1,6 +1,28 @@
 
-<div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
-  <div class="modal-box modal-dialog">
-    <div class="modal__content-login">ЗДЕСЬ СОДЕРЖИМОЕ МОДАЛЬНОГО ОКНА "ВХОД ДЛЯ КЛИЕНТОВ"</div>
+<div class="modal modal-forms fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+  <div class="modal-box modal-dialog button button--gradient">
+    <div class="modal__content">
+      <div class="modal__content-title">Войти в личный кабинет</div>
+      <div class="modal__content-description">Для того, чтобы войти в личный кабинет, введите логин и пароль</div>
+      <form class="modal__content-form">
+        <div class="modal__content-form-input">
+          <input class="modal__content-form-input-user" type="text" name="loginName" placeholder="Имя пользователя*"/>
+        </div>
+        <div class="modal__content-form-input">
+          <input class="modal__content-form-input-pass" type="text" name="loginPass" placeholder="Пароль*"/>
+        </div>
+        <div class="modal__content-cols">
+          <div class="modal__content-col1-2">
+            <label class="label-loginRemember" for="loginRemember">Запомнить меня</label>
+            <input class="input-loginRemember" id="loginRemember" type="checkbox"/>
+          </div>
+          <div class="modal__content-col1-2"><a class="modal__content-nat-a-partner" href="#">Еще не наш партнер?</a></div>
+        </div>
+        <div class="modal__content-form-submit">
+          <input class="modal__content-form-submit-btn" type="submit" value="ВОЙТИ НА САЙТ"/>
+        </div>
+      </form>
+      <div class="modal__content-close"></div>
+    </div>
   </div>
 </div>

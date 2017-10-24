@@ -1,11 +1,19 @@
 @charset "UTF-8";
 /* header */
 /* header top */
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
 .header-top {
   position: relative;
-  background-color: #6e6e6e;
+  background-color: #4ab75e;
   color: #fff;
-  z-index: 100; }
+  z-index: 1000; }
 
 .header-top__inner {
   display: -webkit-flex;
@@ -21,7 +29,7 @@
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  padding: 5px 0; }
+  padding: 10px 0; }
 
 .header-top__icon {
   margin-right: 7px;
@@ -29,18 +37,91 @@
 
 .header-top__text {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 0 10px; }
 
 .header-top__item-pharma,
 .header-top__item-pharma:hover {
   color: #fff; }
 
+/* Кнопка входа */
 .header-top-login {
-  cursor: pointer; }
+  cursor: pointer;
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.header-top-login.active {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex; }
 
 .header-top-login:hover {
   text-decoration: underline; }
 
+.header-top-login.header-top-logged {
+  background-color: #6e6e6e;
+  padding-right: 40px; }
+
+.header-top-login.header-top-logged:hover {
+  text-decoration: none; }
+
+.header-top-login__arrow {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 18px; }
+
+.header-top-login .header-top__icon {
+  margin-left: 7px; }
+
+.header-top.inn_padd {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.header-top-logged {
+  position: relative; }
+
+/* Меню входа */
+.header-top-logged__menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  background-color: #6e6e6e;
+  top: -50px;
+  opacity: 0;
+  transition: .2s ease;
+  z-index: -1; }
+
+.header-top-logged:hover .header-top-logged__menu {
+  top: 100%;
+  opacity: 1; }
+
+.fa-angle-up {
+  opacity: 0;
+  transition: .2s ease; }
+
+.fa-angle-down {
+  transition: .2s ease; }
+
+.header-top-logged:hover .fa-angle-up {
+  opacity: 1; }
+
+.header-top-logged:hover .fa-angle-down {
+  opacity: 0; }
+
+a.header-top-logged__menu-btn {
+  color: #fff;
+  padding: 5px 5px;
+  cursor: pointer; }
+
+/* /Меню входа */
+/* /Кнопка входа */
 /* Переключатель языка */
 .header-top__item-abs {
   position: absolute;
@@ -50,10 +131,9 @@
   display: flex;
   align-items: center; }
 
-.ru-eng__eng {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+a.ru-eng__eng,
+a.ru-eng__ru {
+  display: none;
   align-items: center;
   border: 1px solid white;
   border-radius: 15px;
@@ -63,7 +143,14 @@
   cursor: pointer;
   height: 28px;
   font-size: 16px;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #fff; }
+
+.ru-eng__eng.active,
+.ru-eng__ru.active {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex; }
 
 .ru-eng__text {
   margin-top: 2px; }

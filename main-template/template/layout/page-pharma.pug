@@ -1,7 +1,7 @@
 extends page-template.pug
 
 block content
-	+crumbs('template-images/pharma__title.png', 'Фармаконадзор', ['', 'Фармаконадзор'])
+	+crumbs('template-images/pharma__title.png', 'Фармаконадзор', 'Фармаконадзор')
 	// Содержимое страницы "Фармаконадзор"
 	.pharma.inn_padd
 		.pharma__inner.site-width
@@ -361,13 +361,9 @@ block content
 							.pharma-form__cols
 								.pharma-form__cols.pharma-form__submit
 									input(type="submit" value="ОТПРАВИТЬ").contacts-form__submit
-								
-								
-								
-	
 	.footer-separator
 	// Корректировка Тайтла "Фармаконадзора"
-	script(src='')
+	script(src='js/pharma__change-title.js')
 	// Корректировка полей ввода даты
 	script(src='js/inputDateForm.js')
 	// серый футер
