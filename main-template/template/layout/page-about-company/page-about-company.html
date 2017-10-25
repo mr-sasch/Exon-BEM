@@ -27,9 +27,86 @@
   <body>
     <!-- Модальные окна-->
     <!-- Модальное окно - Вход для клиентов-->
-    <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
-      <div class="modal-box modal-dialog">
-        <div class="modal__content-login">ЗДЕСЬ СОДЕРЖИМОЕ МОДАЛЬНОГО ОКНА "ВХОД ДЛЯ КЛИЕНТОВ"</div>
+    <div class="modal modal-forms fade" id="clientsLogin" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <div class="modal__content-title">Войти в личный кабинет</div>
+          <div class="modal__content-description">Для того, чтобы войти в личный кабинет, введите логин и пароль</div>
+          <form class="modal__content-form">
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-user" type="text" name="loginName" placeholder="Имя пользователя*"/>
+            </div>
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-pass" type="text" name="loginPass" placeholder="Пароль*"/>
+            </div>
+            <div class="modal__content-cols">
+              <div class="modal__content-col1-2 loginRemember">
+                <input class="input-loginRemember" id="loginRemember" type="checkbox"/>
+                <div class="label-loginRemember__checkbox"></div>
+                <label class="label-loginRemember" for="loginRemember">Запомнить меня</label>
+              </div>
+              <div class="modal__content-col1-2 not-a-partner"><a class="modal__content-nat-a-partner" href="#">Еще не наш партнер?</a></div>
+            </div>
+            <div class="modal__content-form-submit">
+              <input class="modal__content-form-submit-btn" type="submit" value="ВОЙТИ НА САЙТ"/>
+            </div>
+          </form>
+          <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно - Оставить заявку-->
+    <div class="modal modal-forms fade" id="online-order" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <div class="modal__content-title">Оставить заявку</div>
+          <div class="modal__content-description">Для того, чтобы оставить заявку, вам требуется войти на сайт под своими учетными данными. <br/>Имя и пароль выдаются нашей компанией при регистрации партнера. </div>
+          <form class="modal__content-form">
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-user" type="text" name="loginName" placeholder="Имя пользователя*"/>
+            </div>
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-pass" type="text" name="loginPass" placeholder="Пароль*"/>
+            </div>
+            <div class="modal__content-cols">
+              <div class="modal__content-col1-2 loginRemember">
+                <input class="input-loginRemember" id="loginRememberOrder" type="checkbox"/>
+                <div class="label-loginRemember__checkbox"></div>
+                <label class="label-loginRemember" for="loginRememberOrder">Запомнить меня</label>
+              </div>
+              <div class="modal__content-col1-2 not-a-partner"><a class="modal__content-nat-a-partner" href="#">Еще не наш партнер?</a></div>
+            </div>
+            <div class="modal__content-form-submit">
+              <input class="modal__content-form-submit-btn" type="submit" value="ВОЙТИ НА САЙТ"/>
+            </div>
+          </form>
+          <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно - Обратная связь-->
+    <div class="modal modal-forms fade" id="callBack" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <div class="modal__content-title">Обратная связь</div>
+          <div class="modal__content-description">Если у вас есть вопросы относительно деятельности нашего предприятия, либо по продукции, оставьте ваши контактные данные в форме ниже, и мы свяжемся с вами в ближайшее время.</div>
+          <form class="modal__content-form">
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-user" type="text" name="loginName" placeholder="Имя пользователя*"/>
+            </div>
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-mail" type="text" name="loginPass" placeholder="Ваш e-mail*"/>
+            </div>
+            <div class="modal__content-form-input">
+              <input class="modal__content-form-input-phone" type="text" name="loginPass" placeholder="Номер телефона*"/>
+            </div>
+            <div class="modal__content-form-submit">
+              <input class="modal__content-form-submit-btn" type="submit" value="ОТПРАВИТЬ"/>
+            </div>
+            <div class="modal__content__note">Ваши персональные данные находятся в безопасности</div>
+          </form>
+          <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+        </div>
       </div>
     </div>
     <!-- ***** Хэдер ***** -->
@@ -41,14 +118,20 @@
             <div class="header-top__text">225612, Республика Беларусь, г.Дрогичин, ул.Ленина 202</div>
           </div><a class="header-top__item header-top__item-pharma" href="page-pharma.html"><img class="header-top__icon" src="template-images/header-top-nadzor.png"/>
             <div class="header-top__text">Фармаконадзор</div></a>
-          <div class="header-top__item header-top-login" data-target="#modal-box" href="" data-toggle="modal"><img class="header-top__icon" src="template-images/header-top-login.png"/>
+          <!-- Вход для клиентов - Вход не совершен (активируется классом .active)-->
+          <div class="header-top__item header-top-login active" data-target="#clientsLogin" href="" data-toggle="modal"><img class="header-top__icon" src="template-images/header-top-login.png"/>
             <div class="header-top__text">Вход для клиентов</div>
           </div>
-          <div class="header-top__item-abs ru-eng">
-            <div class="ru-eng__eng">
-              <div class="ru-eng__text">ENG</div><img class="ru-eng__img" src="template-images/header-top-eng.png"/>
-            </div>
+          <!-- Вход для клиентов - Вход совершен (активируется классом .active)-->
+          <div class="header-top__item header-top-login header-top-logged"><img class="header-top__icon" src="template-images/header-top-client.png"/>
+            <div class="header-top__text">Клиент 123546</div>
+            <!-- Вход для клиентов - Меню--><i class="fa fa-angle-up header-top-login__arrow" aria-hidden="true"></i><i class="fa fa-angle-down header-top-login__arrow" aria-hidden="true"></i>
+            <div class="header-top-logged__menu"><a class="header-top-logged__menu-btn header-top-logged__menu-lk" href="page-lk.html">Личный кабинет</a><a class="header-top-logged__menu-btn header-top-logged__menu-logout" href="#">Выйти</a></div>
           </div>
+          <!-- Переключатель языков-->
+          <div class="header-top__item-abs ru-eng"><a class="ru-eng__eng active" href="#">
+              <div class="ru-eng__text">ENG</div><img class="ru-eng__img" src="template-images/header-top-eng.png"/></a><a class="ru-eng__ru" href="#">
+              <div class="ru-eng__text">РУС</div><img class="ru-eng__img" src="template-images/header-top-eng.png"/></a></div>
         </div>
       </div>
       <!-- Header-bottom-->
@@ -57,7 +140,8 @@
           <!-- Левое крыло-->
           <div class="header-bottom__left">
             <ul class="menu header-menu">
-              <li><a class="button-link header-menu__button" href="page-catalog.html">Каталог продукции</a>
+              <!-- пункт меню активируется добавлением класса .active-->
+              <li><a class="button-link header-menu__button active" href="page-catalog.html">Каталог продукции</a>
               </li>
               <li><a class="button-link header-menu__button" href="page-about-company.html">О Компании</a>
               </li>
@@ -84,7 +168,7 @@
               <li><a class="button-link header-menu__button" href="page-contacts.html">Контакты</a>
               </li>
               <li>
-                    <button class="button button--gradient online-order" data-target="#modal-box" href="" data-toggle="modal">Онлайн заявка</button>
+                    <button class="button button--gradient online-order" data-target="#online-order" href="" data-toggle="modal">Онлайн заявка</button>
               </li>
             </ul>
           </div>
@@ -110,7 +194,7 @@
           <!-- Колонка Телефон-->
           <div class="header-bottom-mobile__col header-bottom-mobile__col2">
             <div class="header-bottom-mobile__phone"><span>8 01644</span><strong>&nbsp3-24-09</strong></div>
-                <button class="button button--gradient online-order" data-target="#modal-box" href="" data-toggle="modal">Онлайн заявка</button>
+                <button class="button button--gradient online-order" data-target="#online-order" href="" data-toggle="modal">Онлайн заявка</button>
           </div>
           <!-- Колонка Меню-->
           <div class="header-bottom-mobile__col header-bottom-mobile__col3 header-mobile-menu">
@@ -144,9 +228,11 @@
             <div class="main-slider__txt">
               <div class="main-slider__txt-title">О компании</div>
             </div>
-            <!-- Крошки		-->
+            <!-- Крошки -->
             <div class="page__title-crumbs inn_padd">
-              <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная<i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i><a class="page__title-crumbs__child" href="#">О компании</a></a></div>
+              <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная</a><i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i>
+                <div class="page__title-crumbs__child">#,О компании</div>
+              </div>
             </div>
           </div>
         </div>
@@ -251,32 +337,19 @@
           </div>
           <!-- Кнопка, появляющаяся в мобильной версии	-->
           <div class="footer-top__col footer-top__footer-feedback">
-                <button class="button button--gradient footer-feedback footer-feedback_mobile" data-target="#modal-box" href="" data-toggle="modal">Онлайн заявка</button>
+                <button class="button button--gradient footer-feedback footer-feedback_mobile" data-target="#callBack" href="" data-toggle="modal">Онлайн заявка</button>
           </div>
           <!-- вторая колонка -->
           <div class="footer-top__col">
-            <div class="footer-top__col-title">Компания</div>
-            <div class="footer-top__col-row">Информация</div>
-            <div class="footer-top__col-row">История</div>
-            <div class="footer-top__col-row">Сертификаты качества</div>
-            <div class="footer-top__col-row">География продаж</div>
+            <div class="footer-top__col-title">Компания</div><a class="footer-top__col-row" href="#">Информация</a><a class="footer-top__col-row" href="#">История</a><a class="footer-top__col-row" href="#">Сертификаты качества</a><a class="footer-top__col-row" href="#">География продаж</a>
           </div>
           <!-- третья колонка -->
           <div class="footer-top__col">
-            <div class="footer-top__col-title">Продукция</div>
-            <div class="footer-top__col-row">Лекарственные средства</div>
-            <div class="footer-top__col-row">Биологически активные добавки</div>
-            <div class="footer-top__col-row">Пищевые продукты</div>
+            <div class="footer-top__col-title">Продукция</div><a class="footer-top__col-row" href="#">Лекарственные средства</a><a class="footer-top__col-row" href="#">Биологически активные добавки</a><a class="footer-top__col-row" href="#">Пищевые продукты</a>
           </div>
           <!-- четвертая колонка -->
           <div class="footer-top__col">
-            <div class="footer-top__col-title">Партнерам</div>
-            <div class="footer-top__col-row">Наши партнеры</div>
-            <div class="footer-top__col-row">Дистрибьютерам</div>
-            <div class="footer-top__col-row">Информация по наличию</div>
-            <div class="footer-top__col-row">Положение по скидкам</div>
-            <div class="footer-top__col-row">Форма заказа</div>
-            <div class="footer-top__col-row">Прайс лист</div>
+            <div class="footer-top__col-title">Партнерам</div><a class="footer-top__col-row" href="#">Наши партнеры</a><a class="footer-top__col-row" href="#">Дистрибьютерам</a><a class="footer-top__col-row" href="#">Информация по наличию</a><a class="footer-top__col-row" href="#">Положение по скидкам</a><a class="footer-top__col-row" href="#">Форма заказа</a><a class="footer-top__col-row" href="#">Прайс лист</a>
           </div>
         </div>
         <!-- /Футер верхний-->
@@ -284,12 +357,12 @@
         <div class="footer-bottom">
           <div class="footer-bottom__inner">
             <div class="footer-bottom__col">
-                  <button class="button button--gradient footer-feedback" data-target="#modal-box" href="" data-toggle="modal">Обратная связь</button>
+                  <button class="button button--gradient footer-feedback" data-target="#callBack" href="" data-toggle="modal">Обратная связь</button>
             </div>
             <div class="footer-bottom__col">
               <div class="footer-join-us">
                 <div class="footer-join-us__text">Присоединяйтесь:</div>
-                <div class="footer-join-us__socials"><img class="footer-join-us__socials" src="template-images/socials-vk.png"/><img class="footer-join-us__socials" src="template-images/socials-inst.png"/><img class="footer-join-us__socials" src="template-images/socials-fb.png"/><img class="footer-join-us__socials" src="template-images/socials-ok.png"/></div>
+                <div class="footer-join-us__socials"><a href="https://vk.com/" target="_blank"><img class="footer-join-us__socials" src="template-images/socials-vk.png"/></a><a href="https://www.instagram.com/" target="_blank"><img class="footer-join-us__socials" src="template-images/socials-inst.png"/></a><a href="https://www.facebook.com" target="_blank"><img class="footer-join-us__socials" src="template-images/socials-fb.png"/></a><a href="https://ok.ru/" target="_blank"><img class="footer-join-us__socials" src="template-images/socials-ok.png"/></a></div>
               </div>
             </div>
           </div>

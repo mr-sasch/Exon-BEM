@@ -1,0 +1,43 @@
+.page-not-found {
+	text-align: center;
+	color: $grey;
+}
+.not-found-title {
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 300;
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+.not-found-description {
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 60px;
+}
+a.not-found-btn {
+	display: inline-block;
+	color: #fff;
+	font-size: 30px; font-weight: 500;
+	width: 100%; max-width: 320px;
+	background-color: $green-d;
+	cursor: pointer;
+	padding: 7px 0;
+	border-radius: 30px
+}
+a.not-found-btn:hover {
+	text-decoration: none;
+}
+
+/* Адаптация */
+@media screen and (max-width: 500px) {
+	.not-found-title {
+		font-size: 50px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.not-found-title {
+		font-size: 40px;
+	}
+}
+
+/* /Адаптация */

@@ -1,5 +1,5 @@
 .input-loginRemember {
-	// display: none;
+	display: none;
 }
 .modal-forms .modal-dialog {
 	max-width: 800px;
@@ -15,8 +15,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 40px;
-	padding-bottom: 60px;
+	padding-top: 50px; padding-bottom: 60px;
+	padding-left: 15px; padding-right: 15px;
 	margin: auto;
 }
 .modal__content-title {
@@ -27,16 +27,23 @@
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
+	line-height: 50px;
 }
 .modal__content-description {
 	font-size: 18px;
 	font-weight: 300;
-	clear: $grey;
-	margin-bottom: 50px;
+	color: $grey;
+	margin-bottom: 50px; margin-top: 10px;
+	max-width: 590px;
+  text-align: center;
+  line-height: 24px;
 }
 
 .modal__content-form {
 	width: 100%;
+}
+.modal-dialog.button {
+	cursor: default;
 }
 .modal-box.modal-dialog.button:before {
 	border-radius: 45px;
@@ -121,8 +128,59 @@ a.modal__content-nat-a-partner {
 	color: $blue;
 	font-size: 14px;
 }
+
+/* Запомнить меня */
+.loginRemember {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
 .label-loginRemember {
 	font-size: 14px;
 	font-weight: 300;
 	color: $grey;
+	margin-bottom: 0;
+	margin-left: 10px;
+	cursor: pointer;
 }
+.label-loginRemember__checkbox {
+	display: inline-block;
+	width: 20px; height: 20px;
+	border-radius: 50%;
+	border: 1px solid $grey;
+	transition: .2s ease;
+}
+.input-loginRemember:checked ~ .label-loginRemember__checkbox {
+	background-color: $green-d;
+	border-color: $green-d;
+}
+/* /Запомнить меня */
+
+/* Еще не партнер */
+.not-a-partner {
+	text-align: right;
+}
+/* /Еще не партнер */
+
+/* Закрыть окно */
+.modal__content-close {
+	position: absolute;
+	top: -30px; right: -20px;
+	cursor: pointer;
+}
+.modal.show .modal-dialog {
+	transform: translate(0,20%);
+}
+	/* Адаптация */
+@media screen and (max-width: 900px) {
+	.modal__content-close {
+    top: -40px;
+    right: 0px;
+	}
+	.modal.show .modal-dialog {
+		transform: translate(0,15%);
+	}
+}
+	/* /Адаптация */
+/* /Закрыть окно */

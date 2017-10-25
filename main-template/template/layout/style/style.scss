@@ -551,3 +551,13 @@ a.page-main-news__list-item {
 
 // Модальное окно "Вход для клиентов"
 @import "../../blocks/modals/modal__header-top-login/modal__header-top-login.scss";
+// Модальное окно "Оставить заявку"
+@import "../../blocks/modals/modal__header-bottom-online-order/modal__header-bottom-online-order.scss";
+// Модальное окно "Обратная связь"
+@import "../../blocks/modals/modal__footer-call-back/modal__footer-call-back.scss";
+
+// Карточка товара
+@import "../page-catalog__card/page-catalog__card.scss";
+
+// Ошибка 404
+@import "../page-not-found/page-not-found.scss";

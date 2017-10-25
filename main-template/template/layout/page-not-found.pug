@@ -1,0 +1,14 @@
+extends page-template.pug
+
+block content
+	+crumbs('template-images/lk__title.png', 'Ошибка 404', '404')
+	// Содержимое страницы 404
+	.news-all.inn_padd
+		.news-all__inner.page-not-found.site-width
+			.not-found-title Запрашиваемая страница не найдена
+			.not-found-description Ошибка 404 означает, что траницы, которую вы запрашивает, не существует.
+				br
+				| Возможно она была удалена, возможно вы набрали неправильный адрес
+			a.not-found-btn(href='page-main.html') На главную
+	// серый футер
+	script(src='js/footer-grey.js')

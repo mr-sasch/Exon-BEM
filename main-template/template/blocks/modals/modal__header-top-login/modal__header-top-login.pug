@@ -1,6 +1,4 @@
-mixin pharma-input(classname, type, name, placeholder)
-	input(class= classname type= type name= name placeholder= placeholder)
-.modal.modal-forms.fade#modal-box(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+.modal.modal-forms.fade#clientsLogin(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
 	.modal-box.modal-dialog.button.button--gradient
 		.modal__content
 			.modal__content-title Войти в личный кабинет
@@ -11,11 +9,13 @@ mixin pharma-input(classname, type, name, placeholder)
 				.modal__content-form-input
 					input(type='text' name='loginPass' placeholder='Пароль*').modal__content-form-input-pass
 				.modal__content-cols
-					.modal__content-col1-2
-						label(for='loginRemember').label-loginRemember Запомнить меня
+					.modal__content-col1-2.loginRemember
 						input#loginRemember(type='checkbox').input-loginRemember
-					.modal__content-col1-2
+						.label-loginRemember__checkbox
+						label(for='loginRemember').label-loginRemember Запомнить меня
+					.modal__content-col1-2.not-a-partner
 						a.modal__content-nat-a-partner(href='#') Еще не наш партнер?
 				.modal__content-form-submit
 					input.modal__content-form-submit-btn(type='submit' value='ВОЙТИ НА САЙТ') 
-			.modal__content-close
+			.modal__content-close(data-dismiss="modal" aria-label="Close")
+				img.modal__content-close(src='template-images/forms__cancel.png')

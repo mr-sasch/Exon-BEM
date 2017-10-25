@@ -107,101 +107,73 @@ a.catalog__sorting-alphabet-z-a:hover .catalog__sorting-alphabet-z-a-txt {
 
 
 /* Меню */
-	/* Позиционирование */
-.catalog__navbar {
+.catalog__menu {
 	width: 316px;
+	border: 2px solid $grey-brd;
+	border-radius: 20px;
+
 }
-.catalog__navbar .card {
-	position: relative;
-	overflow: hidden;
-	background-color: #eeeeee;
-	border-radius: 30px;
+
+// Раздел каталога
+.catalog__menu-item {
+	width: calc(100% + 4px);
 }
-.catalog__navbar .border-active {
-	position: absolute;
-	top: 0; bottom: 0; left: 0; right: 0;
+.catalog__menu-item.active {
 	border: 2px solid $green-d;
-	z-index: 10;
-	border-radius: 30px;
+	border-radius: 20px;
+	margin: -2px;
+}
+
+// Заголовок подраздела
+.catalog__menu-item-title {
+	position: relative;
+	padding-top: 20px; padding-left: 15px;
+	padding-right: 35px;
+	font-size: 18px; font-weight: 600;
+	color: $grey;
+	cursor: pointer;
 	transition: .2s ease;
+}
+.catalog__menu-item-title:hover,
+.catalog__menu-item.active .catalog__menu-item-title {
+	color: $green-d;
+}
+// Стрелка в заголовке
+.catalog__menu-item-title-arrow {
+	position: absolute;
+	right: 0; top: 20px;
 	opacity: 1;
 }
-.catalog__navbar .collapsed .border-active {
-	opacity: 0;
-}
-	/* /Позиционирование */
 
-.catalog__navbar .card-header {
-	border: none;
-	background-color: rgba(201, 55, 108, 0);
-	z-index: 30;
-}
-	/* стили */
-		/* заголовки Меню */
-.catalog__navbar .menu__title a {
-	color: $green-d;
-	font-size: 18px;
-	font-weight: 600;
-	transition: .2s ease;
-}
-.catalog__navbar .menu__title a.collapsed:hover {
-	color: $green-d;
-}
-.catalog__navbar .menu__title a.collapsed {
-	color: $grey;
-}
-	/* /заголовки Меню */
 
-	/* заголовки Подменю */
-.catalog__navbar .card-body {
-	z-index: 20;
-	position: relative;
-}
-.catalog__navbar .card-body a {
-	color: $grey;
-	font-size: 16px;
-	transition: .2s ease;
-}
-.catalog__navbar .card-body a:hover {
-	color: $green-d;
-}
-.catalog__navbar .card-body li.active a {
-	color: $green-d;
-}
-	/* /заголовки Подменю */
 
-.catalog__navbar .card-body li {
-	padding: 7px 0;
-	padding-left: 50px;
-	max-width: 290px;
+// Содержимое подраздела
+.catalog__submenu {
+	padding-left: 40px; padding-top: 10px;
+	height: 0;
+  opacity: 0;
+	transition: .3s ease;
+	overflow: hidden;
 }
-// кружок активного пункта меню
-.catalog__navbar .card-body li {
-	position: relative;
+.catalog__menu-item.active .catalog__submenu {
+	height: 100px;
+  opacity: 1;
 }
-.catalog__navbar .active-item {
-	width: 37px; height: 37px;
-	background-color: $green-d;
-	border-radius: 50%;
-	position: absolute;
-	left: -19px; top: -1px;
-	display: none;
-}
-.catalog__navbar .card-body li.active .active-item {
+
+.catalog__submenu-item {
 	display: inline-block;
+	width: 100%;
+	font-size: 16px;
+	color: $grey;
+	transition: .2s ease;
+	padding: 5px 0;
+}
+.catalog__submenu-item:hover {
+	color: $green-d;
 }
 
 
-	/* /стили */
 
-.catalog__navbar .accordion {
-	background-color: #eeeeee;
-	border-radius: 30px;
-}
-.catalog__navbar .card-body {
-	list-style: none;
-	padding: 0;
-}
 /* /Меню */
 
 

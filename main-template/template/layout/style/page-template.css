@@ -557,7 +557,8 @@ a.online-order:hover {
 /* /Кнопка */
 /* Меню */
 .theme-exon .mobile-menu__menu {
-  top: 160px; }
+  top: 160px;
+  z-index: 10; }
 
 .mobile-menu__item-a {
   text-decoration: none;
@@ -656,7 +657,12 @@ a.online-order:hover {
 .footer-top__col-row {
   margin-bottom: 15px;
   font-size: 18px;
-  font-weight: 300; }
+  font-weight: 300;
+  display: block;
+  color: #4a4a4a; }
+
+.footer-top__col-row:hover {
+  color: #4a4a4a; }
 
 /* /Заголовок */
 /* /Меню в футере */

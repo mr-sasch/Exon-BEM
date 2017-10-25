@@ -1,5 +1,5 @@
 
-<div class="modal modal-forms fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+<div class="modal modal-forms fade" id="clientsLogin" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
   <div class="modal-box modal-dialog button button--gradient">
     <div class="modal__content">
       <div class="modal__content-title">Войти в личный кабинет</div>
@@ -12,17 +12,18 @@
           <input class="modal__content-form-input-pass" type="text" name="loginPass" placeholder="Пароль*"/>
         </div>
         <div class="modal__content-cols">
-          <div class="modal__content-col1-2">
-            <label class="label-loginRemember" for="loginRemember">Запомнить меня</label>
+          <div class="modal__content-col1-2 loginRemember">
             <input class="input-loginRemember" id="loginRemember" type="checkbox"/>
+            <div class="label-loginRemember__checkbox"></div>
+            <label class="label-loginRemember" for="loginRemember">Запомнить меня</label>
           </div>
-          <div class="modal__content-col1-2"><a class="modal__content-nat-a-partner" href="#">Еще не наш партнер?</a></div>
+          <div class="modal__content-col1-2 not-a-partner"><a class="modal__content-nat-a-partner" href="#">Еще не наш партнер?</a></div>
         </div>
         <div class="modal__content-form-submit">
           <input class="modal__content-form-submit-btn" type="submit" value="ВОЙТИ НА САЙТ"/>
         </div>
       </form>
-      <div class="modal__content-close"></div>
+      <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
     </div>
   </div>
 </div>

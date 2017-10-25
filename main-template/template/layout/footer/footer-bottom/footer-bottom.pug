@@ -2,13 +2,17 @@
 .footer-bottom
 	.footer-bottom__inner
 		.footer-bottom__col
-			+button-modal-colored('footer-feedback', '#modal-box', 'Обратная связь')
+			+button-modal-colored('footer-feedback', '#callBack', 'Обратная связь')
 		.footer-bottom__col
 			.footer-join-us
 				.footer-join-us__text Присоединяйтесь:
 				.footer-join-us__socials
-					img.footer-join-us__socials(src='template-images/socials-vk.png')
-					img.footer-join-us__socials(src='template-images/socials-inst.png')
-					img.footer-join-us__socials(src='template-images/socials-fb.png')
-					img.footer-join-us__socials(src='template-images/socials-ok.png')
+					a(href='https://vk.com/' target='_blank')
+						img.footer-join-us__socials(src='template-images/socials-vk.png')
+					a(href='https://www.instagram.com/' target='_blank')
+						img.footer-join-us__socials(src='template-images/socials-inst.png')
+					a(href='https://www.facebook.com' target='_blank')
+						img.footer-join-us__socials(src='template-images/socials-fb.png')
+					a(href='https://ok.ru/' target='_blank')
+						img.footer-join-us__socials(src='template-images/socials-ok.png')
 // /Футер нижний

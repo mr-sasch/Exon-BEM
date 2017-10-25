@@ -1,0 +1,94 @@
+// Раскладка
+.catalog-card__cols {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.catalog-card__img {
+	max-width: 300px;
+	padding-top: 70px;
+	margin: auto;
+	position: relative;
+}
+.catalog-card__img-new {
+	position: absolute;
+	top: 0; right: 0;
+}
+.catalog-card__img-col {
+	width: 45%;
+}
+.catalog-card__descr-col {
+	width: 55%;
+}
+
+// С рецептом или без
+.catalog-card__descr-receipt-yes,
+.catalog-card__descr-receipt-no {
+	position: relative;
+	padding-left: 20px;
+	display: none;
+}
+.catalog-card__descr-receipt-yes-img,
+.catalog-card__descr-receipt-no-img {
+	position: absolute;
+	left: 0; top: 0px;
+}
+.catalog-card__descr-receipt-yes.active {
+	display: inline-block;
+}
+.catalog-card__descr-receipt-no.active {
+	display: inline-block;
+}
+
+
+/* Описание */
+.catalog-card__descr-title {
+	font-family: 'Roboto Slab', serif;
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+.catalog-card__descr-reg {
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+.catalog-card__descr-properties {
+	margin-bottom: 30px;
+}
+
+.catalog-card__descr {
+	color: $grey;
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 100px;
+}
+.catalog-card__descr-properties-category strong {
+	color: $green-d;
+}
+/* /Описание */
+
+// Разделитель
+.catalog-card__descr-separator {
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid rgb(218, 218, 218);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* Адаптация */
+@media screen and (max-width: 720px) {
+	.catalog-card__cols {
+    justify-content: space-between;
+    flex-direction: column
+	}
+	.catalog-card__col1-2 {
+		width: 100% !important;
+	}
+	.catalog-card__img-col {
+		margin-bottom: 70px;
+	}
+}
+
+/* /Адаптация */

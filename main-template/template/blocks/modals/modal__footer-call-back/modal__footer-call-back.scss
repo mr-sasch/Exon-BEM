@@ -1,0 +1,22 @@
+.modal__content__note {
+	font-size: 14px; font-weight: 300;
+	color: $grey;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* Инпуты */
+.modal__content-form-input-mail {
+	background: url('../template-images/forms__mail-grey.png') 9px 50% no-repeat;
+}
+.modal__content-form-input-mail:focus {
+	background: url('../template-images/forms__mail-blue.png') 9px 50% no-repeat;
+}
+
+.modal__content-form-input-phone {
+	background: url('../template-images/forms__phone-grey.png') 12px 50% no-repeat;
+}
+.modal__content-form-input-phone:focus {
+	background: url('../template-images/forms__phone-blue.png') 12px 50% no-repeat;
+}
+/* /Инпуты */

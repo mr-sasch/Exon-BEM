@@ -1,0 +1,23 @@
+.modal.modal-forms.fade#online-order(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+	.modal-box.modal-dialog.button.button--gradient
+		.modal__content
+			.modal__content-title Оставить заявку
+			.modal__content-description Для того, чтобы оставить заявку, вам требуется войти на сайт под своими учетными данными. 
+				br
+				| Имя и пароль выдаются нашей компанией при регистрации партнера. 
+			form.modal__content-form
+				.modal__content-form-input
+					input(type='text' name='loginName' placeholder='Имя пользователя*').modal__content-form-input-user
+				.modal__content-form-input
+					input(type='text' name='loginPass' placeholder='Пароль*').modal__content-form-input-pass
+				.modal__content-cols
+					.modal__content-col1-2.loginRemember
+						input#loginRememberOrder(type='checkbox').input-loginRemember
+						.label-loginRemember__checkbox
+						label(for='loginRememberOrder').label-loginRemember Запомнить меня
+					.modal__content-col1-2.not-a-partner
+						a.modal__content-nat-a-partner(href='#') Еще не наш партнер?
+				.modal__content-form-submit
+					input.modal__content-form-submit-btn(type='submit' value='ВОЙТИ НА САЙТ') 
+			.modal__content-close(data-dismiss="modal" aria-label="Close")
+				img.modal__content-close(src='template-images/forms__cancel.png')

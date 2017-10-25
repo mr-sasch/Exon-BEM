@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$grey".
-        on line 34 of ./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss
+        on line 35 of ./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss
 
-29: 	color: transparent;
-30: }
-31: .modal__content-description {
-32: 	font-size: 18px;
-33: 	font-weight: 300;
-34: 	clear: $grey;
-35: 	margin-bottom: 50px;
-36: }
-37: 
-38: .modal__content-form {
-39: 	width: 100%;
+30: 	line-height: 50px;
+31: }
+32: .modal__content-description {
+33: 	font-size: 18px;
+34: 	font-weight: 300;
+35: 	color: $grey;
+36: 	margin-bottom: 50px; margin-top: 10px;
+37: 	max-width: 590px;
+38:   text-align: center;
+39:   line-height: 24px;
+40: }
 
 Backtrace:
-./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss:34
+./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss:35
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -69,4 +69,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$grey\".\A         on line 34 of ./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss\A \A 29: 	color: transparent;\A 30: }\A 31: .modal__content-description {\A 32: 	font-size: 18px;\A 33: 	font-weight: 300;\A 34: 	clear: $grey;\A 35: 	margin-bottom: 50px;\A 36: }\A 37: \A 38: .modal__content-form {\A 39: 	width: 100%;"; }
+  content: "Error: Undefined variable: \"$grey\".\A         on line 35 of ./template/blocks/modals/modal__header-top-login/modal__header-top-login.scss\A \A 30: 	line-height: 50px;\A 31: }\A 32: .modal__content-description {\A 33: 	font-size: 18px;\A 34: 	font-weight: 300;\A 35: 	color: $grey;\A 36: 	margin-bottom: 50px; margin-top: 10px;\A 37: 	max-width: 590px;\A 38:   text-align: center;\A 39:   line-height: 24px;\A 40: }"; }

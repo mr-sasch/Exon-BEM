@@ -26,81 +26,37 @@ block content
 							strong Я
 							i.fa.fa-long-arrow-right(aria-hidden="true")
 							strong А
-						
 			
 			.catalog__cols
 				// Первая колонка
 				.catalog__col1
 					// Меню
-					.catalog__navbar
-						mixin menu-accordion-bootstrap
-							.menu-accordion-bootstrap
-								// Бутстрап Аккордион 
-								.accordion#accordion(role="tablist")
-									.card
-										.card-header#headingOne(role="tab")
-											.menu__title
-												a(data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne") Лекарственные средства
-										.submenu-block#collapseOne.collapse.show(role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion")
-											ul.card-body
-												li.active
-													.active-item
-													a(href='#') Сиропы
-												li
-													.active-item
-													a(href='#') Гематогены
-												li
-													.active-item
-													a(href='#') Таблетки
-												li
-													.active-item
-													a(href='#') Порошки и гранулы
-												li
-													.active-item
-													a(href='#') Капсулы
-												li
-													.active-item
-													a(href='#') Прочие лекарственные средства
-											.border-active
-									.card
-										.card-header(role="tab" id="headingTwo")
-											.menu__title
-												a.collapsed(data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Биологически активные добавки
-										.submenu-block#collapseTwo.collapse(role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion")
-											ul.card-body
-												li
-													a(href='#') Сиропы
-												li
-													a(href='#') Гематогены
-												li
-													a(href='#') Таблетки
-												li
-													a(href='#') Порошки и гранулы
-												li
-													a(href='#') Капсулы
-												li
-													a(href='#') Прочие лекарственные средства
-											.border-active
-									.card
-										.card-header(role="tab" id="headingThree")
-											.menu__title
-												a.collapsed(data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree") Пищевые продукты
-										.submenu-block#collapseThree.collapse(role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion")
-											ul.card-body
-												li
-													a(href='#') Сиропы
-												li
-													a(href='#') Гематогены
-												li
-													a(href='#') Таблетки
-												li
-													a(href='#') Порошки и гранулы
-												li
-													a(href='#') Капсулы
-												li
-													a(href='#') Прочие лекарственные средства
-											.border-active
-						+menu-accordion-bootstrap
+					.catalog__menu
+						// Раздел каталога
+						.catalog__menu-item.active
+							.catalog__menu-item-title Лекарственные средства
+								.catalog__menu-item-title-arrow
+									i(class="fa fa-angle-down" aria-hidden="true")
+									i(class="fa fa-angle-up" aria-hidden="true")
+							// Подраздел каталога
+							.catalog__submenu
+								a(href='#').catalog__submenu-item Сиропы
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Гематогены
+									.catalog__submenu-item-label
+						// Раздел каталога
+						.catalog__menu-item
+							.catalog__menu-item-title Биологически активные добавки
+								.catalog__menu-item-title-arrow
+									i(class="fa fa-angle-down" aria-hidden="true")
+									i(class="fa fa-angle-up" aria-hidden="true")
+							// Подраздел каталога
+							.catalog__submenu
+								a(href='#').catalog__submenu-item Сиропы
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Гематогены
+									.catalog__submenu-item-label
+						script(src='js/catalog__menu.js')
 					// Баннер
 					.catalog__banner
 						img.catalog__banner-img(src='template-images/catalog__banner.png')

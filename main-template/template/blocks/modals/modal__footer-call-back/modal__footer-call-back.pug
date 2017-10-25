@@ -1,0 +1,17 @@
+.modal.modal-forms.fade#callBack(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+	.modal-box.modal-dialog.button.button--gradient
+		.modal__content
+			.modal__content-title Обратная связь
+			.modal__content-description Если у вас есть вопросы относительно деятельности нашего предприятия, либо по продукции, оставьте ваши контактные данные в форме ниже, и мы свяжемся с вами в ближайшее время.
+			form.modal__content-form
+				.modal__content-form-input
+					input(type='text' name='loginName' placeholder='Имя пользователя*').modal__content-form-input-user
+				.modal__content-form-input
+					input(type='text' name='loginPass' placeholder='Ваш e-mail*').modal__content-form-input-mail
+				.modal__content-form-input
+					input(type='text' name='loginPass' placeholder='Номер телефона*').modal__content-form-input-phone
+				.modal__content-form-submit
+					input.modal__content-form-submit-btn(type='submit' value='ОТПРАВИТЬ')
+				.modal__content__note Ваши персональные данные находятся в безопасности
+			.modal__content-close(data-dismiss="modal" aria-label="Close")
+				img.modal__content-close(src='template-images/forms__cancel.png')

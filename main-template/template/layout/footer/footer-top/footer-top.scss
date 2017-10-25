@@ -73,6 +73,11 @@
 	margin-bottom: 15px;
 	font-size: 18px;
 	font-weight: 300;
+	display: block;
+	color: $grey;
+}
+.footer-top__col-row:hover {
+	color: $grey;
 }
 	/* /Заголовок */
 /* /Меню в футере */
