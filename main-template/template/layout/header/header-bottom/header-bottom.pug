@@ -5,11 +5,11 @@
 		.header-bottom__left
 			ul.menu.header-menu
 				// пункт меню активируется добавлением класса .active
-				li
-					+button-link('header-menu__button active', 'page-catalog.html', 'Каталог продукции')
-				li
+				li#nav__catalog
+					+button-link('header-menu__button', 'page-catalog.html', 'Каталог продукции')
+				li#nav__about-company
 					+button-link('header-menu__button', 'page-about-company.html', 'О Компании')
-				li
+				li#nav__news
 					+button-link('header-menu__button', 'page-news-all.html', 'Новости')
 		// Центр
 		.header-bottom__center
@@ -24,9 +24,9 @@
 		// Правое крыло
 		.header-bottom__right
 			ul.menu.header-menu
-				li
+				li#nav__partners
 					+button-link('header-menu__button', '#', 'Партнерам')
-				li
+				li#nav__contacts
 					+button-link('header-menu__button', 'page-contacts.html', 'Контакты').online-order
 				li
 					+button-modal-colored('online-order', '#online-order', 'Онлайн заявка')

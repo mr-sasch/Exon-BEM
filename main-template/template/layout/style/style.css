@@ -121,13 +121,15 @@ a.button--gradient:hover {
 
 .header-search input[type=text] {
   position: absolute;
-  width: 25px;
+  width: 100%;
+  height: 100%;
   left: 0;
+  top: -1px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0);
-  background: url("../template-images/header-search.png") no-repeat;
+  background: url("../template-images/header-search.png") 3px 1px no-repeat;
   padding: 0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
@@ -139,7 +141,7 @@ a.button--gradient:hover {
   border: 1px solid #4a4a4a;
   border-radius: 20px;
   width: 250px;
-  padding: 5px 5px 5px 40px;
+  padding: 2px 5px 2px 40px;
   background-color: #fff;
   outline: none;
   background: #fff url("../template-images/header-search.png") 7px 50% no-repeat;
@@ -401,7 +403,7 @@ a.online-order:hover {
   position: absolute;
   z-index: 100;
   left: 0;
-  top: 2px; }
+  top: -3px; }
 
 .header-bottom__left-top-phone {
   color: #4a4a4a; }
@@ -2704,61 +2706,113 @@ a.catalog__sorting-alphabet-z-a:hover .catalog__sorting-alphabet-z-a-txt {
 /* Меню */
 .catalog__menu {
   width: 316px;
-  border: 2px solid #6e6e6e;
-  border-radius: 20px; }
+  border: 2px solid rgba(110, 110, 110, 0.24);
+  border-radius: 20px;
+  background-color: #f2f2f2; }
 
 .catalog__menu-item {
-  width: calc(100% + 4px); }
+  width: calc(100% + 4px);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  margin: -2px;
+  padding-top: 0;
+  transition: border-color .2s ease; }
 
-.catalog__menu-item.active {
+.catalog__menu-item.active-item {
   border: 2px solid #4ab75e;
   border-radius: 20px;
-  margin: -2px; }
+  margin: -2px;
+  transition: border-color .2s ease;
+  padding-top: 20px; }
+
+.catalog__menu-item.active-item:first-child {
+  margin-top: -2px; }
 
 .catalog__menu-item-title {
   position: relative;
-  padding-top: 20px;
-  padding-left: 15px;
+  padding-top: 8px;
+  padding-left: 20px;
   padding-right: 35px;
+  padding-bottom: 8px;
   font-size: 18px;
   font-weight: 600;
+  line-height: 20px;
   color: #4a4a4a;
   cursor: pointer;
   transition: .2s ease; }
 
 .catalog__menu-item-title:hover,
-.catalog__menu-item.active .catalog__menu-item-title {
+.catalog__menu-item.active-item .catalog__menu-item-title {
   color: #4ab75e; }
 
-.catalog__menu-item-title-arrow {
-  position: absolute;
-  right: 0;
-  top: 20px;
-  opacity: 1; }
+.catalog__menu-item:first-child {
+  padding-top: 20px; }
 
+.catalog__menu-item:nth-last-child(2) {
+  padding-bottom: 20px; }
+
+.catalog__menu-item.active-item:nth-last-child(2) {
+  padding-bottom: 0; }
+
+/* Содержимое подраздела */
 .catalog__submenu {
-  padding-left: 40px;
-  padding-top: 10px;
-  height: 0;
-  opacity: 0;
-  transition: .3s ease;
+  padding-bottom: 20px;
+  opacity: 1;
   overflow: hidden; }
 
-.catalog__menu-item.active .catalog__submenu {
-  height: 100px;
-  opacity: 1; }
-
 .catalog__submenu-item {
+  position: relative;
   display: inline-block;
   width: 100%;
+  max-width: 300px;
   font-size: 16px;
   color: #4a4a4a;
   transition: .2s ease;
-  padding: 5px 0; }
+  padding: 5px 0;
+  padding-right: 30px;
+  padding-left: 40px; }
 
-.catalog__submenu-item:hover {
+.catalog__submenu-item:hover,
+.catalog__submenu-item.active {
   color: #4ab75e; }
 
+.catalog__submenu-item-label {
+  display: none;
+  position: absolute;
+  left: -20px;
+  top: -1px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: #4ab75e; }
+
+.catalog__submenu-item.active .catalog__submenu-item-label {
+  display: inline-block; }
+
+.catalog__menu-item-title-arrow {
+  position: absolute;
+  right: 15px;
+  top: 6px;
+  opacity: 1; }
+
+.catalog__menu-item-title-arrow i {
+  position: absolute;
+  right: 0;
+  transition: .3s ease; }
+
+.catalog__menu-item .fa-angle-up {
+  opacity: 0; }
+
+.catalog__menu-item .fa-angle-down {
+  opacity: 1; }
+
+.catalog__menu-item.active-item .fa-angle-up {
+  opacity: 1; }
+
+.catalog__menu-item.active-item .fa-angle-down {
+  opacity: 0; }
+
+/* /Содержимое подраздела */
 /* /Меню */
 /* Текст */
 .catalog__text {
@@ -3333,7 +3387,7 @@ td.lk__td {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 98%;
+  width: 100%;
   background-color: #fff;
   font-size: 18px;
   font-weight: 300;

@@ -253,7 +253,7 @@ a.online-order:hover {
   position: absolute;
   z-index: 100;
   left: 0;
-  top: 2px; }
+  top: -3px; }
 
 .header-bottom__left-top-phone {
   color: #4a4a4a; }

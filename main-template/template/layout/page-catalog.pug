@@ -33,16 +33,25 @@ block content
 					// Меню
 					.catalog__menu
 						// Раздел каталога
-						.catalog__menu-item.active
+						//- .active-item
+						.catalog__menu-item.active-item
 							.catalog__menu-item-title Лекарственные средства
 								.catalog__menu-item-title-arrow
 									i(class="fa fa-angle-down" aria-hidden="true")
 									i(class="fa fa-angle-up" aria-hidden="true")
 							// Подраздел каталога
 							.catalog__submenu
-								a(href='#').catalog__submenu-item Сиропы
+								a(href='#').catalog__submenu-item.active Сиропы
 									.catalog__submenu-item-label
 								a(href='#').catalog__submenu-item Гематогены
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Таблетки
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Порошки и гранулы
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Капсулы
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Прочие лекарственные средства
 									.catalog__submenu-item-label
 						// Раздел каталога
 						.catalog__menu-item
@@ -51,7 +60,19 @@ block content
 									i(class="fa fa-angle-down" aria-hidden="true")
 									i(class="fa fa-angle-up" aria-hidden="true")
 							// Подраздел каталога
-							.catalog__submenu
+							.catalog__submenu.hide
+								a(href='#').catalog__submenu-item Сиропы
+									.catalog__submenu-item-label
+								a(href='#').catalog__submenu-item Гематогены
+									.catalog__submenu-item-label
+						// Раздел каталога
+						.catalog__menu-item
+							.catalog__menu-item-title Пищевые продукты
+								.catalog__menu-item-title-arrow
+									i(class="fa fa-angle-down" aria-hidden="true")
+									i(class="fa fa-angle-up" aria-hidden="true")
+							// Подраздел каталога
+							.catalog__submenu.hide
 								a(href='#').catalog__submenu-item Сиропы
 									.catalog__submenu-item-label
 								a(href='#').catalog__submenu-item Гематогены
@@ -82,3 +103,5 @@ block content
 						+read-more-bootstrap('Подробно', 'Производство продукции осуществляется на основании промышленных регламентов, технологических инструкций, стандартных операционных процедур (СОП). На предприятии действует собственная служба обеспечения и контроля  качества. Высококвалифицированный персонал выполняет работы по входному промежуточному контролю, а также контроль качества готовой продукции, контролирует хранение и реализацию. Процесс производства, обеспечения и контроль качества продукции ОАО "Экзон" гарантирует безопасность продукции, эффективность и полное соответствие техническим нормативным правовым актам и нормативным документам.')
 	// Примите участие в опросе
 	+page-main-interview
+	// Подсветка активного пункта меню
+	script(src='js/active-page__catalog.js')
