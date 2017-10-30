@@ -26,7 +26,6 @@ q {
 .mod_margin-top-0 {
 	margin-top: 0 !important;
 }
-
 /* /Модификаторы */
 
 /* Переменные */
@@ -526,6 +525,7 @@ a.page-main-news__list-item {
 
 /* Страница "Каталог" */
 @import "../page-catalog/page-catalog.scss";
+@import "../page-catalog__card/page-catalog__card.scss";
 /* /Страница "Каталог" */
 
 /* Страница "Личный кабинет" */
@@ -561,3 +561,9 @@ a.page-main-news__list-item {
 
 // Ошибка 404
 @import "../page-not-found/page-not-found.scss";
+
+// Простая текстовая страница
+.simple-text-block {
+	padding-left: 10px; padding-right: 10px;
+	color: $grey;
+}

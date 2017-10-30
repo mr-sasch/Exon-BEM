@@ -2954,6 +2954,116 @@ a.catalog__card:hover {
 .catalog__banner {
   margin-top: 50px; }
 
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
+.catalog-card__cols {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between; }
+
+.catalog-card__img {
+  max-width: 300px;
+  padding-top: 70px;
+  margin: auto;
+  position: relative; }
+
+.catalog-card__img-new {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.catalog-card__img-col {
+  width: 45%; }
+
+.catalog-card__descr-col {
+  width: 55%; }
+
+.catalog-card__descr-receipt-yes,
+.catalog-card__descr-receipt-no {
+  position: relative;
+  padding-left: 20px;
+  display: none; }
+
+.catalog-card__descr-receipt-yes-img,
+.catalog-card__descr-receipt-no-img {
+  position: absolute;
+  left: 0;
+  top: 0px; }
+
+.catalog-card__descr-receipt-yes.active {
+  display: inline-block; }
+
+.catalog-card__descr-receipt-no.active {
+  display: inline-block; }
+
+.catalog-card__download-instructions {
+  position: relative;
+  color: #4a4a4a !important;
+  cursor: pointer; }
+
+.catalog-card__download-instructions-img {
+  width: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 3px; }
+
+.catalog-card__download-instructions-img:hover {
+  color: #4a4a4a; }
+
+.catalog-card__download-instructions-txt {
+  display: inline-block;
+  padding-left: 20px; }
+
+/* Описание */
+.catalog-card__descr-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 36px;
+  margin-bottom: 30px; }
+
+.catalog-card__descr-reg {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px; }
+
+.catalog-card__descr-properties {
+  margin-bottom: 30px; }
+
+.catalog-card__descr {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 100px; }
+
+.catalog-card__descr-properties-category strong {
+  color: #4ab75e; }
+
+/* /Описание */
+.catalog-card__descr-separator {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #dadada;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+/* Адаптация */
+@media screen and (max-width: 720px) {
+  .catalog-card__cols {
+    justify-content: space-between;
+    flex-direction: column; }
+
+  .catalog-card__col1-2 {
+    width: 100% !important; }
+
+  .catalog-card__img-col {
+    margin-bottom: 70px; } }
+/* /Адаптация */
 /* /Страница "Каталог" */
 /* Страница "Личный кабинет" */
 /* Глобальный серый цвет */
@@ -3825,6 +3935,14 @@ a.modal__content-nat-a-partner {
   background: url("../template-images/forms__phone-blue.png") 12px 50% no-repeat; }
 
 /* /Инпуты */
+/* Глобальный серый цвет */
+/* Серый цвет бэкграунда */
+/* Серый цвет бордюров */
+/* Глобальный голубой цвет */
+/* Глобальный зеленый цвет */
+/* Зеленый - темный */
+/* Красный цвет */
+/* Верхний отстут контента страницы от заголовка */
 .catalog-card__cols {
   display: -webkit-flex;
   display: -ms-flex;
@@ -3865,6 +3983,24 @@ a.modal__content-nat-a-partner {
 
 .catalog-card__descr-receipt-no.active {
   display: inline-block; }
+
+.catalog-card__download-instructions {
+  position: relative;
+  color: #4a4a4a !important;
+  cursor: pointer; }
+
+.catalog-card__download-instructions-img {
+  width: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 3px; }
+
+.catalog-card__download-instructions-img:hover {
+  color: #4a4a4a; }
+
+.catalog-card__download-instructions-txt {
+  display: inline-block;
+  padding-left: 20px; }
 
 /* Описание */
 .catalog-card__descr-title {
@@ -3948,5 +4084,9 @@ a.not-found-btn:hover {
   .not-found-title {
     font-size: 40px; } }
 /* /Адаптация */
+.simple-text-block {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #4a4a4a; }
 
 /*# sourceMappingURL=style.css.map */

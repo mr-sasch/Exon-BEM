@@ -7,7 +7,7 @@ block content
 		.catalog__inner.catalog-card__inner.site-width
 			.catalog-card__cols
 				// Изображение товара
-				.catalog-card__col1-2.catalog-card__img-col
+				.catalog-card__col1-2.catalog-card__img-col#catalog-card__img-col
 					.catalog-card__img
 						img.catalog-card__img-image(src='template-images/catalog-card__rozavit.png')
 						.catalog-card__img-new.catalog__card-novelty.on Новинка
@@ -38,6 +38,10 @@ block content
 								img.catalog-card__descr-receipt-yes-img.active(src='template-images/catalog__card-no-recipe.png')
 							.catalog-card__descr-receipt-no Отпускается по рецепту врача
 								img.catalog-card__descr-receipt-no-img(src='template-images/catalog__card-recipe.png')
+						// Скачать инструкцию
+						a(href='files/file.pdf' target='_blank').catalog-card__download-instructions 
+							img.catalog-card__download-instructions-img(src='template-images/catalog__card-download.png')
+							.catalog-card__download-instructions-txt Скачать инструкцию
 						// Разделитель
 						.catalog-card__descr-separator
 						// Доп.информация						
@@ -95,3 +99,5 @@ block content
 
 	// Примите участие в опросе
 	+page-main-interview
+	// Закрепление картинки при скролле
+	script(src='js/catalog-card__fixed-img.js')
