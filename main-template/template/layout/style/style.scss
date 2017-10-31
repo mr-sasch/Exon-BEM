@@ -26,6 +26,9 @@ q {
 .mod_margin-top-0 {
 	margin-top: 0 !important;
 }
+.mod_tg-left {
+	text-align: left !important;
+}
 /* /Модификаторы */
 
 /* Переменные */
@@ -567,3 +570,9 @@ a.page-main-news__list-item {
 	padding-left: 10px; padding-right: 10px;
 	color: $grey;
 }
+
+// Модальное окно "Опрос"
+@import "../../blocks/modals/modal__interview/modal__interview.scss";
+
+// Модальное окно "География продаж"
+@import "../../blocks/modals/modal__map/modal__map.scss";

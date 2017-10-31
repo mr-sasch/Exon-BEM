@@ -110,6 +110,58 @@
         </div>
       </div>
     </div>
+    <!-- Модальное окно - Принять участие в опросе-->
+    <div class="modal modal-forms fade" id="interviewModal" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <div class="modal__content-title">Опрос</div>
+          <div class="modal__content-description modal__interview-description">Примите участие в опросе, чтобы помочь нам совершенствоваться</div>
+          <form class="modal__content-form">
+            <div class="modal__content-description modal-interview__select-title">Являетесь ли вы специалистом в области здравоохранения?</div>
+                        <div class="pharma-select__container">
+                          <select name="message">
+                            <option selected="selected" disabled="disabled">Сделайте выбор</option>
+                            <option value="yes">Да</option>
+                            <option value="no">Нет</option>
+                          </select>
+                        </div>
+            <div class="modal__content-description modal-interview__select-title">Приобретаете ли вы продукцию ОАО "Экзон"?</div>
+                        <div class="pharma-select__container">
+                          <select name="message">
+                            <option selected="selected" disabled="disabled">Сделайте выбор</option>
+                            <option value="yes">Да</option>
+                            <option value="no">Нет</option>
+                          </select>
+                        </div>
+            <div class="modal__content-description modal-interview__select-title">Откуда вы узнаете о нашей продукции?</div>
+                        <div class="pharma-select__container">
+                          <select name="message">
+                            <option selected="selected" disabled="disabled">Сделайте выбор</option>
+                            <option value="znakomie">От знакомых</option>
+                            <option value="doctor">По назначению врача</option>
+                            <option value="apteka">От работников аптек</option>
+                            <option value="reklama">Видели рекламу</option>
+                            <option value="inet">Читали в интернете</option>
+                          </select>
+                        </div>
+            <div class="modal__content-form-submit">
+              <input class="modal__content-form-submit-btn" type="submit" value="ОТПРАВИТЬ"/>
+            </div>
+            <div class="modal__content__note">Ваши персональные данные находятся в безопасности</div>
+          </form>
+        </div>
+        <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+      </div>
+    </div>
+    <!-- Модальное окно - География продаж-->
+    <div class="modal modal-forms fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <iframe class="mapModal" src="https://yandex.by/map-widget/v1/-/CBaUZQbBXB" width="1000" height="630" frameborder="0"></iframe>
+        </div>
+        <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+      </div>
+    </div>
     <!-- ***** Хэдер ***** -->
     <div class="header">
       <!-- Header-top-->
@@ -455,7 +507,8 @@
           </div>
           <!-- вторая колонка -->
           <div class="footer-top__col">
-            <div class="footer-top__col-title">Компания</div><a class="footer-top__col-row" href="#">Информация</a><a class="footer-top__col-row" href="#">История</a><a class="footer-top__col-row" href="#">Сертификаты качества</a><a class="footer-top__col-row" href="#">География продаж</a>
+            <div class="footer-top__col-title">Компания</div><a class="footer-top__col-row" href="#">Информация</a><a class="footer-top__col-row" href="#">История</a><a class="footer-top__col-row" href="#">Сертификаты качества		</a>
+                <button class="footer-top__col-row" data-target="#mapModal" data-toggle="modal">География продаж</button>
           </div>
           <!-- третья колонка -->
           <div class="footer-top__col">

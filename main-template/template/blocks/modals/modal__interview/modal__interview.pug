@@ -1,0 +1,25 @@
+.modal.modal-forms.fade#interviewModal(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+	.modal-box.modal-dialog.button.button--gradient
+		.modal__content
+			.modal__content-title Опрос
+			.modal__content-description.modal__interview-description Примите участие в опросе, чтобы помочь нам совершенствоваться
+			form.modal__content-form
+				//- /Миксин выпадающего списка
+				mixin pharma-select(selectClassname, selectName, selectedPlaceholder, ...options)
+					.pharma-select__container(class= selectClassname)
+						select(name= selectName)
+							option(selected disabled)= selectedPlaceholder
+							each option in options
+								option(value= option[0])= option[1]
+				.modal__content-description.modal-interview__select-title Являетесь ли вы специалистом в области здравоохранения?
+				//- /Вызов миксина выпадающего списка
+				+pharma-select('', 'message', 'Сделайте выбор', ['yes','Да'], ['no','Нет'])
+				.modal__content-description.modal-interview__select-title Приобретаете ли вы продукцию ОАО "Экзон"?
+				+pharma-select('', 'message', 'Сделайте выбор', ['yes','Да'], ['no','Нет'])
+				.modal__content-description.modal-interview__select-title Откуда вы узнаете о нашей продукции?
+				+pharma-select('', 'message', 'Сделайте выбор', ['znakomie','От знакомых'], ['doctor','По назначению врача'], ['apteka','От работников аптек'], ['reklama','Видели рекламу'], ['inet','Читали в интернете'])
+				.modal__content-form-submit
+					input.modal__content-form-submit-btn(type='submit' value='ОТПРАВИТЬ')
+				.modal__content__note Ваши персональные данные находятся в безопасности
+		.modal__content-close(data-dismiss="modal" aria-label="Close")
+			img.modal__content-close(src='template-images/forms__cancel.png')

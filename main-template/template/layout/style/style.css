@@ -24,6 +24,9 @@ q {
 .mod_margin-top-0 {
   margin-top: 0 !important; }
 
+.mod_tg-left {
+  text-align: left !important; }
+
 /* /Модификаторы */
 /* Переменные */
 /* Глобальный серый цвет */
@@ -49,6 +52,34 @@ a.button-link:hover {
   color: #4a4a4a !important;
   text-decoration: none;
   border-color: #4a4a4a; }
+
+/* Вариант для модального окна */
+.button-link {
+  color: #4a4a4a !important;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  transition: .2s ease;
+  padding: 8px 15px;
+  font-size: 22px;
+  font-weight: 300; }
+
+.button-link:hover {
+  color: #4a4a4a !important;
+  text-decoration: none;
+  border-color: #4a4a4a; }
+
+.button-link.btn-page-main-all-news {
+  color: #fff !important;
+  font-size: 28px !important;
+  border: 2px solid;
+  padding: 11px 36px;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+.button-link.btn-page-main-all-news:hover {
+  color: #fff !important;
+  border-color: #fff; }
 
 /* для пунктов Главного меню */
 .header-bottom a.button-link.active {
@@ -816,6 +847,18 @@ a.online-order:hover {
 
 /* /Заголовок */
 /* /Меню в футере */
+/* Кнопка "География продаж" */
+button.footer-top__col-row {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none; }
+
+button.footer-top__col-row:hover {
+  text-decoration: underline; }
+
+/* /Кнопка "География продаж" */
 /* Мобильная кнопка обратной связи */
 .footer-feedback_mobile {
   display: none; }
@@ -2972,7 +3015,9 @@ a.catalog__card:hover {
   max-width: 300px;
   padding-top: 70px;
   margin: auto;
-  position: relative; }
+  position: sticky;
+  top: 50px;
+  margin-bottom: 90px; }
 
 .catalog-card__img-new {
   position: absolute;
@@ -3953,7 +3998,9 @@ a.modal__content-nat-a-partner {
   max-width: 300px;
   padding-top: 70px;
   margin: auto;
-  position: relative; }
+  position: sticky;
+  top: 50px;
+  margin-bottom: 90px; }
 
 .catalog-card__img-new {
   position: absolute;
@@ -4088,5 +4135,60 @@ a.not-found-btn:hover {
   padding-left: 10px;
   padding-right: 10px;
   color: #4a4a4a; }
+
+.modal-interview__select-title {
+  text-align: left;
+  max-width: 494px;
+  margin: auto;
+  font-size: 17px;
+  margin-bottom: -10px; }
+
+.modal__interview-description {
+  max-width: 494px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 10px; }
+
+#interviewModal.modal.show .modal-dialog {
+  transform: translate(0, 12%) !important; }
+
+#interviewModal .modal__content-form-input {
+  margin-bottom: 18px !important; }
+
+#interviewModal .modal__content-form-submit {
+  margin-top: 50px; }
+
+#interviewModal select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-transform: none;
+  border: none;
+  background-color: #fff;
+  color: rgba(74, 74, 74, 0.8);
+  font-weight: 300;
+  border-radius: 50px;
+  padding-left: 25px;
+  outline: none; }
+
+#mapModal .modal__content {
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  left: 8px;
+  border-radius: 40px; }
+
+#mapModal .modal-box.modal-dialog.button.button--gradient {
+  max-width: 1000px;
+  height: 60%; }
+
+.modal.show#mapModal .modal-dialog {
+  transform: translate(0, 17%); }
 
 /*# sourceMappingURL=style.css.map */
