@@ -1,0 +1,42 @@
+//- page-contacts.pug
+extends page-template.pug
+
+block content
+	+crumbs('template-images/pharma__title.png', 'Регистрация партнера', 'Регистрация партнера')
+	// Главные контакты
+	.pharma.reg-partner.inn_padd
+		.pharma__inner.site-width
+			form.pharma-form
+				.news-single__post-title Сообщите нам ваши персональные данные
+				.pharma-text Заполните форму заявки ниже.
+					br
+					| После получения ваших персональных данных наш менеджер свяжется с вами и проконсультирует о дальнейших действиях для завершения регистраци компании-партнера.
+				.pharma-form__cols
+					mixin pharma-input(classname, type, name, placeholder)
+						input(class= classname type= type name= name placeholder= placeholder)
+					.pharma-form__col-1_2
+						+pharma-input('', 'text', 'reg__fio', 'Фамилия Имя Отчество руководителя*')
+						+pharma-input('', 'text', 'reg__mail', 'Контактный e-mail*')
+						+pharma-input('', 'text', 'reg__phone', 'Контактный телефон*')
+					.pharma-form__col-1_2
+						+pharma-input('', 'text', 'reg__org', 'Наименование организации(ИП, Юрлицо)*')
+						+pharma-input('', 'text', 'reg__unp', 'УНП*')
+						+pharma-input('', 'text', 'reg__strana', 'Страна*')
+				.pharma-form__cols
+					.pharma-form__col-1_2.reg-partner__text-area
+						mixin pharma-textarea(textareaClassName, rows, cols, formId, textareaName, textareaPlaceholder)
+							textarea(class= textareaClassName rows= rows cols= cols name= textareaName form= formId placeholder= textareaPlaceholder)
+						+pharma-textarea('opisaniePodProd', '5', '50', '', '', 'Дополнительное персональное сообщение')
+					.pharma-form__col-1_2.reg-partner__inputs
+						+pharma-input('', 'text', 'reg__address', 'Адрес: индекс, город, улица, дом*')
+						+pharma-input('', 'text', 'reg__office', 'Номер офиса(если есть)*')
+				.pharma-form__cols
+					.pharma-form__cols.pharma-form__submit
+						input(type="submit" value="ОТПРАВИТЬ ЗАЯВКУ НА РЕГИСТРАЦИЮ" onclick='acceptModal()').contacts-form__submit#reg-partner-submit
+	.footer-separator
+	// серый футер
+	script(src='js/footer-grey.js')
+	// Корректировка Тайтла "Регистрация партнера"
+	script(src='js/reg-partner__change-title.js')
+	// Вызов модального окна
+	script(src='js/accept-modal.js')

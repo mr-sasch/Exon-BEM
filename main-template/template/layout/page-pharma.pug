@@ -74,10 +74,10 @@ block content
 							.pharma-form__block-title Медицинский или фармацевтический работник, сообщающий о нежелательной реакции
 							.pharma-form__cols
 								.pharma-form__col-1_2
-									//- Миксим поля input
+									//- Миксин поля input
 									mixin pharma-input(classname, type, name, placeholder)
 										input(class= classname type= type name= name placeholder= placeholder)
-									//- /Миксим поля input
+									//- /Миксин поля input
 									+pharma-input('', 'text', 'pharma__person-name', 'Ф.И.О.')
 									+pharma-input('', 'text', 'pharma__person-phone', 'Телефон')
 									+pharma-input('', 'text', 'pharma__person-address', 'Адрес учреждения')

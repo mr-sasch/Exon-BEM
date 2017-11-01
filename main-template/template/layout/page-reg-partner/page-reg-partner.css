@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.reg-partner .pharma__inner {
+  padding-top: 0; }
+
+.reg-partner .pharma-form__cols {
+  margin-bottom: 0; }
+
+.reg-partner .pharma-text {
+  margin-bottom: 80px; }
+
+/* Адаптация */
+@media screen and (max-width: 1130px) {
+  .page-reg-partner .main-slider__txt-title {
+    font-size: 60px; } }
+@media screen and (max-width: 900px) {
+  .page-reg-partner .main-slider__txt-title {
+    font-size: 50px; } }
+@media screen and (max-width: 750px) {
+  .page-reg-partner .main-slider__txt-title {
+    font-size: 40px; } }
+@media screen and (max-width: 700px) {
+  .reg-partner__text-area {
+    order: 2;
+    margin-top: 20px; }
+
+  .reg-partner__inputs {
+    order: 1; } }
+@media screen and (max-width: 370px) {
+  .reg-partner .pharma-form__submit input {
+    font-size: 15px; } }
+/* Адаптация */
+
+/*# sourceMappingURL=page-reg-partner.css.map */

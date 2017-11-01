@@ -576,3 +576,9 @@ a.page-main-news__list-item {
 
 // Модальное окно "География продаж"
 @import "../../blocks/modals/modal__map/modal__map.scss";
+
+// Страница "Регистрация партнера"
+@import "../page-reg-partner/page-reg-partner.scss";
+
+// Модальное окно "Регистрация партнера"
+@import "../../blocks/modals/accept-modal/accept-modal.scss";
