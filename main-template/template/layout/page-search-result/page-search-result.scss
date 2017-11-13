@@ -1,0 +1,118 @@
+@import "../style/vars.scss";
+
+/* Стили */
+.search-result__title {
+	font-size: 30px;
+	font-weight: 300;
+	color: $grey;
+}
+.search-result__comment {
+	font-size: 18px;
+	font-weight: 400;
+	color: $searchComment;
+}
+.search-result__comment-query {
+	font-weight: 600;
+}
+.search-result__comment-quantity {
+	font-weight: 600;
+	color: $green-d;
+}
+.search-result__result-items {
+	padding-left: 25px;
+}
+.search-result__result-item {
+	font-size: 22px;
+	font-weight: 600;
+	font-family: Lato, sans-serif;
+	color: $green-d;
+}
+.search-result__result-item-title,
+.search-result__result-item-title:hover {
+	color: $green-d;
+}
+.search-result__result-item-text {
+	font-size: 16px;
+	font-weight: 400;
+	color: $grey;
+}
+.search-result__form-input {
+	border-radius: 20px;
+	border: 1px solid $grey-brd;
+	height: 40px;
+	padding-left: 20px;
+	font-size: 16px;
+	font-weight: 300;
+	outline: none;
+}
+.search-result__form-input:focus,
+.search-result__form-input:active {
+	border-color: $blue;
+}
+.search-result__submit {
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	background-color: $green-d;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	width: 150px;
+	background-image: url('../template-images/search-result__loop.png');
+	background-repeat: no-repeat;
+	background-position: 12px 9px;
+	cursor: pointer;
+	outline: none;
+}
+/* Стили */
+
+/* Позиция */
+.search-result__form {
+	max-width: 620px;
+	width: 100%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.search-result__form-input {
+	width: calc(100% - 180px);
+}
+.search-result__comment-query,
+.search-result__comment-quantity {
+	display: inline-block;
+}
+.search-result__form {
+	margin-bottom: 25px;
+}
+.search-result__form-input {
+	margin-bottom: 15px;
+}
+.search-result__title {
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+.search-result__comment {
+	margin-bottom: 70px;
+}
+.search-result__result-item {
+	margin-bottom: 25px;
+}
+.search-result__result-item-text {
+	margin-top: 7px;
+}
+/* /Позиция */
+
+
+/* Адаптация */
+@media screen and (max-width: 350px) {
+	.search-result__form {
+		flex-direction: column;
+		align-items: center;
+	}
+	.search-result__form-input {
+		width: 100%;
+	}
+}
+
+/* /Адаптация */

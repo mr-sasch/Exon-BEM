@@ -5,6 +5,7 @@ $('.catalog__menu-item-title').click(function(){
 
 // Скрытие/разворачивание меню
 $('.catalog__submenu.hide').slideUp();
+$('.catalog__menu').find('.catalog__menu-item:first').addClass('active');
 
 $('.catalog__menu-item-title').click(function(){
 	if(!$(this).parent().hasClass('active')){

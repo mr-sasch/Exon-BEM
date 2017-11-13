@@ -666,6 +666,18 @@ a.online-order:hover {
 
 /* /Заголовок */
 /* /Меню в футере */
+/* Кнопка "География продаж" */
+button.footer-top__col-row {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none; }
+
+button.footer-top__col-row:hover {
+  text-decoration: underline; }
+
+/* /Кнопка "География продаж" */
 /* Мобильная кнопка обратной связи */
 .footer-feedback_mobile {
   display: none; }

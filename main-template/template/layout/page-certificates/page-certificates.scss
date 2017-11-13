@@ -1,0 +1,88 @@
+@import "../style/vars.scss";
+
+.certificates-items {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.certificates-item {
+	max-width: 403px;
+	margin-bottom: 60px;
+}
+a.certificates-item__image {
+	outline: none;
+	display: inline-block;
+	position: relative;
+	padding: 3px;
+}
+.certificates-item__image-hover-bg {
+	position: absolute;
+	top: 0; bottom: 0; right: 0; left: 0;
+	z-index: 20;
+	background-color: #fff;
+	opacity: 0;
+	transition: .3s ease;
+}
+a.certificates-item__image:hover .certificates-item__image-hover-bg {
+	opacity: .5;
+}
+.certificates-item__image-certificate {
+	width: 100%;
+	z-index: 10;
+}
+.certificates-item__title {
+	text-align: center;
+	font-size: 22px;
+	color: $grey;
+	margin-top: 20px;
+}
+.certificates-item__zoom {
+	z-index: 30;
+	display: block;
+	position: absolute;
+	top: calc(50% - 24px); left: calc(50% - 22px);
+	opacity: 0;
+	transition: .2s ease;
+}
+a.certificates-item__image:hover .certificates-item__zoom {
+	opacity: 1;
+}
+// Градиентный бордюр
+a.certificates-item__image,
+.certificates-item__image-hover-bg,
+.certificates-item__image-certificate {
+	border-radius: 10px;
+}
+a.certificates-item__image:before,
+a.certificates-item__image:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0; bottom: 0; right: 0; left: 0;
+}
+a.certificates-item__image:before {
+	background: linear-gradient(to bottom, $blue, $green);
+	z-index: -2;
+	margin: -2px;
+	border-radius: 10px;
+	opacity: 0;
+	transition: .3s ease;
+}
+a.certificates-item__image:hover:before {
+	opacity: 1;
+}
+a.certificates-item__image:after {
+	z-index: -1;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+/* Адаптация */
+@media screen and (max-width: 1250px) {
+	.certificates-items {
+		justify-content: space-around;
+	}
+}
+/* /Адаптация */

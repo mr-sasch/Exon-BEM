@@ -28,16 +28,6 @@ q {
   text-align: left !important; }
 
 /* /Модификаторы */
-/* Переменные */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
-/* /Переменные */
 /* Общий шаблон кнопки со ссылкой */
 a.button-link {
   color: #4a4a4a !important;
@@ -135,14 +125,6 @@ a.button--gradient:hover {
   text-decoration: none; }
 
 /* Форма поиска в хэдере */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 /*header-bottom__search*/
 .header-search {
   position: relative;
@@ -182,14 +164,6 @@ a.button--gradient:hover {
 /* Главный шаблон "Шапка - Футер" */
 /* header */
 /* header top */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .header-top {
   position: relative;
   background-color: #4ab75e;
@@ -356,14 +330,6 @@ a.ru-eng__ru {
     font-size: 11.5px !important; } }
 /* /Адаптация */
 /* header bottom */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .header-bottom {
   background-color: #fff;
   padding-top: 15px; }
@@ -917,14 +883,6 @@ button.footer-top__col-row:hover {
     font-weight: 300; } }
 /* /Адаптивность */
 /* Нижний блок футера */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 /* Раскладка */
 .footer-bottom {
   display: -webkit-flex;
@@ -1046,14 +1004,6 @@ button.footer-top__col-row:hover {
 /* /выравниваем буллеты по центру */
 /* /Slick Slider - выравнивание буллетов и стрелок */
 /* Slick Slider - стилизация */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 /* Масштабирование изображения по высоте */
 /* /Масштабирование изображения по высоте */
 /* Блок с текстом */
@@ -1379,14 +1329,6 @@ button.footer-top__col-row:hover {
 /* /обнуляем стили и выравниваем буллеты в горизонт */
 /* /Slick Slider - выравнивание буллетов и стрелок */
 /* Slick Slider - стилизация */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 /* стилизуем слайдер */
 /* стрелки */
 .theme-exon .slick-arrow {
@@ -1632,14 +1574,6 @@ button.footer-top__col-row:hover {
     padding: 30px 10px; } }
 /* /Адаптация содержимого таба */
 /* Стилизация табов */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .nav-tabs,
 .nav-tabs .nav-item.show .nav-link {
   border: none;
@@ -1747,6 +1681,7 @@ button.footer-top__col-row:hover {
 .page-main-news__item-img-action.switch-on {
   display: inline-block; }
 
+/* Акция в списке */
 .page-main-news__list-item-action {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -1866,6 +1801,7 @@ a.page-main-news__list-item {
 /* /Адаптация */
 /* /Главная - Блок новостей */
 /* Главная - Текстовый блок */
+/* стили блока "Подробнее" */
 .btn {
   padding: 0; }
 
@@ -2030,14 +1966,6 @@ a.page__title-crumbs__child {
 
 /* /Стили крошек */
 /* Страница "Контакты" */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 /* Раскладка */
 .contacts-main__inner,
 .contacts-other__inner {
@@ -2342,14 +2270,6 @@ a.news-sort-by-date__switch-old-first:hover {
 
 /* /Стили блока "Сортировать по дате" */
 /* Превью новости */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .news-all__previews-item {
   display: -webkit-flex;
   display: -ms-flex;
@@ -2646,14 +2566,6 @@ a.news-all__back-to-all-txt:hover {
 /* /Наши партнеры */
 /* /Страница "О компании" */
 /* Страница "Каталог" */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .catalog__inner {
   margin: auto;
   margin-top: 80px; }
@@ -2997,14 +2909,6 @@ a.catalog__card:hover {
 .catalog__banner {
   margin-top: 50px; }
 
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .catalog-card__cols {
   display: -webkit-flex;
   display: -ms-flex;
@@ -3111,14 +3015,6 @@ a.catalog__card:hover {
 /* /Адаптация */
 /* /Страница "Каталог" */
 /* Страница "Личный кабинет" */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .lk__inner {
   margin: auto;
   margin-top: 100px; }
@@ -3413,6 +3309,7 @@ td.lk__td {
   border-bottom: 1px solid #4ab75e;
   padding-bottom: 90px; }
 
+/* Список ссылок */
 .tab-content__item-source-download,
 .tab-content__item-source-see {
   width: 45px;
@@ -3432,6 +3329,7 @@ td.lk__td {
   background-position: center;
   background-repeat: no-repeat; }
 
+/* Счетчик */
 .product-count {
   display: -webkit-flex;
   display: -ms-flex;
@@ -3461,14 +3359,6 @@ td.lk__td {
 
 /* /Серый футер */
 /* Фармаконадзор */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
 .pharma__inner {
   margin: auto;
   padding-top: 90px; }
@@ -3751,6 +3641,7 @@ td.lk__td {
 /* /Корректировка Тайтла */
 /* /Адаптация */
 /* /Фармаконадзор */
+/* Модальное окно "Вход для клиентов" */
 .input-loginRemember {
   display: none; }
 
@@ -3931,6 +3822,8 @@ a.modal__content-nat-a-partner {
     transform: translate(0, 15%); } }
 /* /Адаптация */
 /* /Закрыть окно */
+/* Модальное окно "Вход для клиентов" */
+/* Модальное окно "Оставить заявку" */
 /* Запомнить меня */
 .loginRemember {
   display: -webkit-flex;
@@ -3959,6 +3852,8 @@ a.modal__content-nat-a-partner {
   border-color: #4ab75e; }
 
 /* /Запомнить меня */
+/* /Модальное окно "Оставить заявку" */
+/* Модальное окно "Обратная связь" */
 .modal__content__note {
   font-size: 14px;
   font-weight: 300;
@@ -3980,14 +3875,8 @@ a.modal__content-nat-a-partner {
   background: url("../template-images/forms__phone-blue.png") 12px 50% no-repeat; }
 
 /* /Инпуты */
-/* Глобальный серый цвет */
-/* Серый цвет бэкграунда */
-/* Серый цвет бордюров */
-/* Глобальный голубой цвет */
-/* Глобальный зеленый цвет */
-/* Зеленый - темный */
-/* Красный цвет */
-/* Верхний отстут контента страницы от заголовка */
+/* /Модальное окно "Обратная связь" */
+/* Карточка товара */
 .catalog-card__cols {
   display: -webkit-flex;
   display: -ms-flex;
@@ -4092,6 +3981,8 @@ a.modal__content-nat-a-partner {
   .catalog-card__img-col {
     margin-bottom: 70px; } }
 /* /Адаптация */
+/* /Карточка товара */
+/* Ошибка 404 */
 .page-not-found {
   text-align: center;
   color: #4a4a4a; }
@@ -4131,11 +4022,14 @@ a.not-found-btn:hover {
   .not-found-title {
     font-size: 40px; } }
 /* /Адаптация */
+/* /Ошибка 404 */
+/* Простая текстовая страница */
 .simple-text-block {
   padding-left: 10px;
   padding-right: 10px;
   color: #4a4a4a; }
 
+/* Модальное окно "Опрос" */
 .modal-interview__select-title {
   text-align: left;
   max-width: 494px;
@@ -4174,6 +4068,8 @@ a.not-found-btn:hover {
   padding-left: 25px;
   outline: none; }
 
+/* /Модальное окно "Опрос" */
+/* Модальное окно "География продаж" */
 #mapModal .modal__content {
   padding: 0;
   overflow: hidden;
@@ -4191,6 +4087,8 @@ a.not-found-btn:hover {
 .modal.show#mapModal .modal-dialog {
   transform: translate(0, 17%); }
 
+/* /Модальное окно "География продаж" */
+/* Страница "Регистрация партнера" */
 .reg-partner .pharma__inner {
   padding-top: 0; }
 
@@ -4221,6 +4119,8 @@ a.not-found-btn:hover {
   .reg-partner .pharma-form__submit input {
     font-size: 15px; } }
 /* Адаптация */
+/* /Страница "Регистрация партнера" */
+/* Модальное окно "Регистрация партнера" */
 .modal__reg-partner-text {
   color: #4a4a4a;
   font-size: 18px;
@@ -4230,5 +4130,210 @@ a.not-found-btn:hover {
 #regPartner .modal__content-title {
   margin: 22px 0;
   text-align: center; }
+
+/* /Модальное окно "Регистрация партнера" */
+/* Cтраница "Результаты поиска" */
+/* Стили */
+.search-result__title {
+  font-size: 30px;
+  font-weight: 300;
+  color: #4a4a4a; }
+
+.search-result__comment {
+  font-size: 18px;
+  font-weight: 400;
+  color: #898989; }
+
+.search-result__comment-query {
+  font-weight: 600; }
+
+.search-result__comment-quantity {
+  font-weight: 600;
+  color: #4ab75e; }
+
+.search-result__result-items {
+  padding-left: 25px; }
+
+.search-result__result-item {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: Lato, sans-serif;
+  color: #4ab75e; }
+
+.search-result__result-item-title,
+.search-result__result-item-title:hover {
+  color: #4ab75e; }
+
+.search-result__result-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4a4a4a; }
+
+.search-result__form-input {
+  border-radius: 20px;
+  border: 1px solid #6e6e6e;
+  height: 40px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  outline: none; }
+
+.search-result__form-input:focus,
+.search-result__form-input:active {
+  border-color: #4fb1f6; }
+
+.search-result__submit {
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #4ab75e;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  width: 150px;
+  background-image: url("../template-images/search-result__loop.png");
+  background-repeat: no-repeat;
+  background-position: 12px 9px;
+  cursor: pointer;
+  outline: none; }
+
+/* Стили */
+/* Позиция */
+.search-result__form {
+  max-width: 620px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between; }
+
+.search-result__form-input {
+  width: calc(100% - 180px); }
+
+.search-result__comment-query,
+.search-result__comment-quantity {
+  display: inline-block; }
+
+.search-result__form {
+  margin-bottom: 25px; }
+
+.search-result__form-input {
+  margin-bottom: 15px; }
+
+.search-result__title {
+  margin-top: 100px;
+  margin-bottom: 30px; }
+
+.search-result__comment {
+  margin-bottom: 70px; }
+
+.search-result__result-item {
+  margin-bottom: 25px; }
+
+.search-result__result-item-text {
+  margin-top: 7px; }
+
+/* /Позиция */
+/* Адаптация */
+@media screen and (max-width: 350px) {
+  .search-result__form {
+    flex-direction: column;
+    align-items: center; }
+
+  .search-result__form-input {
+    width: 100%; } }
+/* /Адаптация */
+/* /Cтраница "Результаты поиска" */
+/* Страница "Сертификаты" */
+.certificates-items {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.certificates-item {
+  max-width: 403px;
+  margin-bottom: 60px; }
+
+a.certificates-item__image {
+  outline: none;
+  display: inline-block;
+  position: relative;
+  padding: 3px; }
+
+.certificates-item__image-hover-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #fff;
+  opacity: 0;
+  transition: .3s ease; }
+
+a.certificates-item__image:hover .certificates-item__image-hover-bg {
+  opacity: .5; }
+
+.certificates-item__image-certificate {
+  width: 100%;
+  z-index: 10; }
+
+.certificates-item__title {
+  text-align: center;
+  font-size: 22px;
+  color: #4a4a4a;
+  margin-top: 20px; }
+
+.certificates-item__zoom {
+  z-index: 30;
+  display: block;
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 22px);
+  opacity: 0;
+  transition: .2s ease; }
+
+a.certificates-item__image:hover .certificates-item__zoom {
+  opacity: 1; }
+
+a.certificates-item__image,
+.certificates-item__image-hover-bg,
+.certificates-item__image-certificate {
+  border-radius: 10px; }
+
+a.certificates-item__image:before,
+a.certificates-item__image:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+a.certificates-item__image:before {
+  background: linear-gradient(to bottom, #4fb1f6, #53e1a9);
+  z-index: -2;
+  margin: -2px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: .3s ease; }
+
+a.certificates-item__image:hover:before {
+  opacity: 1; }
+
+a.certificates-item__image:after {
+  z-index: -1;
+  background-color: #fff;
+  border-radius: 10px; }
+
+/* Адаптация */
+@media screen and (max-width: 1250px) {
+  .certificates-items {
+    justify-content: space-around; } }
+/* /Адаптация */
+/* /Страница "Сертификаты" */
 
 /*# sourceMappingURL=style.css.map */

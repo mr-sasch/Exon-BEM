@@ -1,0 +1,41 @@
+//- page-contacts.pug
+extends page-template.pug
+
+block content
+	+crumbs('template-images/pharma__title.png', 'Поиск на сайте', 'Результаты поиска')
+	// Главные контакты
+	.pharma.reg-partner.search-result.inn_padd
+		.pharma__inner.site-width
+			.search-result__title Искать на сайте
+			form.search-result__form
+				input.search-result__form-input(type='text' name='searchResult' placeholder='Искать на сайте')
+				input.search-result__submit(type='submit' value='Искать')
+			.search-result__comment По запросу 
+				.search-result__comment-query "Гематоген"
+				|  найдено
+				.search-result__comment-quantity 5 
+				|  совпадений.
+			ol.search-result__result-items
+				li.search-result__result-item
+					a(href='').search-result__result-item-title Гематоген со вкусом апельсина
+					.search-result__result-item-text Текст со страницы продукта
+				li.search-result__result-item
+					a(href='').search-result__result-item-title Гематоген со вкусом апельсина
+					.search-result__result-item-text Текст со страницы продукта
+				li.search-result__result-item
+					a(href='').search-result__result-item-title Гематоген со вкусом апельсина
+					.search-result__result-item-text Текст со страницы продукта
+				li.search-result__result-item
+					a(href='').search-result__result-item-title Гематоген со вкусом апельсина
+					.search-result__result-item-text Текст со страницы продукта
+				li.search-result__result-item
+					a(href='').search-result__result-item-title Гематоген со вкусом апельсина
+					.search-result__result-item-text Текст со страницы продукта
+			
+	.footer-separator
+	// серый футер
+	script(src='js/footer-grey.js')
+	// Корректировка Тайтла "Регистрация партнера"
+	script(src='js/reg-partner__change-title.js')
+	// Вызов модального окна
+	script(src='js/accept-modal.js')

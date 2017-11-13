@@ -1,0 +1,55 @@
+//- page-contacts.pug
+extends page-template.pug
+
+block content
+	+crumbs-big('template-images/news-all__title.png', 'Сертификаты качества', 'Сертификаты качества', '#', ['#', 'О Компании'])
+	// Главные контакты
+	link(href='fancybox/jquery.fancybox.css' rel='stylesheet')
+	script(src='fancybox/jquery.fancybox.js')
+	.pharma.certificates.inn_padd
+		.pharma__inner.site-width
+			.certificates-items
+				.certificates-item
+					a.certificates-item__image(data-fancybox='gallery' href='template-images/certificates__1.png')
+						.certificates-item__image-hover-bg
+						img(src='template-images/certificates__zoom.png').certificates-item__zoom
+						img(src='template-images/certificates__1.png').certificates-item__image-certificate
+					.certificates-item__title Сертификат соответствия СТБ ISO 9001-2009
+				.certificates-item
+					a.certificates-item__image(data-fancybox='gallery' href='template-images/certificates__2.png')
+						.certificates-item__image-hover-bg
+						img(src='template-images/certificates__zoom.png').certificates-item__zoom
+						img(src='template-images/certificates__2.png').certificates-item__image-certificate
+					.certificates-item__title Сертификат соответствия на систему СУОТ
+				.certificates-item
+					a.certificates-item__image(data-fancybox='gallery' href='template-images/certificates__3.png')
+						.certificates-item__image-hover-bg
+						img(src='template-images/certificates__zoom.png').certificates-item__zoom
+						img(src='template-images/certificates__3.png').certificates-item__image-certificate
+					.certificates-item__title Сертификат соответствия на систему HACCP
+				.certificates-item
+					a.certificates-item__image(data-fancybox='gallery' href='template-images/certificates__4.png')
+						.certificates-item__image-hover-bg
+						img(src='template-images/certificates__zoom.png').certificates-item__zoom
+						img(src='template-images/certificates__4.png').certificates-item__image-certificate
+					.certificates-item__title Сертификат соответствия производства БАД Европарламента
+				.certificates-item
+					a.certificates-item__image(data-fancybox='gallery' href='template-images/certificates__5.png')
+						.certificates-item__image-hover-bg
+						img(src='template-images/certificates__zoom.png').certificates-item__zoom
+						img(src='template-images/certificates__5.png').certificates-item__image-certificate
+					.certificates-item__title Сертификат соответствия производства лекарственного средства требованиям GMP
+				.certificates-item
+					a.certificates-item__image(data-fancybox='gallery' href='template-images/certificates__6.png')
+						.certificates-item__image-hover-bg
+						img(src='template-images/certificates__zoom.png').certificates-item__zoom
+						img(src='template-images/certificates__6.png').certificates-item__image-certificate
+					.certificates-item__title Международный сертификат соответствия производства пищевой продукции
+			
+	.footer-separator
+	// серый футер
+	script(src='js/footer-grey.js')
+	// Корректировка Тайтла "Регистрация партнера"
+	script(src='js/reg-partner__change-title.js')
+	// Вызов модального окна
+	script(src='js/accept-modal.js')

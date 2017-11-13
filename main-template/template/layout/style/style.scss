@@ -31,9 +31,9 @@ q {
 }
 /* /Модификаторы */
 
-/* Переменные */
+// Переменные
 @import "vars.scss";
-/* /Переменные */
+
 /* Общий шаблон кнопки со ссылкой */
 @import "../../blocks/buttons/button-link/button-link.scss";
 /* Шаблон цветной кнопки со ссылкой */
@@ -266,7 +266,7 @@ q {
 .page-main-news__item-img-action.switch-on {
 	display: inline-block;
 }
-				// Акция в списке
+				/* Акция в списке */
 .page-main-news__list-item-action {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
@@ -392,7 +392,7 @@ a.page-main-news__list-item {
 
 
 	/* Главная - Текстовый блок */
-	// стили блока "Подробнее"
+	/* стили блока "Подробнее" */
 @import "/home/xander/GitHub/Exon-BEM/main-template/template/blocks/read-more-bootstrap/read-more-bootstrap.scss";
 .page-main-text {
   padding-bottom: 100px !important;
@@ -533,9 +533,9 @@ a.page-main-news__list-item {
 
 /* Страница "Личный кабинет" */
 @import "../page-lk/page-lk.scss";
-// Список ссылок
+/* Список ссылок */
 @import "../../blocks/list-down/list-down.scss";
-// Счетчик
+/* Счетчик */
 @import "../../blocks/count-plus-minus/count-plus-minus.scss";
 /* /Страница "Личный кабинет" */
 
@@ -552,33 +552,50 @@ a.page-main-news__list-item {
 @import "../page-pharma/page-pharma.scss";
 /* /Фармаконадзор */
 
-// Модальное окно "Вход для клиентов"
+/* Модальное окно "Вход для клиентов" */
 @import "../../blocks/modals/modal__header-top-login/modal__header-top-login.scss";
-// Модальное окно "Оставить заявку"
+/* Модальное окно "Вход для клиентов" */
+/* Модальное окно "Оставить заявку" */
 @import "../../blocks/modals/modal__header-bottom-online-order/modal__header-bottom-online-order.scss";
-// Модальное окно "Обратная связь"
+/* /Модальное окно "Оставить заявку" */
+/* Модальное окно "Обратная связь" */
 @import "../../blocks/modals/modal__footer-call-back/modal__footer-call-back.scss";
+/* /Модальное окно "Обратная связь" */
 
-// Карточка товара
+/* Карточка товара */
 @import "../page-catalog__card/page-catalog__card.scss";
+/* /Карточка товара */
 
-// Ошибка 404
+/* Ошибка 404 */
 @import "../page-not-found/page-not-found.scss";
+/* /Ошибка 404 */
 
-// Простая текстовая страница
+/* Простая текстовая страница */
 .simple-text-block {
 	padding-left: 10px; padding-right: 10px;
 	color: $grey;
 }
 
-// Модальное окно "Опрос"
+/* Модальное окно "Опрос" */
 @import "../../blocks/modals/modal__interview/modal__interview.scss";
+/* /Модальное окно "Опрос" */
 
-// Модальное окно "География продаж"
+/* Модальное окно "География продаж" */
 @import "../../blocks/modals/modal__map/modal__map.scss";
+/* /Модальное окно "География продаж" */
 
-// Страница "Регистрация партнера"
+/* Страница "Регистрация партнера" */
 @import "../page-reg-partner/page-reg-partner.scss";
+/* /Страница "Регистрация партнера" */
 
-// Модальное окно "Регистрация партнера"
+/* Модальное окно "Регистрация партнера" */
 @import "../../blocks/modals/accept-modal/accept-modal.scss";
+/* /Модальное окно "Регистрация партнера" */
+
+/* Cтраница "Результаты поиска" */
+@import "../page-search-result/page-search-result.scss";
+/* /Cтраница "Результаты поиска" */
+
+/* Страница "Сертификаты" */
+@import "../page-certificates/page-certificates.scss";
+/* /Страница "Сертификаты" */

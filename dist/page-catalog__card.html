@@ -110,6 +110,58 @@
         </div>
       </div>
     </div>
+    <!-- Модальное окно - Принять участие в опросе-->
+    <div class="modal modal-forms fade" id="interviewModal" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <div class="modal__content-title">Опрос</div>
+          <div class="modal__content-description modal__interview-description">Примите участие в опросе, чтобы помочь нам совершенствоваться</div>
+          <form class="modal__content-form">
+            <div class="modal__content-description modal-interview__select-title">Являетесь ли вы специалистом в области здравоохранения?</div>
+                        <div class="pharma-select__container">
+                          <select name="message">
+                            <option selected="selected" disabled="disabled">Сделайте выбор</option>
+                            <option value="yes">Да</option>
+                            <option value="no">Нет</option>
+                          </select>
+                        </div>
+            <div class="modal__content-description modal-interview__select-title">Приобретаете ли вы продукцию ОАО "Экзон"?</div>
+                        <div class="pharma-select__container">
+                          <select name="message">
+                            <option selected="selected" disabled="disabled">Сделайте выбор</option>
+                            <option value="yes">Да</option>
+                            <option value="no">Нет</option>
+                          </select>
+                        </div>
+            <div class="modal__content-description modal-interview__select-title">Откуда вы узнаете о нашей продукции?</div>
+                        <div class="pharma-select__container">
+                          <select name="message">
+                            <option selected="selected" disabled="disabled">Сделайте выбор</option>
+                            <option value="znakomie">От знакомых</option>
+                            <option value="doctor">По назначению врача</option>
+                            <option value="apteka">От работников аптек</option>
+                            <option value="reklama">Видели рекламу</option>
+                            <option value="inet">Читали в интернете</option>
+                          </select>
+                        </div>
+            <div class="modal__content-form-submit">
+              <input class="modal__content-form-submit-btn" type="submit" value="ОТПРАВИТЬ"/>
+            </div>
+            <div class="modal__content__note">Ваши персональные данные находятся в безопасности</div>
+          </form>
+        </div>
+        <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+      </div>
+    </div>
+    <!-- Модальное окно - География продаж-->
+    <div class="modal modal-forms fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true">
+      <div class="modal-box modal-dialog button button--gradient">
+        <div class="modal__content">
+          <iframe class="mapModal" src="https://yandex.by/map-widget/v1/-/CBaUZQbBXB" width="1000" height="630" frameborder="0"></iframe>
+        </div>
+        <div class="modal__content-close" data-dismiss="modal" aria-label="Close"><img class="modal__content-close" src="template-images/forms__cancel.png"/></div>
+      </div>
+    </div>
     <!-- ***** Хэдер ***** -->
     <div class="header">
       <!-- Header-top-->
@@ -241,7 +293,7 @@
       <div class="catalog__inner catalog-card__inner site-width">
         <div class="catalog-card__cols">
           <!-- Изображение товара-->
-          <div class="catalog-card__col1-2 catalog-card__img-col">
+          <div class="catalog-card__col1-2 catalog-card__img-col" id="catalog-card__img-col">
             <div class="catalog-card__img"><img class="catalog-card__img-image" src="template-images/catalog-card__rozavit.png"/>
               <div class="catalog-card__img-new catalog__card-novelty on">Новинка</div>
             </div>
@@ -266,6 +318,8 @@
                 <div class="catalog-card__descr-receipt-yes active">Отпускается без рецепта врача<img class="catalog-card__descr-receipt-yes-img active" src="template-images/catalog__card-no-recipe.png"/></div>
                 <div class="catalog-card__descr-receipt-no">Отпускается по рецепту врача<img class="catalog-card__descr-receipt-no-img" src="template-images/catalog__card-recipe.png"/></div>
               </div>
+              <!-- Скачать инструкцию--><a class="catalog-card__download-instructions" href="files/file.pdf" target="_blank"> <img class="catalog-card__download-instructions-img" src="template-images/catalog__card-download.png"/>
+                <div class="catalog-card__download-instructions-txt">Скачать инструкцию</div></a>
               <!-- Разделитель-->
               <div class="catalog-card__descr-separator"></div>
               <!-- Доп.информация						-->
@@ -297,10 +351,12 @@
             <div class="page-main-interview__text2">
               <div class="page-main-interview__txt">Примите участиве в опросе, чтобы помочь нам совершенстоваться</div>
             </div>
-            <div class="page-main-interview__btn"> <a class="button-link btn-page-main-all-news btn-page-main-all-news__list" href="#">Принять участие</a>
+            <div class="page-main-interview__btn">
+                  <button class="button-link btn-page-main-all-news btn-page-main-all-news__list" data-target="#interviewModal" data-toggle="modal">Принять участие</button>
             </div>
           </div>
         </div>
+    <!-- Закрепление картинки при скролле-->
     <!-- ***** /Контент *****-->
     <!-- ***** Футер ***** -->
     <div class="footer inn_padd">
@@ -331,7 +387,8 @@
           </div>
           <!-- вторая колонка -->
           <div class="footer-top__col">
-            <div class="footer-top__col-title">Компания</div><a class="footer-top__col-row" href="#">Информация</a><a class="footer-top__col-row" href="#">История</a><a class="footer-top__col-row" href="#">Сертификаты качества</a><a class="footer-top__col-row" href="#">География продаж</a>
+            <div class="footer-top__col-title">Компания</div><a class="footer-top__col-row" href="#">Информация</a><a class="footer-top__col-row" href="#">История</a><a class="footer-top__col-row" href="#">Сертификаты качества		</a>
+                <button class="footer-top__col-row" data-target="#mapModal" data-toggle="modal">География продаж</button>
           </div>
           <!-- третья колонка -->
           <div class="footer-top__col">
