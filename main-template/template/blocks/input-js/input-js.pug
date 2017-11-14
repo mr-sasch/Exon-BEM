@@ -1,0 +1,41 @@
+// https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets
+
+// Bootstrap 		
+link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
+// /Bootstrap 
+
+// jQuery
+script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+
+form.no-widget
+  select(name="myFruit" tabindex="-1")
+    option Cherry
+    option Lemon
+    option Banana
+    option Strawberry
+    option Apple
+
+  .select(tabindex="0")
+    a.btn.btn-primary(data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample")
+      span.value Cherry
+    .collapse#collapseExample
+      .card.card-body
+        ul.optList.hidden
+          li.option Cherry
+          li.option Lemon
+          li.option Banana
+          li.option Strawberry
+          li.option Apple
+
+  input(type="submit")
+
+link(rel='stylesheet' href='input-js.css')
+script(src='input-js.js')
+script(src='http://localhost:35729/livereload.js')
+
+// Bootstrap			
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous")
+	
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous")
+	
+// /Bootstrap

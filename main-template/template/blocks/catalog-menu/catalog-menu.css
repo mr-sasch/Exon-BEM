@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: ../../template/layout/style/vars.scss.
-       Load path: /home/xander/GitHub/Exon-BEM/main-template/template
-        on line 1 of ./blocks/catalog-menu/catalog-menu.scss
+       Load path: /home/xander/GitHub/Exon-BEM/main-template
+        on line 1 of ./template/blocks/catalog-menu/catalog-menu.scss
 
 1: @import "../../template/layout/style/vars.scss";
 2: 
@@ -11,7 +11,7 @@ Error: File to import not found or unreadable: ../../template/layout/style/vars.
 6: 	border: 2px solid rgba(110, 110, 110, 0.24);
 
 Backtrace:
-./blocks/catalog-menu/catalog-menu.scss:1
+./template/blocks/catalog-menu/catalog-menu.scss:1
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/import_node.rb:45:in `import'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -56,4 +56,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../template/layout/style/vars.scss.\A        Load path: /home/xander/GitHub/Exon-BEM/main-template/template\A         on line 1 of ./blocks/catalog-menu/catalog-menu.scss\A \A 1: @import \"../../template/layout/style/vars.scss\";\A 2: \A 3: /* Меню */\A 4: .catalog__menu {\A 5: 	width: 316px;\A 6: 	border: 2px solid rgba(110, 110, 110, 0.24);"; }
+  content: "Error: File to import not found or unreadable: ../../template/layout/style/vars.scss.\A        Load path: /home/xander/GitHub/Exon-BEM/main-template\A         on line 1 of ./template/blocks/catalog-menu/catalog-menu.scss\A \A 1: @import \"../../template/layout/style/vars.scss\";\A 2: \A 3: /* Меню */\A 4: .catalog__menu {\A 5: 	width: 316px;\A 6: 	border: 2px solid rgba(110, 110, 110, 0.24);"; }
