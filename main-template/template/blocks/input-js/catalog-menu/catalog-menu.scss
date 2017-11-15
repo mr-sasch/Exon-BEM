@@ -1,0 +1,118 @@
+@import "vars.scss";
+
+/* Меню */
+.catalog__menu {
+	width: 316px;
+	border: 2px solid rgba(110, 110, 110, 0.24);
+	border-radius: 20px;
+	background-color: $grey-bg;
+}
+
+// Раздел каталога
+.catalog__menu-item {
+	border: 2px solid transparent;
+	border-radius: 20px;
+  margin: -2px;
+	padding-top: 0;
+	transition: border-color .2s ease;
+}
+.catalog__menu-item.active-item {
+	border: 2px solid $green-d;
+	border-radius: 20px;
+	margin: -2px;
+	transition: border-color .2s ease;
+	padding-top: 20px;
+}
+.catalog__menu-item.active-item:first-child {
+  margin-top: -2px;
+}
+
+// Заголовок подраздела
+.catalog__menu-item-title {
+	position: relative;
+	padding-top: 8px;
+	padding-left: 20px;
+	padding-right: 35px;
+	padding-bottom: 8px;
+	font-size: 18px; font-weight: 600; line-height: 20px;
+	color: $grey;
+	cursor: pointer;
+	transition: .2s ease;
+}
+.catalog__menu-item-title:hover,
+.catalog__menu-item.active-item .catalog__menu-item-title {
+	color: $green-d;
+}
+.catalog__menu-item:first-child {
+    padding-top: 20px;
+}
+.catalog__menu-item:nth-last-child(2) {
+    padding-bottom: 20px;
+}
+.catalog__menu-item.active-item:nth-last-child(2) {
+    padding-bottom: 0;
+}
+
+/* Содержимое подраздела */
+.catalog__submenu {
+	padding-bottom: 20px;
+  opacity: 1;
+
+	overflow: hidden;
+}
+
+
+
+.catalog__submenu-item {
+	position: relative;
+	display: inline-block;
+	width: 100%; max-width: 300px;
+	font-size: 16px;
+	color: $grey;
+	transition: .2s ease;
+	padding: 5px 0; padding-right: 30px; padding-left: 40px;
+}
+.catalog__submenu-item:hover,
+.catalog__submenu-item.active {
+	color: $green-d;
+}
+// Лэйбл активного пункта меню
+.catalog__submenu-item-label {
+	display: none;
+	position: absolute;
+	left: -20px; top: -1px;
+	width: 37px; height: 37px;
+	border-radius: 50%;
+	background-color: $green-d;
+}
+.catalog__submenu-item.active .catalog__submenu-item-label {
+	display: inline-block;
+}
+
+//Стрелки
+.catalog__menu-item-title-arrow {
+	position: absolute;
+	right: 15px; top: 6px;
+	opacity: 1;
+}
+.catalog__menu-item-title-arrow i {
+	position: absolute;
+	right: 0;
+	transition: .3s ease;
+}
+.catalog__menu-item .fa-angle-up {
+	opacity: 0;
+}
+.catalog__menu-item .fa-angle-down {
+	opacity: 1;
+}
+.catalog__menu-item.active-item .fa-angle-up {
+	opacity: 1;
+}
+.catalog__menu-item.active-item .fa-angle-down {
+	opacity: 0;
+}
+/* /Содержимое подраздела */
+
+
+/* /Меню */

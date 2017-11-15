@@ -15,8 +15,10 @@
 
 .select.active,
 .select:focus {
-  box-shadow: 0 0 3px 1px #227755;
   outline: none; }
+
+.select.active {
+  border-color: blue; }
 
 .select .optList {
   position: absolute;
@@ -30,75 +32,103 @@
 /* ------------ */
 /* Fancy Styles */
 /* ------------ */
-.select {
-  font-size: 0.625em;
-  /* 10px */
-  font-family: Verdana, Arial, sans-serif;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0.1em 2.5em 0.2em 0.5em;
-  /* 1px 25px 2px 5px */
-  width: 10em;
-  /* 100px */
-  border: 0.2em solid #000;
-  /* 2px */
-  border-radius: 0.4em;
-  /* 4px */
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
-  /* 0 1px 2px */
-  background: #F0F0F0;
-  background: -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background: linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0); }
-
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top; }
-
-.select:after {
-  content: "▼";
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 2em;
-  /* 20px */
-  top: 0;
-  right: 0;
-  padding-top: .1em;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-  border-left: .2em solid #000;
-  border-radius: 0 .1em .1em 0;
-  background-color: #000;
-  color: #FFF; }
-
-.select .optList {
-  z-index: 2;
+.optList {
   list-style: none;
-  margin: 0;
+  padding: 0; }
+
+/* Блок */
+.select {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+  outline: none; }
+
+/* Варианты для выбора */
+.select .optList {
+  position: relative;
+  margin: 0; }
+
+/* Контейнер input`а */
+.select-container-border {
+  margin: 50px 0 0 50px;
+  width: 250px; }
+
+.btn-primary {
+  background: none;
+  color: #000; }
+
+.btn-primary:hover {
+  background: none;
+  color: #000; }
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: none; }
+
+.btn {
+  border-radius: 20px;
+  width: 100%; }
+
+/* Переопределение блока каталога */
+.catalog__menu,
+.catalog__menu-item.active-item {
+  border-radius: 23px; }
+
+.catalog__menu-item.active-item {
   padding: 0;
-  background: #f0f0f0;
-  border: .2em solid #000;
-  border-top-width: .1em;
-  border-radius: 0 0 .4em .4em;
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  min-width: 100%;
-  max-height: 10em;
-  /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden; }
+  border: 1px solid #6e6e6e;
+  width: 100%; }
 
-.select .option {
-  padding: .2em .3em; }
+.catalog__menu {
+  background-color: #fff;
+  border: none;
+  margin: 20px 0 0 15px; }
 
-.select .highlight {
-  background: #000;
-  color: #FFFFFF; }
+.catalog__menu-item:first-child {
+  padding: 0;
+  border: 1px solid #6e6e6e; }
+
+.catalog__menu-item-title:hover, .catalog__menu-item.active-item .catalog__menu-item-title,
+.catalog__submenu-item {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(74, 74, 74, 0.64); }
+
+.catalog__menu-item-title {
+  padding: 13px 0 12px 30px; }
+
+.catalog__submenu-item {
+  padding-left: 30px;
+  max-width: 100%;
+  cursor: pointer; }
+
+.catalog__submenu {
+  padding-bottom: 10px;
+  padding-top: 0; }
+
+.catalog__menu-item .fa-angle-up {
+  opacity: 0 !important; }
+
+.catalog__menu-item .fa-angle-down {
+  opacity: 1 !important; }
+
+.catalog__menu-item.active .fa-angle-up {
+  opacity: 1 !important; }
+
+.catalog__menu-item.active .fa-angle-down {
+  opacity: 0 !important; }
+
+.catalog__menu-item-title-arrow {
+  top: 14px; }
+
+.catalog__submenu-item:hover, .catalog__submenu-item.active {
+  text-decoration: none;
+  color: rgba(74, 74, 74, 0.64);
+  background-color: rgba(0, 0, 0, 0.08); }
+
+.catalog__menu-item.active-item.active {
+  border-color: #4fb1f6; }
+
+.catalog__menu input {
+  margin-top: 30px; }
 
 /*# sourceMappingURL=input-js.css.map */

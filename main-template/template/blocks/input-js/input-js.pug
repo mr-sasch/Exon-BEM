@@ -7,29 +7,65 @@ link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta
 // jQuery
 script(src="https://code.jquery.com/jquery-3.2.1.min.js")
 
-form.no-widget
-  select(name="myFruit" tabindex="-1")
-    option Cherry
-    option Lemon
-    option Banana
-    option Strawberry
-    option Apple
+link(rel="stylesheet" href="/home/xander/GitHub/Exon-BEM/main-template/template/layout/font-awesome-4.7.0/css/font-awesome.min.css")
 
-  .select(tabindex="0")
-    a.btn.btn-primary(data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample")
-      span.value Cherry
-    .collapse#collapseExample
-      .card.card-body
-        ul.optList.hidden
-          li.option Cherry
-          li.option Lemon
-          li.option Banana
-          li.option Strawberry
-          li.option Apple
+//- form.no-widget
+//-   select(name="myFruit")
+//-     option Cherry
+//-     option Lemon
+//-     option Banana
+//-     option Strawberry
+//-     option Apple
+//-  
+//-   .select(role="listbox")
+//-     span.value Cherry
+//-     ul.optList(role="presentation")
+//-       li.option(role="option" aria-selected="true") Cherry
+//-       li.option(role="option") Lemon
+//-       li.option(role="option") Banana
+//-       li.option(role="option") Strawberry
+//-       li.option(role="option") Apple
+            
+  //- input(type="submit")
 
-  input(type="submit")
+    
+  
+.catalog__menu
+  form.no-widget
+    select(name="myFruit")
+      option Сиропы
+      option Гематогены
+      option Таблетки
+      option Порошки и гранулы
+      option Капсулы
+      option Прочие лекарственные средства
+
+    // Раздел каталога
+    .catalog__menu-item.active-item.select(role="listbox")
+      .catalog__menu-item-title.value Сообщение
+      // Подраздел каталога
+      .catalog__submenu.optList(role="presentation")
+        .catalog__submenu-item.option(role="option") Сиропы
+        .catalog__submenu-item.option(role="option") Гематогены
+        .catalog__submenu-item.option(role="option") Таблетки
+        .catalog__submenu-item.option(role="option") Порошки и гранулы
+        .catalog__submenu-item.option(role="option") Капсулы
+        .catalog__submenu-item.option(role="option") Прочие лекарственные средства
+      .catalog__menu-item-title-arrow
+        i(class="fa fa-angle-down" aria-hidden="true")
+        i(class="fa fa-angle-up" aria-hidden="true")
+          
+
+    input(type="submit")
+    //- script.
+    //-   var index2 = 4;
+      
+
+link(rel='stylesheet' href='catalog-menu/catalog-menu.css')
+script(src='catalog-menu/catalog__menu.js')
 
 link(rel='stylesheet' href='input-js.css')
+  
 script(src='input-js.js')
 script(src='http://localhost:35729/livereload.js')
 

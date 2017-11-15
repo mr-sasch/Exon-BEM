@@ -1,0 +1,51 @@
+.catalog__menu
+	// Раздел каталога
+	.catalog__menu-item.active-item
+		.catalog__menu-item-title Лекарственные средства
+			.catalog__menu-item-title-arrow
+				i(class="fa fa-angle-down" aria-hidden="true")
+				i(class="fa fa-angle-up" aria-hidden="true")
+		// Подраздел каталога
+		.catalog__submenu
+			a(href='#').catalog__submenu-item.active Сиропы
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Гематогены
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Таблетки
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Порошки и гранулы
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Капсулы
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Прочие лекарственные средства
+				.catalog__submenu-item-label
+	// Раздел каталога
+	.catalog__menu-item
+		.catalog__menu-item-title Биологически активные добавки
+			.catalog__menu-item-title-arrow
+				i(class="fa fa-angle-down" aria-hidden="true")
+				i(class="fa fa-angle-up" aria-hidden="true")
+		// Подраздел каталога
+		.catalog__submenu.hide
+			a(href='#').catalog__submenu-item Сиропы
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Гематогены
+				.catalog__submenu-item-label
+	// Раздел каталога
+	.catalog__menu-item
+		.catalog__menu-item-title Пищевые продукты
+			.catalog__menu-item-title-arrow
+				i(class="fa fa-angle-down" aria-hidden="true")
+				i(class="fa fa-angle-up" aria-hidden="true")
+		// Подраздел каталога
+		.catalog__submenu.hide
+			a(href='#').catalog__submenu-item Сиропы
+				.catalog__submenu-item-label
+			a(href='#').catalog__submenu-item Гематогены
+				.catalog__submenu-item-label
+					
+	link(rel='stylesheet' href='catalog-menu.css')
+	script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+	script(src='catalog__menu.js')
+
+script(src='http://localhost:35729/livereload.js')

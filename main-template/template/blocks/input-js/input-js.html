@@ -5,29 +5,36 @@
 <!-- /Bootstrap -->
 <!-- jQuery-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<form class="no-widget">
-  <select name="myFruit" tabindex="-1">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
-  <div class="select" tabindex="0"><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span class="value">Cherry</span></a>
-    <div class="collapse" id="collapseExample">
-      <div class="card card-body">
-        <ul class="optList hidden">
-          <li class="option">Cherry</li>
-          <li class="option">Lemon</li>
-          <li class="option">Banana</li>
-          <li class="option">Strawberry</li>
-          <li class="option">Apple</li>
-        </ul>
+<link rel="stylesheet" href="/home/xander/GitHub/Exon-BEM/main-template/template/layout/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<div class="catalog__menu">
+  <form class="no-widget">
+    <select name="myFruit">
+      <option>Сиропы</option>
+      <option>Гематогены</option>
+      <option>Таблетки</option>
+      <option>Порошки и гранулы</option>
+      <option>Капсулы</option>
+      <option>Прочие лекарственные средства</option>
+    </select>
+    <!-- Раздел каталога-->
+    <div class="catalog__menu-item active-item select" role="listbox">
+      <div class="catalog__menu-item-title value">Сообщение</div>
+      <!-- Подраздел каталога-->
+      <div class="catalog__submenu optList" role="presentation">
+        <div class="catalog__submenu-item option" role="option">Сиропы</div>
+        <div class="catalog__submenu-item option" role="option">Гематогены</div>
+        <div class="catalog__submenu-item option" role="option">Таблетки</div>
+        <div class="catalog__submenu-item option" role="option">Порошки и гранулы</div>
+        <div class="catalog__submenu-item option" role="option">Капсулы</div>
+        <div class="catalog__submenu-item option" role="option">Прочие лекарственные средства</div>
       </div>
+      <div class="catalog__menu-item-title-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i><i class="fa fa-angle-up" aria-hidden="true"></i></div>
     </div>
-  </div>
-  <input type="submit"/>
-</form>
+    <input type="submit"/>
+  </form>
+</div>
+<link rel="stylesheet" href="catalog-menu/catalog-menu.css"/>
+<script src="catalog-menu/catalog__menu.js"></script>
 <link rel="stylesheet" href="input-js.css"/>
 <script src="input-js.js"></script>
 <script src="http://localhost:35729/livereload.js"></script>

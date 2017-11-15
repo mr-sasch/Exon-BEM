@@ -11,25 +11,25 @@ NodeList.prototype.forEach = function (callback) {
 // -------------------- //
 
 function deactivateSelect(select) {
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains('activeElement')) return;
 
   var optList = select.querySelector('.optList');
 
-  optList.classList.add('hidden');
-  select.classList.remove('active');
+  // optList.classList.add('hidden');
+  select.classList.remove('activeElement');
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains('active')) return;
+function activeElementSelect(select, selectList) {
+  if (select.classList.contains('activeElement')) return;
 
   selectList.forEach(deactivateSelect);
-  select.classList.add('active');
+  select.classList.add('activeElement');
 };
 
 function toggleOptList(select, show) {
   var optList = select.querySelector('.optList');
 
-  optList.classList.toggle('hidden');
+  // optList.classList.toggle('hidden');
 }
 
 function highlightOption(select, option) {
@@ -43,9 +43,16 @@ function highlightOption(select, option) {
 };
 
 function updateValue(select, index) {
+  var index = index2;
   var nativeWidget = select.previousElementSibling;
   var value = select.querySelector('.value');
   var optionList = select.querySelectorAll('.option');
+
+  optionList.forEach(function (other) {
+    other.setAttribute('aria-selected', 'false');
+  });
+
+  optionList[index].setAttribute('aria-selected', 'true');
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
@@ -73,32 +80,6 @@ window.addEventListener('load', function () {
   var selectList = document.querySelectorAll('.select');
 
   selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option');
-
-    optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
-        highlightOption(select, option);
-      });
-    });
-
-    select.addEventListener('click', function (event) {
-      toggleOptList(select);
-    });
-
-    select.addEventListener('focus', function (event) {
-      activeSelect(select, selectList);
-    });
-
-    select.addEventListener('blur', function (event) {
-      deactivateSelect(select);
-    });
-  });
-});
-
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
-
-  selectList.forEach(function (select) {
     var optionList = select.querySelectorAll('.option'),
         selectedIndex = getIndex(select);
 
@@ -108,9 +89,25 @@ window.addEventListener('load', function () {
     updateValue(select, selectedIndex);
 
     optionList.forEach(function (option, index) {
+      option.addEventListener('mouseover', function () {
+        highlightOption(select, option);
+      });
+
       option.addEventListener('click', function (event) {
         updateValue(select, index);
       });
+    });
+
+    select.addEventListener('click', function (event) {
+      toggleOptList(select);
+    });
+
+    select.addEventListener('focus', function (event) {
+      activeElementSelect(select, selectList);
+    });
+
+    select.addEventListener('blur', function (event) {
+      deactivateSelect(select);
     });
 
     select.addEventListener('keyup', function (event) {
