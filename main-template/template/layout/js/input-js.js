@@ -1,13 +1,13 @@
-Скрипт разворачивающегося списка //
+// Скрипт разворачивающегося списка //
 $('.catalog__menu-item-title').click(function(){
 	$('.catalog__menu').find('.active-item').removeClass('active-item');
 	$(this).parent().addClass('active-item');
 });
 
-Скрытие/разворачивание меню
-Сворачиваем все подразделы с классом hide
-$('.catalog__submenu.optList').slideUp();
-$('.catalog__menu').find('.catalog__menu-item:first').addClass('active');
+// Скрытие/разворачивание меню
+// Сворачиваем все подразделы с классом hide
+$('.catalog__submenu.hide').slideUp();
+// $('.catalog__menu').find('.catalog__menu-item:first').addClass('active');
 
 $('.catalog__menu-item-title').click(function(){
 	// Если у родителя класса, по которому кликнули, есть класс active,

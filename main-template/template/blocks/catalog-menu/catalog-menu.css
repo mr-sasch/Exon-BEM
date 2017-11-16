@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: ../../template/layout/style/vars.scss.
-       Load path: /home/xander/GitHub/Exon-BEM/main-template
-        on line 1 of ./template/blocks/catalog-menu/catalog-menu.scss
+       Load path: /home/xander/GitHub/Exon-BEM/main-template/template
+        on line 1 of ./blocks/catalog-menu/catalog-menu.scss
 
 1: @import "../../template/layout/style/vars.scss";
 2: 
@@ -11,7 +11,7 @@ Error: File to import not found or unreadable: ../../template/layout/style/vars.
 6: 	border: 2px solid rgba(110, 110, 110, 0.24);
 
 Backtrace:
-./template/blocks/catalog-menu/catalog-menu.scss:1
+./blocks/catalog-menu/catalog-menu.scss:1
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/import_node.rb:45:in `import'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -42,18 +42,17 @@ Backtrace:
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:294:in `watch'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin.rb:109:in `method_missing'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/2.3.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../template/layout/style/vars.scss.\A        Load path: /home/xander/GitHub/Exon-BEM/main-template\A         on line 1 of ./template/blocks/catalog-menu/catalog-menu.scss\A \A 1: @import \"../../template/layout/style/vars.scss\";\A 2: \A 3: /* Меню */\A 4: .catalog__menu {\A 5: 	width: 316px;\A 6: 	border: 2px solid rgba(110, 110, 110, 0.24);"; }
+  content: "Error: File to import not found or unreadable: ../../template/layout/style/vars.scss.\A        Load path: /home/xander/GitHub/Exon-BEM/main-template/template\A         on line 1 of ./blocks/catalog-menu/catalog-menu.scss\A \A 1: @import \"../../template/layout/style/vars.scss\";\A 2: \A 3: /* Меню */\A 4: .catalog__menu {\A 5: 	width: 316px;\A 6: 	border: 2px solid rgba(110, 110, 110, 0.24);"; }
