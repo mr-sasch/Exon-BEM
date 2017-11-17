@@ -1,0 +1,25 @@
+mixin input-js  
+  .catalog__menu
+    form.no-widget
+      select(name="myFruit")
+        option Сиропы
+        option Гематогены
+        option Таблетки
+        option Порошки и гранулы
+        option Капсулы
+        option Прочие лекарственные средства
+
+      // Раздел каталога
+      .catalog__menu-item.active-item.select(role="listbox")
+        .catalog__menu-item-title.value Сообщение
+        // Подраздел каталога
+        .catalog__submenu.optList(role="presentation")
+          .catalog__submenu-item.option(role="option") Сиропы
+          .catalog__submenu-item.option(role="option") Гематогены
+          .catalog__submenu-item.option(role="option") Таблетки
+          .catalog__submenu-item.option(role="option") Порошки и гранулы
+          .catalog__submenu-item.option(role="option") Капсулы
+          .catalog__submenu-item.option(role="option") Прочие лекарственные средства
+        .catalog__menu-item-title-arrow
+          i(class="fa fa-angle-down" aria-hidden="true")
+          i(class="fa fa-angle-up" aria-hidden="true")

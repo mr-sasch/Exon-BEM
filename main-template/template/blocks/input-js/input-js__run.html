@@ -285,61 +285,37 @@
     </div>
     <!-- ***** /Хэдер ***** -->
     <!-- ***** Контент ***** -->
-        <div class="main-slider-slick page__title">
-          <div class="main-slider-slick__item"><img class="main-slider__img" src="template-images/pharma__title.png"/>
-            <div class="main-slider__txt">
-              <div class="main-slider__txt-title">Регистрация партнера</div>
-            </div>
-            <!-- Крошки -->
-            <div class="page__title-crumbs inn_padd">
-              <div class="page__title-crumbs__inner site-width"><a class="page__title-crumbs__main" href="#">Главная</a><i class="fa fa-angle-double-right page__title-crumbs__fa" aria-hidden="true"></i>
-                <div class="page__title-crumbs__child">Регистрация партнера</div>
+    <div class="select-field-1">
+          <div class="catalog__menu">
+            <form class="no-widget">
+              <select name="myFruit">
+                <option>Сиропы</option>
+                <option>Гематогены</option>
+                <option>Таблетки</option>
+                <option>Порошки и гранулы</option>
+                <option>Капсулы</option>
+                <option>Прочие лекарственные средства</option>
+              </select>
+              <!-- Раздел каталога-->
+              <div class="catalog__menu-item active-item select" role="listbox">
+                <div class="catalog__menu-item-title value">Сообщение</div>
+                <!-- Подраздел каталога-->
+                <div class="catalog__submenu optList" role="presentation">
+                  <div class="catalog__submenu-item option" role="option">Сиропы</div>
+                  <div class="catalog__submenu-item option" role="option">Гематогены</div>
+                  <div class="catalog__submenu-item option" role="option">Таблетки</div>
+                  <div class="catalog__submenu-item option" role="option">Порошки и гранулы</div>
+                  <div class="catalog__submenu-item option" role="option">Капсулы</div>
+                  <div class="catalog__submenu-item option" role="option">Прочие лекарственные средства</div>
+                </div>
+                <div class="catalog__menu-item-title-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i><i class="fa fa-angle-up" aria-hidden="true"></i></div>
               </div>
-            </div>
+            </form>
           </div>
-        </div>
-    <!-- Главные контакты-->
-    <div class="pharma reg-partner inn_padd">
-      <div class="pharma__inner site-width">
-        <form class="pharma-form">
-          <div class="news-single__post-title">Сообщите нам ваши персональные данные</div>
-          <div class="pharma-text">Заполните форму заявки ниже.<br/>После получения ваших персональных данных наш менеджер свяжется с вами и проконсультирует о дальнейших действиях для завершения регистраци компании-партнера.</div>
-          <div class="pharma-form__cols">
-            <div class="pharma-form__col-1_2">
-                          <input type="text" name="reg__fio" placeholder="Фамилия Имя Отчество руководителя*"/>
-                          <input type="text" name="reg__mail" placeholder="Контактный e-mail*"/>
-                          <input type="text" name="reg__phone" placeholder="Контактный телефон*"/>
-            </div>
-            <div class="pharma-form__col-1_2">
-                          <input type="text" name="reg__org" placeholder="Наименование организации(ИП, Юрлицо)*"/>
-                          <input type="text" name="reg__unp" placeholder="УНП*"/>
-                          <input type="text" name="reg__strana" placeholder="Страна*"/>
-            </div>
-          </div>
-          <div class="pharma-form__cols">
-            <div class="pharma-form__col-1_2 reg-partner__text-area">
-                            <textarea class="opisaniePodProd" rows="5" cols="50" name="" form="" placeholder="Дополнительное персональное сообщение"></textarea>
-            </div>
-            <div class="pharma-form__col-1_2 reg-partner__inputs">
-                          <input type="text" name="reg__address" placeholder="Адрес: индекс, город, улица, дом*"/>
-                          <input type="text" name="reg__office" placeholder="Номер офиса(если есть)*"/>
-            </div>
-          </div>
-          <div class="pharma-form__cols">
-            <div class="pharma-form__cols pharma-form__submit">
-              <input class="contacts-form__submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ НА РЕГИСТРАЦИЮ" onclick="acceptModal()" id="reg-partner-submit"/>
-            </div>
-          </div>
-        </form>
-      </div>
     </div>
-    <div class="footer-separator"></div>
-    <!-- серый футер-->
-    <script src="js/footer-grey.js"></script>
-    <!-- Корректировка Тайтла "Регистрация партнера"-->
-    <script src="js/reg-partner__change-title.js"></script>
-    <!-- Вызов модального окна-->
-    <script src="js/accept-modal.js"></script>
+    <link rel="stylesheet" href="input-js.css"/>
+    <script src="input-js.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
     <!-- ***** /Контент *****-->
     <!-- ***** Футер ***** -->
     <div class="footer inn_padd">
@@ -437,6 +413,7 @@
     <!-- На главной меняем значение кнопки "Подробнее"(bootstrap)-->
     <script src="js/read-more-bootstrap.js"></script>
     <!-- Скрипт селекта-выпадашки-->
+    <script src="js/input-js.js"></script>
     <!-- Скрипт 3 -->
     <script src=""></script>
     <!-- /Скрипты-->

@@ -1,2 +1,33 @@
 
-<input type="submit"/>
+<!-- jQuery-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="/home/xander/GitHub/Exon-BEM/main-template/template/layout/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<div class="catalog__menu">
+  <form class="no-widget">
+    <select name="myFruit">
+      <option>Сиропы</option>
+      <option>Гематогены</option>
+      <option>Таблетки</option>
+      <option>Порошки и гранулы</option>
+      <option>Капсулы</option>
+      <option>Прочие лекарственные средства</option>
+    </select>
+    <!-- Раздел каталога-->
+    <div class="catalog__menu-item active-item select" role="listbox">
+      <div class="catalog__menu-item-title value">Сообщение</div>
+      <!-- Подраздел каталога-->
+      <div class="catalog__submenu optList" role="presentation">
+        <div class="catalog__submenu-item option" role="option">Сиропы</div>
+        <div class="catalog__submenu-item option" role="option">Гематогены</div>
+        <div class="catalog__submenu-item option" role="option">Таблетки</div>
+        <div class="catalog__submenu-item option" role="option">Порошки и гранулы</div>
+        <div class="catalog__submenu-item option" role="option">Капсулы</div>
+        <div class="catalog__submenu-item option" role="option">Прочие лекарственные средства</div>
+      </div>
+      <div class="catalog__menu-item-title-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+    </div>
+  </form>
+</div>
+<link rel="stylesheet" href="input-js.css"/>
+<script src="input-js.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
