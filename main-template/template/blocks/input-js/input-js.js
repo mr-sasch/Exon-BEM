@@ -1,38 +1,3 @@
-// Скрипт разворачивающегося списка
-$('.catalog__menu-item-title').click(function(){
-	$('.catalog__menu').find('.active-item').removeClass('active-item');
-	$(this).parent().addClass('active-item');
-});
-
-// Скрытие/разворачивание меню
-// Сворачиваем все подразделы с классом hide
-$('.catalog__submenu.optList').slideUp();
-$('.catalog__menu').find('.catalog__menu-item:first').addClass('active');
-
-$('.catalog__menu-item-title').click(function(){
-	// Если у родителя класса, по которому кликнули, есть класс active,
-	if(!$(this).parent().hasClass('active')){
-		// то у всех остальных классов убираем класс active
-		$('.catalog__menu-item-title').parent().removeClass('active');
-		// и добавляем класс active Нашему родителю
-		$(this).parent().addClass('active');
-		// Cворачиваем все подразделы
-		$('.catalog__menu-item-title').parent().find('.catalog__submenu').slideUp(300);
-		// Разворачиваем подраздел текущего родителя
-		$(this).parent().find('.catalog__submenu').slideDown(300);
-	} else {
-		$(this).parent().removeClass('active');
-		$(this).parent().find('.catalog__submenu').slideUp(300);
-	}
-});
-
-// Подсветка активного пункта меню (для бэкенда не надо)
-$('.catalog__submenu-item').click(function(){
-	$('.catalog__submenu').find('.active').removeClass('active');
-	$(this).addClass('active');
-});
-// /Скрипт разворачивающегося списка //
-
 // ------- //
 // HELPERS //
 // ------- //
@@ -46,26 +11,25 @@ NodeList.prototype.forEach = function (callback) {
 // -------------------- //
 
 function deactivateSelect(select) {
-  if (!select.classList.contains('activeElement')) return;
+  if (!select.classList.contains('active')) return;
 
   var optList = select.querySelector('.optList');
-
-  // optList.classList.add('hidden');
-  select.classList.remove('activeElement');
+  optList.classList.add('hidden');
+  select.classList.remove('active');
 }
 
-function activeElementSelect(select, selectList) {
-  if (select.classList.contains('activeElement')) return;
+function activeSelect(select, selectList) {
+  if (select.classList.contains('active')) return;
 
   selectList.forEach(deactivateSelect);
-  select.classList.add('activeElement');
+  select.classList.add('active');
 };
 
 function toggleOptList(select, show) {
   var optList = select.querySelector('.optList');
 
-  // optList.classList.toggle('hidden');
-}
+  optList.classList.toggle('hidden');
+};
 
 function highlightOption(select, option) {
   var optionList = select.querySelectorAll('.option');
@@ -104,11 +68,19 @@ function getIndex(select) {
 // ------------- //
 
 window.addEventListener("load", function () {
-  var form = document.querySelector('form');
-
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  var form = document.getElementsByClassName('form');
+	for(var i=0; i<form.length; i++) {
+	  form[i].classList.remove("no-widget");
+	  form[i].classList.add("widget");
+	};
 });
+
+window.addEventListener('load', function() {
+	var catSubMenu = document.getElementsByClassName('catalog__submenu');
+	for(i=0; i<catSubMenu.length; i++) {
+		catSubMenu[i].classList.add('hidden');
+	}
+})
 
 window.addEventListener('load', function () {
   var selectList = document.querySelectorAll('.select');
@@ -137,7 +109,7 @@ window.addEventListener('load', function () {
     });
 
     select.addEventListener('focus', function (event) {
-      activeElementSelect(select, selectList);
+      activeSelect(select, selectList);
     });
 
     select.addEventListener('blur', function (event) {

@@ -66,51 +66,65 @@
   width: 100%; }
 
 /* Переопределение блока каталога */
-.select-field-1 .catalog__menu,
-.select-field-1 .catalog__menu-item.active-item {
+.catalog__menu,
+.select-custom.catalog__menu-item.active-item {
   border-radius: 23px; }
-.select-field-1 .catalog__menu-item.active-item {
+
+.select-custom.catalog__menu-item.active-item {
   padding: 0;
   border: 1px solid #6e6e6e;
   width: 100%; }
-.select-field-1 .catalog__menu {
+
+.catalog__menu {
   background-color: #fff;
   border: none;
   margin: 20px 0 0 15px; }
-.select-field-1 .catalog__menu-item:first-child {
+
+.select-custom.catalog__menu-item:first-child {
   padding: 0;
   border: 1px solid #6e6e6e; }
-.select-field-1 .catalog__menu-item-title:hover, .select-field-1 .catalog__menu-item.active-item .catalog__menu-item-title,
-.select-field-1 .catalog__submenu-item {
+
+.catalog__menu-item-title:hover, .select-custom.catalog__menu-item.active-item .catalog__menu-item-title,
+.select-custom.catalog__submenu-item {
   font-size: 18px;
   font-weight: 300;
   color: rgba(74, 74, 74, 0.64); }
-.select-field-1 .catalog__menu-item-title {
+
+.catalog__menu-item-title {
   padding: 13px 0 12px 30px; }
-.select-field-1 .catalog__submenu-item {
+
+.select-custom.catalog__submenu-item {
   padding-left: 30px;
   max-width: 100%;
   cursor: pointer; }
-.select-field-1 .catalog__submenu {
-  padding-bottom: 10px;
+
+.select-custom.catalog__submenu {
   padding-top: 0; }
-.select-field-1 .catalog__menu-item .fa-angle-up {
+
+.select-custom.catalog__menu-item .fa-angle-up {
   opacity: 0 !important; }
-.select-field-1 .catalog__menu-item .fa-angle-down {
+
+.select-custom.catalog__menu-item .fa-angle-down {
   opacity: 1 !important; }
-.select-field-1 .catalog__menu-item.active .fa-angle-up {
+
+.select-custom.catalog__menu-item.active .fa-angle-up {
   opacity: 1 !important; }
-.select-field-1 .catalog__menu-item.active .fa-angle-down {
+
+.select-custom.catalog__menu-item.active .fa-angle-down {
   opacity: 0 !important; }
-.select-field-1 .catalog__menu-item-title-arrow {
+
+.select-custom.catalog__menu-item-title-arrow {
   top: 14px; }
-.select-field-1 .catalog__submenu-item:hover, .select-field-1 .catalog__submenu-item.active {
+
+.select-custom.catalog__submenu-item:hover, .select-custom.catalog__submenu-item.active {
   text-decoration: none;
   color: rgba(74, 74, 74, 0.64);
   background-color: rgba(0, 0, 0, 0.08); }
-.select-field-1 .catalog__menu-item.active-item.active {
+
+.select-custom.select-custom.catalog__menu-item.active-item.active {
   border-color: #4fb1f6; }
-.select-field-1 .catalog__menu input {
+
+.catalog__menu input {
   margin-top: 30px; }
 
 /*# sourceMappingURL=input-js.css.map */

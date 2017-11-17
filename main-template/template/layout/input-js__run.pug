@@ -1,17 +1,23 @@
-extends ../../layout/page-template.pug
+extends page-template.pug
 
 block content
+  include ../blocks/input-js/input-js__mixin.pug
 
   //- https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets
 
-  include input-js__mixin.pug
-
-  .select-field-1
-    +input-js      
-
-  link(rel='stylesheet' href='input-js.css')
-  script(src='input-js.js')
-  
+  form(name='multiForm')
+    .select-temp-container
+      .select-field
+        +input-js('siropi')
+    .select-temp-container
+      .select-field
+        +input-js('pills')
+          
+    input(type='submit')
+    
+    // Файлы для запуска из шаблона
+    link(rel='stylesheet' href='../blocks/input-js/input-js.css')
+    script(src='../blocks/input-js/input-js.js')
   
   // Livereload
   script(src='http://localhost:35729/livereload.js')
